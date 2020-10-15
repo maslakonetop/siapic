@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="PilihKpi">
+        <item>Semua Wilayah</item>
+        <item>KPI Cilacap Timur</item>
+        <item>KPI Cilacap</item>
+        <item>KPI Bengawan Donan</item>
+        <item>KPI Provinsi</item>
+        <item>KPI Karang Kandri</item>
+        <item>KPI Bunton</item>
+        <item>KPI Warung Batok</item>
+        <item>KPI Tinggar Jaya</item>
+        <item>KPI Lainnya</item>
+    </string-array>
+</resources>

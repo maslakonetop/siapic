@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="id.co.gesangmultimedia.petapotensicilacap">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:installLocation="auto"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".BerandaSop"></activity>
+        <activity android:name=".ShowPdf" />
+        <activity android:name=".TampilkanVideo" />
+        <activity android:name=".LaporanBug" />
+        <activity android:name=".Pengaturan" />
+        <activity android:name=".About" />
+        <activity android:name=".VideoPotensi" />
+        <activity android:name=".CumstomInfoContent" />
+        <activity android:name=".RtrwCilacap" />
+        <activity android:name=".KawasanIndustri" />
+        <activity android:name=".PotensiUmum" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DataKecamatan" />
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBMd714TGilzaX8fjpIExRrPox3HV-Dhjo" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8683063272161709~6118474226" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+    <permission
+        android:name="id.co.gesangmultimedia.petapotensicilacap.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="your.package.name.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

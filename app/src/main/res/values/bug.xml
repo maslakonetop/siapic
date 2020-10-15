@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bug">
+        <item>Pilih Bug</item>
+        <item>Aplikasi Melambar</item>
+        <item>Aplikasi Error</item>
+        <item>Map Tidak Tampil</item>
+        <item>Error Lain</item>
+    </string-array>
+</resources>
