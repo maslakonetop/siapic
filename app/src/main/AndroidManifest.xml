@@ -5,14 +5,16 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:installLocation="auto"
         android:icon="@mipmap/ic_launcher"
+        android:installLocation="auto"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".BerandaSop"></activity>
+        <activity android:name=".PdfBantarsari"></activity>
+        <activity android:name=".PdfAdipala" />
+        <activity android:name=".BerandaSop" />
         <activity android:name=".ShowPdf" />
         <activity android:name=".TampilkanVideo" />
         <activity android:name=".LaporanBug" />
@@ -47,13 +49,13 @@
     <permission
         android:name="id.co.gesangmultimedia.petapotensicilacap.MAPS_RECEIVE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="your.package.name.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
 </manifest>

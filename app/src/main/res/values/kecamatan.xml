@@ -2,29 +2,28 @@
 <resources>
     <string-array name="namakecamatan">
         <item>Pilih Kecamatan</item>
-        <item>Adipala</item>
-        <item>Bantarsari</item>
-        <item>Binangun</item>
-        <item>Cilacap Utara</item>
-        <item>Cilacap Tengah</item>
-        <item>Cilacap Selatan</item>
-        <item>Cimanggu</item>
-        <item>Cipari</item>
-        <item>Dayeuhluhur</item>
-        <item>Gandrungmangu</item>
-        <item>Jeruklegi</item>
-        <item>Kampung Laut</item>
-        <item>Karangpucung</item>
-        <item>Kawunganten</item>
-        <item>Kedungreja</item>
-        <item>Kesugihan</item>
-        <item>Kroya</item>
-        <item>Majenang</item>
-        <item>Maos</item>
-        <item>Nusawungu</item>
-        <item>Patimuan</item>
-        <item>Sampang</item>
-        <item>Sidareja</item>
-        <item>Wanareja</item>
+        <item>Kecamatan Adipala</item>
+        <item>Kecamatan Bantarsari</item>
+        <item>Kecamatan Binangun</item>
+        <item>Kecamatan Cilacap Utara</item>
+        <item>Kecamatan Cilacap Tengah</item>
+        <item>Kecamatan Cilacap Selatan</item>
+        <item>Kecamatan Cimanggu</item>
+        <item>Kecamatan Cipari</item>
+        <item>Kecamatan Dayeuhluhur</item>
+        <item>Kecamatan Jeruklegi</item>
+        <item>Kecamatan Kampung Laut</item>
+        <item>Kecamatan Karangpucung</item>
+        <item>Kecamatan Kawunganten</item>
+        <item>Kecamatan Kedungreja</item>
+        <item>Kecamatan Kesugihan</item>
+        <item>Kecamatan Kroya</item>
+        <item>Kecamatan Majenang</item>
+        <item>Kecamatan Maos</item>
+        <item>Kecamatan Nusawungu</item>
+        <item>Kecamatan Patimuan</item>
+        <item>Kecamatan Sampang</item>
+        <item>Kecamatan Sidareja</item>
+        <item>Kecamatan Wanareja</item>
     </string-array>
 </resources>

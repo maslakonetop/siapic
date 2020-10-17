@@ -1,18 +1,18 @@
 package id.co.gesangmultimedia.petapotensicilacap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.Telephony;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -26,22 +26,22 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
-import com.google.maps.android.data.geojson.GeoJsonPolygon;
 import com.google.maps.android.data.geojson.GeoJsonPolygonStyle;
 import com.google.maps.android.data.kml.KmlLayer;
 
 import org.json.JSONException;
-import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
 
-public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallback {
+public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallback, AdapterView.OnItemSelectedListener {
     private GoogleMap mMap;
     private GeoJsonLayer geoJsonLayer;
-    private Spinner spinner;
-    private Spinner spinner2;
+    private Spinner spKecamatan;
+    private Spinner spPotensi;
     private KmlLayer kmlLayer;
+    private String strKecamatan = "";
+    private String strPotensi = "";
 
     private static final LatLng CILACAP = new LatLng(-7.727989, 109.005913);
 
@@ -118,7 +118,18 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     private static final LatLng UDANGVANAME = new LatLng(-7.662435, 109.260374);
 
     private static final LatLng WISATAMOMONGAN = new LatLng(-7.430953, 108.7662454);
+
     private static final LatLng KELAPAKEDUNGREJA = new LatLng(-7.5015207, 108.7848592);
+
+    private static final LatLng BUNTON = new LatLng(-7.684692, 109.137513);
+
+    private static final LatLng JIPANGADIPALA = new LatLng(-7.651058, 109.127968);
+    private static final LatLng GITARADIPALA = new LatLng(-7.632131, 109.146367);
+    private static final LatLng PASARADIPALA = new LatLng(-7.660389, 109.151568);
+    private static final LatLng GULAKELAPAADIPALA = new LatLng(-7.670830, 109.111700);
+    private static final LatLng GULAKRISTALADIPALA = new LatLng( -7.636690, 109.138904);
+    private static final LatLng SALEPISANGADIPALA = new LatLng(-7.670583, 109.160941);
+    private static final LatLng SERIPINGPISANGADIPALA = new LatLng(-7.662127, 109.175154);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,16 +140,23 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinkecamatan = findViewById(R.id.spKecamatan);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.namakecamatan, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinkecamatan.setAdapter(adapter);
+        spinkecamatan.setOnItemSelectedListener(this);
+
+        Spinner spinpotensi = findViewById(R.id.spPotensi);
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.potensi, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinpotensi.setAdapter(adapter1);
+        spinpotensi.setOnItemSelectedListener(this);
+
+        Button btnMap = findViewById(R.id.btnPeta);
+        btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
-                String spinSelection =spinner.getSelectedItem().toString();
-                if(spinSelection.equals("Adipala")){
+            public void onClick(View v) {
+                if (strKecamatan.equals("Kecamatan Adipala") && strPotensi.equals("Industri")){
                     try {
                         showAdipala(null);
                     } catch (IOException e) {
@@ -146,277 +164,23 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+                    markerAdipala();
+                    showIndustriAdipala();
                 }
-                else if(spinSelection.equals("Bantarsari")){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Binangun")){
-                    try {
-                        showBinangun(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Cilacap Selatan")){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Cilacap Tengah")){
-                    try {
-                        showClptengah(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Cilacap Utara")){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Cimanggu")){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Cipari")){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Dayeuhluhur")){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Jeruklegi")){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Gandrungmangu")){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Kampung Laut")){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Karang Pucung")){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Kawunganten")){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Kedungreja")){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Kesugihan")){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Kroya")){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Majenang")){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Maos")){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Nusawungu")){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Patimuan")){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Sampang")){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Sidareja")){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if(spinSelection.equals("Wanareja")){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else if (spinSelection.equals("Pilih Kecamatan")){
-                    mMap.clear();
-                    showCilacap(null);
-
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                showCilacap(null);
             }
         });
-        final Spinner spinner1 = (Spinner) findViewById(R.id.spinner2);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.potensi, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner1.setAdapter(adapter1);
-        spinner1.setOnItemSelectedListener((new AdapterView.OnItemSelectedListener() {
+        Button btnPdf = findViewById(R.id.btnPdf);
+        btnPdf.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
-                String spinSelection1 =spinner1.getSelectedItem().toString();
-                if (spinSelection1.equals("Industri")){
-                    hapusMarker();
-                    hapusIwak();
-                    hapusPariwisata();
-                    hapusWedus();
-                    tampilIndustri(null);
-                }
-                else if (spinSelection1.equals("Pilih Potensi")){
-                    showCilacap(null);
-                }
-                else if(spinSelection1.equals("Pariwisata")){
-                    hapusWedus();
-                    hapusMarker();
-                    hapusIwak();
-                    hapusIndustri();
-                    tampilPariwisata(null);
-                }
-                else if (spinSelection1.equals("Perikanan")){
-                    hapusMarker();
-                    hapusIndustri();
-                    hapusWedus();
-                    hapusPariwisata();
-                    tampilIkan(null);
-                }
-                else if (spinSelection1.equals("Peternakan")){
-                    hapusMarker();
-                    hapusPariwisata();
-                    hapusIndustri();
-                    hapusIwak();
-                    tampilTernak(null);
-                }
-                else if (spinSelection1.equals("Pertanian")){
-                    Toast.makeText(getApplicationContext(),"Data Pertanian tidak ditemukan"
-                    ,Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                if(strKecamatan.equals("Kecamatan Adipala")) {
+                    Intent pdf = new Intent(DataKecamatan.this, PdfAdipala.class);
+                    pdf.putExtra("judul", strKecamatan);
+                    startActivity(pdf);
                 }
             }
+        });
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        }));
     }
 
     public void showCilacap(View v){
@@ -466,13 +230,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ADIPALA, 12f));
         GeoJsonLayer layerAdipala;
         layerAdipala = new GeoJsonLayer(mMap, R.raw.adipala, getApplicationContext());
         GeoJsonPolygonStyle layerAdipalaStyle = layerAdipala.getDefaultPolygonStyle();
-        layerAdipalaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerAdipalaStyle.setFillColor(ContextCompat.getColor(this, R.color.cyan));
+        layerAdipalaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerAdipalaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerAdipala.addLayerToMap();
         markerAdipala();
     }
@@ -482,13 +245,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BANTARSARI, 13f));
         GeoJsonLayer layerBantarsari;
         layerBantarsari =new GeoJsonLayer(mMap, R.raw.bantarsari, getApplicationContext());
         GeoJsonPolygonStyle layerBantarsariStyle = layerBantarsari.getDefaultPolygonStyle();
-        layerBantarsariStyle.setFillColor(ContextCompat.getColor(this, R.color.green));
-        layerBantarsariStyle.setStrokeColor(ContextCompat.getColor(this, R.color.aqua));
+        layerBantarsariStyle.setFillColor(ContextCompat.getColor(this, R.color.black));
+        layerBantarsariStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerBantarsari.addLayerToMap();
         markerBantarsari();
     }
@@ -498,13 +260,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
         GeoJsonLayer layerMaos;
         layerMaos = new GeoJsonLayer(mMap, R.raw.maos, getApplicationContext());
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
-        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerMaos.addLayerToMap();
         markerMaos();
     }
@@ -513,13 +274,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BINANGUN, 13f));
         GeoJsonLayer layerBinangun;
         layerBinangun = new GeoJsonLayer(mMap, R.raw.binagun, getApplicationContext());
         GeoJsonPolygonStyle layerBinangunStyle = layerBinangun.getDefaultPolygonStyle();
-        layerBinangunStyle.setStrokeColor(ContextCompat.getColor(this, R.color.honeydew));
-        layerBinangunStyle.setStrokeColor(ContextCompat.getColor(this, R.color.cornflowerblue));
+        layerBinangunStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerBinangunStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerBinangun.addLayerToMap();
         markerBinangun();
     }
@@ -528,13 +288,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPSELATAN, 13f));
         GeoJsonLayer layerSelatan;
         layerSelatan = new GeoJsonLayer(mMap, R.raw.cilacapselatan, getApplicationContext());
         GeoJsonPolygonStyle layerSelatanStyle = layerSelatan.getDefaultPolygonStyle();
-        layerSelatanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.olive));
-        layerSelatanStyle.setFillColor(ContextCompat.getColor(this, R.color.floralwhite));
+        layerSelatanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerSelatanStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerSelatan.addLayerToMap();
         markerClpSelatan();
     }
@@ -543,13 +302,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPTENGAH, 13f));
         GeoJsonLayer layerTengah;
         layerTengah = new GeoJsonLayer(mMap, R.raw.cilacaptengah, getApplicationContext());
         GeoJsonPolygonStyle layerTengahStyle = layerTengah.getDefaultPolygonStyle();
-        layerTengahStyle.setStrokeColor(ContextCompat.getColor(this, R.color.olive));
-        layerTengahStyle.setFillColor(ContextCompat.getColor(this, R.color.floralwhite));
+        layerTengahStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerTengahStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerTengah.addLayerToMap();
         markerClpTengah();
     }
@@ -558,13 +316,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPUTARA, 13f));
         GeoJsonLayer layerUtara;
         layerUtara = new GeoJsonLayer(mMap, R.raw.cilacaputara, getApplicationContext());
         GeoJsonPolygonStyle layerUtaraStyle = layerUtara.getDefaultPolygonStyle();
-        layerUtaraStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerUtaraStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerUtaraStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerUtaraStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerUtara.addLayerToMap();
         markerClpUtara();
     }
@@ -573,13 +330,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(NUSAWUNGU, 13f));
         GeoJsonLayer layerNusawungu;
         layerNusawungu = new GeoJsonLayer(mMap, R.raw.nusawungu, getApplicationContext());
         GeoJsonPolygonStyle layerNusawunguStyle = layerNusawungu.getDefaultPolygonStyle();
-        layerNusawunguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerNusawunguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerNusawunguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerNusawunguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerNusawungu.addLayerToMap();
         markerNusawungu();
     }
@@ -588,13 +344,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CIMANGGU, 13f));
         GeoJsonLayer layerCimanggu;
         layerCimanggu = new GeoJsonLayer(mMap, R.raw.cimanggu, getApplicationContext());
         GeoJsonPolygonStyle layerCimangguStyle = layerCimanggu.getDefaultPolygonStyle();
-        layerCimangguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerCimangguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerCimangguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerCimangguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerCimanggu.addLayerToMap();
         markerCimanggu();
     }
@@ -603,13 +358,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
         GeoJsonLayer layerPatimuan;
         layerPatimuan = new GeoJsonLayer(mMap, R.raw.patimuan, getApplicationContext());
         GeoJsonPolygonStyle layerPatimuanStyle = layerPatimuan.getDefaultPolygonStyle();
-        layerPatimuanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerPatimuanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerPatimuanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerPatimuanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerPatimuan.addLayerToMap();
         markerPatimuan();
     }
@@ -618,13 +372,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
         GeoJsonLayer layerMaos;
         layerMaos = new GeoJsonLayer(mMap, R.raw.maos, getApplicationContext());
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
-        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerMaos.addLayerToMap();
         markerCipari();
     }
@@ -633,13 +386,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SAMPANG, 13f));
         GeoJsonLayer layerSampang;
         layerSampang = new GeoJsonLayer(mMap, R.raw.sampang, getApplicationContext());
         GeoJsonPolygonStyle layerSampangStyle = layerSampang.getDefaultPolygonStyle();
-        layerSampangStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerSampangStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerSampangStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerSampangStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerSampang.addLayerToMap();
         markerSampang();
     }
@@ -648,13 +400,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DAYEUHLUHUR, 13f));
         GeoJsonLayer layerDayeuhluhur;
         layerDayeuhluhur = new GeoJsonLayer(mMap, R.raw.dayeuhluhur, getApplicationContext());
         GeoJsonPolygonStyle layerDayeuhluhurStyle = layerDayeuhluhur.getDefaultPolygonStyle();
-        layerDayeuhluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerDayeuhluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerDayeuhluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerDayeuhluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerDayeuhluhur.addLayerToMap();
         markerDayeuhluhur();
     }
@@ -663,13 +414,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        hapusMarker();
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(GANDRUNGMANGU, 13f));
         GeoJsonLayer layerGandrungmangu;
         layerGandrungmangu = new GeoJsonLayer(mMap, R.raw.gandrungmangu, getApplicationContext());
         GeoJsonPolygonStyle layerGandrungmanguStyle = layerGandrungmangu.getDefaultPolygonStyle();
-        layerGandrungmanguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerGandrungmanguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerGandrungmanguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerGandrungmanguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerGandrungmangu.addLayerToMap();
         markerGandrungmangu();
     }
@@ -682,8 +432,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerJeruklegi;
         layerJeruklegi = new GeoJsonLayer(mMap, R.raw.jeruklegi, getApplicationContext());
         GeoJsonPolygonStyle layerJeruklegiStyle = layerJeruklegi.getDefaultPolygonStyle();
-        layerJeruklegiStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerJeruklegiStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerJeruklegiStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerJeruklegiStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerJeruklegi.addLayerToMap();
         markerJeruklegi();
     }
@@ -696,8 +446,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKpLaut;
         layerKpLaut = new GeoJsonLayer(mMap, R.raw.kampunglaut, getApplicationContext());
         GeoJsonPolygonStyle layerKpLautStyle = layerKpLaut.getDefaultPolygonStyle();
-        layerKpLautStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKpLautStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKpLautStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKpLautStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKpLaut.addLayerToMap();
         //markerDayeuhluhur();
         markerKpLaut();
@@ -711,8 +461,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKrPucung;
         layerKrPucung = new GeoJsonLayer(mMap, R.raw.karangpucung, getApplicationContext());
         GeoJsonPolygonStyle layerKrPucungStyle = layerKrPucung.getDefaultPolygonStyle();
-        layerKrPucungStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKrPucungStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKrPucungStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKrPucungStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKrPucung.addLayerToMap();
         //markerDayeuhluhur();
         markerKrPucung();
@@ -726,8 +476,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKawunganten;
         layerKawunganten = new GeoJsonLayer(mMap, R.raw.kawunganten, getApplicationContext());
         GeoJsonPolygonStyle layerKawungantenStyle = layerKawunganten.getDefaultPolygonStyle();
-        layerKawungantenStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKawungantenStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKawungantenStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKawungantenStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKawunganten.addLayerToMap();
         //markerDayeuhluhur();
         markerKawunganteng();
@@ -741,8 +491,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKdreja;
         layerKdreja = new GeoJsonLayer(mMap, R.raw.kedungreja, getApplicationContext());
         GeoJsonPolygonStyle layerKdrejaStyle = layerKdreja.getDefaultPolygonStyle();
-        layerKdrejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKdrejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKdrejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKdrejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKdreja.addLayerToMap();
         //markerDayeuhluhur();
         markerKdreja();
@@ -756,8 +506,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKesugihan;
         layerKesugihan = new GeoJsonLayer(mMap, R.raw.kesugihan, getApplicationContext());
         GeoJsonPolygonStyle layerKesugihanStyle = layerKesugihan.getDefaultPolygonStyle();
-        layerKesugihanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKesugihanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKesugihanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKesugihanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKesugihan.addLayerToMap();
         //markerDayeuhluhur();
         //layerKesugihan.addLayerToMap();
@@ -772,8 +522,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerKroya;
         layerKroya = new GeoJsonLayer(mMap, R.raw.kroya, getApplicationContext());
         GeoJsonPolygonStyle layerKroyaStyle = layerKroya.getDefaultPolygonStyle();
-        layerKroyaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerKroyaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerKroyaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerKroyaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerKroya.addLayerToMap();
         //markerDayeuhluhur();
         markerKroya();
@@ -787,8 +537,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerMajenang;
         layerMajenang = new GeoJsonLayer(mMap, R.raw.majenang, getApplicationContext());
         GeoJsonPolygonStyle layerMajenangluhurStyle = layerMajenang.getDefaultPolygonStyle();
-        layerMajenangluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerMajenangluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerMajenangluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerMajenangluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerMajenang.addLayerToMap();
         //markerDayeuhluhur();
         markerMajenang();
@@ -802,8 +552,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerSidareja;
         layerSidareja = new GeoJsonLayer(mMap, R.raw.sidareja, getApplicationContext());
         GeoJsonPolygonStyle layerSidarejaStyle = layerSidareja.getDefaultPolygonStyle();
-        layerSidarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerSidarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerSidarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerSidarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerSidareja.addLayerToMap();
         //markerDayeuhluhur();
         markerSidareja();
@@ -817,18 +567,14 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonLayer layerWanareja;
         layerWanareja = new GeoJsonLayer(mMap, R.raw.wanareja, getApplicationContext());
         GeoJsonPolygonStyle layerWanarejaStyle = layerWanareja.getDefaultPolygonStyle();
-        layerWanarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.blue));
-        layerWanarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerWanarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerWanarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         layerWanareja.addLayerToMap();
         markerDayeuhluhur();
         markerWanareja();
     }
 
     public void tampilIndustri(View v){
-        hapusMarker();
-        hapusIwak();
-        hapusPariwisata();
-        hapusWedus();
         palaDayeuhluhur();
         kelapaWanareja();
         kelapaKedungreja();
@@ -836,39 +582,71 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         //udang();
     }
     public void tampilPariwisata(View v){
-        hapusMarker();
-        hapusIndustri();
-        hapusWedus();
-        hapusIwak();
         airpanascipari();
         hutanpayau();
         sleko();
         momongan();
     }
     public void tampilIkan(View v){
-        hapusMarker();
-        hapusIndustri();
-        hapusPariwisata();
-        hapusWedus();
         sidat();
         udang();
     }
     public void tampilTernak(View v){
-        hapusMarker();
-        hapusPariwisata();
-        hapusIndustri();
-        hapusIwak();
         sapiDayeuhluhur();
         sapiMajenang();
         sapiWanareja();
         kambingKrpucung();
+    }
+    private void showIndustriAdipala() {
+        mMap.addMarker(new MarkerOptions()
+                .position(GITARADIPALA)
+                .title("Produsen Gitar Suwanto")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(GULAKELAPAADIPALA)
+                .title("Gula Kelapa Adipala")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(GULAKRISTALADIPALA)
+                .title("Gula Kristal Adipala")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(JIPANGADIPALA)
+                .title("Sentra Produksi Jipang Adipala")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(PASARADIPALA)
+                .title("Pasar Adipala")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(SALEPISANGADIPALA)
+                .title("Pusat Sale Pisang")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(SERIPINGPISANGADIPALA)
+                .title("Seriping Pisang Adipala")
+                //.snippet("Jumlah Penduduk 71.383 orang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
     }
     private void markerBantarsari() {
         mMap.addMarker(new MarkerOptions()
                 .position(BANTARSARI)
                 .title("Kecamatan Bantarsari")
                 .snippet("Jumlah Penduduk 71.383 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerBinangun() {
@@ -876,7 +654,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(BINANGUN)
                 .title("Kecamatan Binangun")
                 .snippet("Jumlah Penduduk 66.522 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerClpSelatan() {
@@ -884,7 +662,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(CILACAPSELATAN)
                 .title("Kecamatan Cilacap Selatan")
                 .snippet("Jumlah Penduduk 89.709 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerClpTengah() {
@@ -892,7 +670,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(CILACAPTENGAH)
                 .title("Kecamatan Cilacap Tengah")
                 .snippet("Jumlah Penduduk 89.709 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerClpUtara() {
@@ -900,7 +678,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(CILACAPUTARA)
                 .title("Kecamatan Cilaap Utara")
                 .snippet("Jumlah Penduduk 81.524 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerCimanggu() {
@@ -908,7 +686,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(CIMANGGU)
                 .title("Kecamatan Cimanggu")
                 .snippet("Jumlah Penduduk 102.219 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerCipari() {
@@ -916,7 +694,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(CIPARI)
                 .title("Kecamatan Cipari")
                 .snippet("Jumlah Penduduk 64.379 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerDayeuhluhur() {
@@ -924,7 +702,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(DAYEUHLUHUR)
                 .title("Kecamatan Dayeuhluhur")
                 .snippet("Jumlah Penduduk 48.809 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerGandrungmangu() {
@@ -932,7 +710,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(GANDRUNGMANGU)
                 .title("Kecamatan Gandrungmangu")
                 .snippet("Jumlah Penduduk 107.169 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerJeruklegi() {
@@ -940,7 +718,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(JERUKLEGI)
                 .title("Kecamatan Jeruklegi")
                 .snippet("Jumlah Penduduk 7.705 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKpLaut() {
@@ -948,7 +726,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KAMPUNGLAUT)
                 .title("Kecamatan Kampung Laut")
                 .snippet("Jumlah Penduduk 15.043 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKrPucung() {
@@ -956,7 +734,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KARANGPUCUNG)
                 .title("Kecamatan Karang Pucung")
                 .snippet("Jumlah Penduduk 73.825 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKawunganteng() {
@@ -964,7 +742,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KAWUNGANTEN)
                 .title("Kecamatan Kawunganten")
                 .snippet("Jumlah Penduduk 83.753 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKdreja() {
@@ -972,7 +750,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KEDUNGREJA)
                 .title("Kecamatan Kedungreja")
                 .snippet("Jumlah Penduduk 84.557 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKesugihan() {
@@ -980,7 +758,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KESUGIHAN)
                 .title("Kecamatan Kesugihan")
                 .snippet("Jumlah Penduduk 129.580 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerKroya() {
@@ -988,7 +766,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(KROYA)
                 .title("Kecamatan Kroya")
                 .snippet("Jumlah Penduduk 113.211 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerMajenang() {
@@ -996,7 +774,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(MAJENANG)
                 .title("Kecamatan Majenang")
                 .snippet("Jumlah Penduduk 135.392 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerMaos() {
@@ -1004,7 +782,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(MAOS)
                 .title("Kecamatan Maos")
                 .snippet("Jumlah Penduduk 47.006 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerNusawungu() {
@@ -1012,7 +790,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(NUSAWUNGU)
                 .title("Kecamatan Nusawungu")
                 .snippet("Jumlah Penduduk 83.184 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerPatimuan() {
@@ -1020,7 +798,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(PATIMUAN)
                 .title("Kecamatan Patimuan")
                 .snippet("Jumlah Penduduk 48.728 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerSampang() {
@@ -1028,7 +806,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(SAMPANG)
                 .title("Kecamatan Sampang")
                 .snippet("Jumlah Penduduk 42.372 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerSidareja() {
@@ -1036,7 +814,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(SIDAREJA)
                 .title("Kecamatan Sidareja")
                 .snippet("Jumlah Penduduk 61.972 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
     private void markerWanareja(){
@@ -1044,7 +822,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(WANAREJA)
                 .title("Kecamatan Wanareja")
                 .snippet("Jumlah Penduduk 102.857 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.location))
         );
     }
     private void markerAdipala(){
@@ -1052,7 +830,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(ADIPALA)
                 .title("Kecamatan Adipala")
                 .snippet("Jumlah Penduduk 91.069 orang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.iconkecamatan))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.location))
         );
     }
     private void airpanascipari(){
@@ -1159,52 +937,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Pengolahan Kelapa Terpadu Kedungreja")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
     }
-    private void hapusMarker(){
-        mMap.addMarker(new MarkerOptions()
-        .position(KROYA)
-        .visible(false));
-    }
-    private void hapusIndustri(){
-        mMap.addMarker(new MarkerOptions()
-        .position(PALADAYEUHLUHUR)
-         .visible(false));
-
-        mMap.addMarker(new MarkerOptions()
-                .position(KELAPAWANAREJA)
-                .visible(false));
-
-        mMap.addMarker(new MarkerOptions()
-                .position(KELAPAKEDUNGREJA)
-                .visible(false));
-
-        mMap.addMarker(new MarkerOptions()
-                .position(GULAJERUKLEGI)
-                .visible(false));
-    }
-
-    private void hapusPariwisata(){
-        mMap.addMarker(new MarkerOptions()
-                .position(AIRPANASCIPARI)
-                .position(HUTANPAYAU)
-                .position(WISATASLEKO)
-                .position(WISATAMOMONGAN)
-                .visible(false));
-    }
-    private void hapusIwak(){
-        mMap.addMarker(new MarkerOptions()
-                .position(UDANGVANAME)
-                .position(SIDATCILACAP)
-                .visible(false));
-    }
-    private void hapusWedus(){
-        mMap.addMarker(new MarkerOptions()
-                .position(SAPIWANAREJA)
-                .position(SAPIMAJENANG)
-                .position(SAPIDAYEUHLUHUR)
-                .position(KAMBINGKRPUCUNG)
-                .visible(false));
-    }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -1223,5 +955,24 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         Canvas canvas = new Canvas(bitmap);
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+        Spinner spinner = (Spinner)parent;
+        Spinner spinner1 = (Spinner)parent;
+        if (spinner.getId() == R.id.spKecamatan){
+            strKecamatan = parent.getSelectedItem().toString();
+        }
+        else if (spinner1.getId() == R.id.spPotensi){
+            strPotensi = parent.getSelectedItem().toString();
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
