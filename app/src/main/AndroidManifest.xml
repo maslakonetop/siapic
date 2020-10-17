@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.co.gesangmultimedia.petapotensicilacap">
+    package="id.co.gesangmultimedia.siapic">
 
     <application
         android:allowBackup="true"
@@ -12,28 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".PdfBantarsari"></activity>
-        <activity android:name=".PdfAdipala" />
-        <activity android:name=".BerandaSop" />
-        <activity android:name=".ShowPdf" />
-        <activity android:name=".TampilkanVideo" />
-        <activity android:name=".LaporanBug" />
-        <activity android:name=".Pengaturan" />
-        <activity android:name=".About" />
-        <activity android:name=".VideoPotensi" />
-        <activity android:name=".CumstomInfoContent" />
-        <activity android:name=".RtrwCilacap" />
-        <activity android:name=".KawasanIndustri" />
-        <activity android:name=".PotensiUmum" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="id.co.gesangmultimedia.siapic.PdfBantarsari"></activity>
+        <activity android:name="id.co.gesangmultimedia.siapic.PdfAdipala" />
+        <activity android:name="id.co.gesangmultimedia.siapic.BerandaSop" />
+        <activity android:name="id.co.gesangmultimedia.siapic.ShowPdf" />
+        <activity android:name="id.co.gesangmultimedia.siapic.TampilkanVideo" />
+        <activity android:name="id.co.gesangmultimedia.siapic.LaporanBug" />
+        <activity android:name="id.co.gesangmultimedia.siapic.Pengaturan" />
+        <activity android:name="id.co.gesangmultimedia.siapic.About" />
+        <activity android:name="id.co.gesangmultimedia.siapic.VideoPotensi" />
+        <activity android:name="id.co.gesangmultimedia.siapic.CumstomInfoContent" />
+        <activity android:name="id.co.gesangmultimedia.siapic.RtrwCilacap" />
+        <activity android:name="id.co.gesangmultimedia.siapic.KawasanIndustri" />
+        <activity android:name="id.co.gesangmultimedia.siapic.PotensiUmum" />
+        <activity android:name="id.co.gesangmultimedia.siapic.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DataKecamatan" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="id.co.gesangmultimedia.siapic.DataKecamatan" />
+        <activity android:name="id.co.gesangmultimedia.siapic.MainActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -47,7 +47,7 @@
     </application>
 
     <permission
-        android:name="id.co.gesangmultimedia.petapotensicilacap.MAPS_RECEIVE"
+        android:name="id.co.gesangmultimedia.siapic.MAPS_RECEIVE"
         android:protectionLevel="signature" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

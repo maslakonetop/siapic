@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "id.co.gesangmultimedia.petapotensicilacap"
+        applicationId "id.co.gesangmultimedia.siapic"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
