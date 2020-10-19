@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "id.co.gesangmultimedia.siapic"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -40,7 +40,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.3.1'
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
-    implementation 'com.emredavarci:CircleProgressBar:1.0.8'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
