@@ -1,11 +1,11 @@
 package id.co.gesangmultimedia.siapic;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -57,11 +57,15 @@ public class ShowPdf extends AppCompatActivity {
             PDFView pdfView = findViewById(R.id.pdfView);
             pdfView.fromAsset("pdfdayeuhluhur.pdf").load();
         }
+        else if (txtpdf.getText().equals("Kecamatan Gandrungmangu")){
+            PDFView pdfView = findViewById(R.id.pdfView);
+            pdfView.fromAsset("pdfgandrungmangu.pdf").load();
+        }
         else if (txtpdf.getText().equals("Kecamatan Jeruklegi")){
             PDFView pdfView = findViewById(R.id.pdfView);
             pdfView.fromAsset("pdfjeruklegi.pdf").load();
         }
-        else if (txtpdf.getText().equals("Kecamatan Kampunglaut")){
+        else if (txtpdf.getText().equals("Kecamatan Kampung Laut")){
             PDFView pdfView = findViewById(R.id.pdfView);
             pdfView.fromAsset("pdfkampunglaut.pdf").load();
         }

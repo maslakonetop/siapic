@@ -4,6 +4,7 @@
     <permission
         android:name="id.co.gesangmultimedia.siapic.MAPS_RECEIVE"
         android:protectionLevel="signature" />
+    <uses-permission android:name="id.co.gesangmultimedia.siapic.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="your.package.name.permission.MAPS_RECEIVE" />
@@ -15,16 +16,14 @@
 
     <application
         android:allowBackup="true"
-        android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/siapik"
         android:installLocation="auto"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/siapik"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="id.co.gesangmultimedia.siapic.PdfBantarsari"></activity>
-        <activity android:name="id.co.gesangmultimedia.siapic.PdfAdipala" />
         <activity android:name="id.co.gesangmultimedia.siapic.BerandaSop" />
         <activity android:name="id.co.gesangmultimedia.siapic.ShowPdf" />
         <activity android:name="id.co.gesangmultimedia.siapic.TampilkanVideo" />

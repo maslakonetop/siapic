@@ -4,6 +4,247 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Pengaturan">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="767dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="410dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="620dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="208dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline62"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:layout_constraintVertical_bias="0.266"
+        app:srcCompat="@drawable/apik"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/Pengaturan"
+        android:layout_width="219dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/arial"
+        android:text="Pengaturan Aplikasi (Demo Version)"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline62"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.714"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtKontrol"
+        android:layout_width="181dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="185dp"
+        android:fontFamily="@font/arial"
+        android:text="Kontrol Aplikasi"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.047"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btKembali"
+        android:layout_width="89dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/back"
+        android:onClick="balik"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline63"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline50"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btSimpan"
+        android:layout_width="89dp"
+        android:layout_height="83dp"
+        android:background="@drawable/flopydisk"
+        android:onClick="simpan"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/btKembali"
+        app:layout_constraintEnd_toStartOf="@+id/guideline63"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/btKembali"
+        app:layout_constraintTop_toTopOf="@+id/btKembali"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="176dp"
+        android:layout_height="179dp"
+        android:tooltipText="Modus Aplikasi"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/guideline63"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline62"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prioritas Untuk Background Service"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chMemory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hemat Memory"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chBatere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modus Hemat Batere"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chTampilan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modus Tampilan (Batere akan boros)"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <Switch
+        android:id="@+id/swGelap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode Gelap"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="@+id/guideline63"
+        app:layout_constraintTop_toTopOf="@+id/guideline62"
+        app:layout_constraintVertical_bias="0.028"
+        tools:ignore="UseSwitchCompatOrMaterialXml, HardcodedText" />
+
+    <Switch
+        android:id="@+id/swMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Map Mode Satelit"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="@+id/swGelap"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/swGelap"
+        app:layout_constraintTop_toBottomOf="@+id/swGelap"
+        app:layout_constraintVertical_bias="0.049"
+        tools:ignore="UseSwitchCompatOrMaterialXml, HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/chModeAdmin"
+        android:layout_width="260dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:text="Mode Admin (Anda Harus Login)"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtKontrol" />
+
+    <CheckBox
+        android:id="@+id/chGambarKecil"
+        android:layout_width="195dp"
+        android:layout_height="44dp"
+        android:text="Mode Tanpa Gambar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chModeAdmin"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/chLite"
+        android:layout_width="195dp"
+        android:layout_height="44dp"
+        android:text="Aktifkan Mode Lite"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chGambarKecil"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

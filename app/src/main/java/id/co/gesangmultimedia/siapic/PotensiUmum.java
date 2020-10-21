@@ -1,6 +1,7 @@
 package id.co.gesangmultimedia.siapic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -247,4 +248,8 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         Toast.makeText(this, "Lokasi saya di klik", Toast.LENGTH_SHORT).show();
     }
 
+    public void balik(View view) {
+        Intent balik = new Intent(PotensiUmum.this, MainActivity.class);
+        startActivity(balik);
+    }
 }

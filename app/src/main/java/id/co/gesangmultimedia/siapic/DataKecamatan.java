@@ -556,7 +556,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showIndustriCimanggu();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Pariwisata"))){
+                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Industri"))){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -567,7 +567,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     showWisataCimanggu();
                     animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Perikanan"))){
+                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Perikanan"))){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -578,7 +578,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     showKebunCimanggu();
                     animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Pertanian"))){
+                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Pertanian"))){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -588,7 +588,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showPertanianCimanggu();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Perkebunan"))){
+                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Perkebunan"))){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -599,7 +599,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     showKebunCimanggu();
                     animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Peternakan"))){
+                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Peternakan"))){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -724,7 +724,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showTernakDayeuhluhur();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Industri"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Industri"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -734,7 +734,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showIndustriGandrungmangu();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Pariwisata"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Pariwisata"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -745,7 +745,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     showWisataGandrungmangu();
                     animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Perikanan"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Perikanan"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -755,7 +755,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showIkanGandrungmangu();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Perkebunan"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Perkebunan"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -766,7 +766,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     showKebunGandrungmangu();
                     animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Pertanian"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Pertanian"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -775,8 +775,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                         e.printStackTrace();
                     }
                     showTaniGandrungmangu();
+                    animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmagu") && (strPotensi.equals("Peternakan"))){
+                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Peternakan"))){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -1606,7 +1607,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         if (mMap == null) {
             return;
         }
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAP, 10f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAP, 9f));
 
         GeoJsonLayer geoJsonLayer = null;
         try {
@@ -1641,7 +1642,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BANTARSARI, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BANTARSARI, 12f));
         GeoJsonLayer layerBantarsari;
         layerBantarsari =new GeoJsonLayer(mMap, R.raw.bantarsari, getApplicationContext());
         GeoJsonPolygonStyle layerBantarsariStyle = layerBantarsari.getDefaultPolygonStyle();
@@ -1656,7 +1657,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 12f));
         GeoJsonLayer layerMaos;
         layerMaos = new GeoJsonLayer(mMap, R.raw.maos, getApplicationContext());
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
@@ -1670,7 +1671,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BINANGUN, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BINANGUN, 12f));
         GeoJsonLayer layerBinangun;
         layerBinangun = new GeoJsonLayer(mMap, R.raw.binagun, getApplicationContext());
         GeoJsonPolygonStyle layerBinangunStyle = layerBinangun.getDefaultPolygonStyle();
@@ -1684,7 +1685,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPSELATAN, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPSELATAN, 12f));
         GeoJsonLayer layerSelatan;
         layerSelatan = new GeoJsonLayer(mMap, R.raw.cilacapselatan, getApplicationContext());
         GeoJsonPolygonStyle layerSelatanStyle = layerSelatan.getDefaultPolygonStyle();
@@ -1698,7 +1699,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPTENGAH, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPTENGAH, 12f));
         GeoJsonLayer layerTengah;
         layerTengah = new GeoJsonLayer(mMap, R.raw.cilacaptengah, getApplicationContext());
         GeoJsonPolygonStyle layerTengahStyle = layerTengah.getDefaultPolygonStyle();
@@ -1712,7 +1713,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPUTARA, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAPUTARA, 12f));
         GeoJsonLayer layerUtara;
         layerUtara = new GeoJsonLayer(mMap, R.raw.cilacaputara, getApplicationContext());
         GeoJsonPolygonStyle layerUtaraStyle = layerUtara.getDefaultPolygonStyle();
@@ -1726,7 +1727,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(NUSAWUNGU, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(NUSAWUNGU, 12f));
         GeoJsonLayer layerNusawungu;
         layerNusawungu = new GeoJsonLayer(mMap, R.raw.nusawungu, getApplicationContext());
         GeoJsonPolygonStyle layerNusawunguStyle = layerNusawungu.getDefaultPolygonStyle();
@@ -1740,7 +1741,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CIMANGGU, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CIMANGGU, 12f));
         GeoJsonLayer layerCimanggu;
         layerCimanggu = new GeoJsonLayer(mMap, R.raw.cimanggu, getApplicationContext());
         GeoJsonPolygonStyle layerCimangguStyle = layerCimanggu.getDefaultPolygonStyle();
@@ -1754,7 +1755,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 12f));
         GeoJsonLayer layerPatimuan;
         layerPatimuan = new GeoJsonLayer(mMap, R.raw.patimuan, getApplicationContext());
         GeoJsonPolygonStyle layerPatimuanStyle = layerPatimuan.getDefaultPolygonStyle();
@@ -1768,7 +1769,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 12f));
         GeoJsonLayer layerMaos;
         layerMaos = new GeoJsonLayer(mMap, R.raw.maos, getApplicationContext());
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
@@ -1782,7 +1783,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SAMPANG, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SAMPANG, 12f));
         GeoJsonLayer layerSampang;
         layerSampang = new GeoJsonLayer(mMap, R.raw.sampang, getApplicationContext());
         GeoJsonPolygonStyle layerSampangStyle = layerSampang.getDefaultPolygonStyle();
@@ -1796,7 +1797,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DAYEUHLUHUR, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DAYEUHLUHUR, 12f));
         GeoJsonLayer layerDayeuhluhur;
         layerDayeuhluhur = new GeoJsonLayer(mMap, R.raw.dayeuhluhur, getApplicationContext());
         GeoJsonPolygonStyle layerDayeuhluhurStyle = layerDayeuhluhur.getDefaultPolygonStyle();
@@ -1810,7 +1811,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(GANDRUNGMANGU, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(GANDRUNGMANGU, 12f));
         GeoJsonLayer layerGandrungmangu;
         layerGandrungmangu = new GeoJsonLayer(mMap, R.raw.gandrungmangu, getApplicationContext());
         GeoJsonPolygonStyle layerGandrungmanguStyle = layerGandrungmangu.getDefaultPolygonStyle();
@@ -1824,7 +1825,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(JERUKLEGI, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(JERUKLEGI, 12f));
         GeoJsonLayer layerJeruklegi;
         layerJeruklegi = new GeoJsonLayer(mMap, R.raw.jeruklegi, getApplicationContext());
         GeoJsonPolygonStyle layerJeruklegiStyle = layerJeruklegi.getDefaultPolygonStyle();

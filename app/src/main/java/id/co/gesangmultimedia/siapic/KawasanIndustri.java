@@ -1,9 +1,7 @@
 package id.co.gesangmultimedia.siapic;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -14,6 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -426,4 +427,8 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
+    public void balik(View view) {
+        Intent balik = new Intent(KawasanIndustri.this, MainActivity.class);
+        startActivity(balik);
+    }
 }

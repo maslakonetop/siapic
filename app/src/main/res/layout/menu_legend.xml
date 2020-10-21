@@ -1,543 +1,397 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/_250sdp"
-    android:layout_height="@dimen/_188sdp"
-    android:background="@color/ghostwhite">
+    android:layout_width="350dp"
+    android:layout_height="125dp"
+    android:background="@color/snow"
+    tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:id="@+id/imgCagarAlam"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="@dimen/_7sdp"
-        android:layout_marginTop="@dimen/_2sdp"
-        android:layout_marginEnd="@dimen/_2sdp"
-        android:layout_marginBottom="@dimen/_2sdp"
-        android:background="@color/burlywood"
-        android:paddingStart="@dimen/_1sdp"
-        android:layout_alignParentTop="true"
-        android:paddingTop="@dimen/_2sdp"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/imgCagar"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/burlywood" />
 
-    <TextView
-        android:layout_width="@dimen/_60sdp"
-        android:id="@+id/tvCagarAlam"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_toRightOf="@+id/imgCagarAlam"
-        android:layout_marginRight="@dimen/_1sdp"
-        android:layout_marginLeft="@dimen/_1sdp"
-        android:text="Cagar Alam"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText"/>
+        <TextView
+            android:id="@+id/txtCagat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Cagar Alam"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <ImageView
-        android:id="@+id/imgHutanProduksi"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_toRightOf="@+id/tvCagarAlam"
-        android:background="@color/grey"
-        android:paddingStart="@dimen/_3sdp"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/imgHutanProduksi"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="9dp"
+            android:background="@color/grey" />
 
-    <TextView
-        android:id="@+id/tvHutanProduksi"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginRight="@dimen/_1sdp"
-        android:layout_toRightOf="@+id/imgHutanProduksi"
-        android:text="Hutan Produksi"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtHutanProd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="HutanProduksi"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <ImageView
-        android:id="@+id/imgAnakan"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_toEndOf="@+id/tvHutanProduksi"
-        android:layout_toRightOf="@+id/tvHutanProduksi"
-        android:background="@color/hotpink"
-        android:paddingStart="@dimen/_3sdp"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/imgAnakan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="2dp"
+            android:background="@color/hotpink" />
 
-    <TextView
-        android:id="@+id/tvAnakan"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="@dimen/_1sdp"
-        android:layout_toRightOf="@+id/imgAnakan"
-        android:textSize="@dimen/_7sdp"
-        android:text="Obsv Segara Anakan"
-        android:textColor="@color/black"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtAnakan"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Konservasi Segara Anakan"
+            android:textColor="@color/black"
+            android:textSize="5sp" />
 
-    <ImageView
-        android:id="@+id/imgMangrove"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgCagarAlam"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="-236dp"
-        android:layout_marginTop="3dp"
-        android:background="@color/gold"
-        android:paddingStart="@dimen/_3sdp"
-        android:paddingTop="@dimen/_8sdp"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/imgMangrove"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="4dp"
+            android:background="@color/gold" />
 
-    <TextView
-        android:id="@+id/tvMangrove"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvCagarAlam"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="@dimen/_6sdp"
-        android:layout_marginRight="@dimen/_1sdp"
-        android:layout_toRightOf="@id/imgMangrove"
-        android:text="Kaw. Perlindungan Mangrove"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtMangrove"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Perlindungan Mangrove"
+            android:textColor="@color/black"
+            android:textSize="5sp" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgResapAir"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgHutanProduksi"
-        android:layout_alignParentStart="false"
-        android:layout_alignParentBottom="false"
-        android:layout_marginStart="@dimen/_93sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:layout_marginTop="6dp"
-        android:background="@color/deepskyblue"
-        android:paddingStart="@dimen/_3sdp"
-        android:paddingTop="@dimen/_8sdp"
-        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="18dp">
 
-    <TextView
-        android:id="@+id/tvResAir"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvCagarAlam"
-        android:layout_marginLeft="@dimen/_87sdp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="@dimen/_1sdp"
-        android:layout_toRightOf="@id/imgMangrove"
-        android:text="Kaw. Resapan Air"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgResair"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/deepskyblue" />
 
-    <ImageView
-        android:id="@+id/imgKPI"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgAnakan"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="@dimen/_100sdp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="-109dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvResAir"
-        android:background="@color/maroon" />
+        <TextView
+            android:id="@+id/txtResAir"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Resapan Air"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tcKPI"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvAnakan"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/imgKPI"
-        android:text="Kawasan Perunt. Idust"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText"/>
+        <ImageView
+            android:id="@+id/imgKPI"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="1dp"
+            android:background="@color/maroon" />
 
-    <ImageView
-        android:id="@+id/imgMataAir"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgMangrove"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="@dimen/_7sdp"
-        android:layout_marginTop="@dimen/_3sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:background="@color/mediumorchid" />
+        <TextView
+            android:id="@+id/txtKPI"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Peruntukan Industri"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
 
-    <TextView
-        android:id="@+id/tvMataAir"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvAnakan"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="38dp"
-        android:layout_toEndOf="@+id/imgMataAir"
-        android:text="Kaw. Perlind. Mata Air"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgMataAir"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/mediumorchid" />
 
-    <ImageView
-        android:id="@+id/imgNonHutan"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgResapAir"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="0dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvMataAir"
-        android:background="@color/olive" />
+        <TextView
+            android:id="@+id/txtMataAir"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Mata Air"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tvNonHutan"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvResAir"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@+id/imgNonHutan"
-        android:text="Kaw. Non Hutan"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgNonHutan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/olive" />
 
-    <ImageView
-        android:id="@+id/imgLongsor"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgKPI"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="-111dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvNonHutan"
-        android:background="@color/lightcoral" />
+        <TextView
+            android:id="@+id/txtNonHutan"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Non Hutan"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvLongsor"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tcKPI"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@+id/imgLongsor"
-        android:text="Longsor"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="45dp">
 
-    <ImageView
-        android:id="@+id/imgDesa"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgMataAir"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="-218dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="113dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvNonHutan"
-        android:background="@color/orange" />
+        <ImageView
+            android:id="@+id/imgLongsor"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/lightcoral" />
 
-    <TextView
-        android:id="@+id/tvDesa"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvMataAir"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="2dp"
-        android:layout_toEndOf="@+id/imgDesa"
-        android:text="Kaw. Perdesaan"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtLongsor"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Longsor"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <ImageView
-        android:id="@+id/imgPerkebunan"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgNonHutan"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="0dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvDesa"
-        android:background="@color/forestgreen" />
+        <ImageView
+            android:id="@+id/imgDesa"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="1dp"
+            android:background="@color/orange" />
 
-    <TextView
-        android:id="@+id/tvPerkebunan"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvNonHutan"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/imgPerkebunan"
-        android:text="Kaw. Perkebunan"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtKDesa"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Pedesaan"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <ImageView
-        android:id="@+id/imgKota"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgLongsor"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="-111dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvPerkebunan"
-        android:background="@color/mediumviolet" />
+        <ImageView
+            android:id="@+id/imgPerkebunan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/forestgreen" />
 
-    <TextView
-        android:id="@+id/tvKota"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvLongsor"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/imgKota"
-        android:text="Kaw. Perkotaan"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtPedesaan"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Perkebunan"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <ImageView
-        android:id="@+id/imgIbuKota"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgDesa"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="-216dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="111dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvPerkebunan"
-        android:background="@color/darkturquoise" />
+        <ImageView
+            android:id="@+id/imgPerkotaan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/mediumviolet" />
 
-    <TextView
-        android:id="@+id/tvIbuKota"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvDesa"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@+id/imgIbuKota"
-        android:text="Kaw. Ibu Kota"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtKota"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Perkotaan"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgLahanBasah"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgPerkebunan"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="-1dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvIbuKota"
-        android:background="@color/tan" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="70dp">
 
-    <TextView
-        android:id="@+id/tvLahanBasah"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvPerkebunan"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="3dp"
-        android:layout_toEndOf="@+id/imgLahanBasah"
-        android:text="Kaw. Lahan Basah"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgIbukota"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/darkturquoise" />
 
-    <ImageView
-        android:id="@+id/imgLahanKering"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgKota"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="-112dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvLahanBasah"
-        android:background="@color/mediumaquamarine"/>
+        <TextView
+            android:id="@+id/txtIbukota"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Ibukota"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tvLahanKering"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvKota"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@+id/imgLahanKering"
-        android:text="Kaw. Lahan Kering"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgLahanBasah"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="1dp"
+            android:background="@color/tan" />
 
-    <ImageView
-        android:id="@+id/imgRawan"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgIbuKota"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="-216dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="109dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvLahanBasah"
-        android:background="@color/crimson" />
+        <TextView
+            android:id="@+id/txtLahanBasah"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Lahan Basah"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tvRawan"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvIbuKota"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/imgRawan"
-        android:text="Kaw. Rawan Bencana"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgLahanKering"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/mediumaquamarine" />
 
-    <ImageView
-        android:id="@+id/imgPantai"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvLahanBasah"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="-3dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvRawan"
-        android:background="@color/blanchedalmond"/>
+        <TextView
+            android:id="@+id/txtLahanKering"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Lahan Kering"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
 
-    <TextView
-        android:id="@+id/tvPantai"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvLahanBasah"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/imgPantai"
-        android:text="Kaw. Sempadan Pantai"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/imgNonRawan"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/crimson" />
 
-    <ImageView
-        android:id="@+id/imgInduk"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgLahanKering"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="-113dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvRawan"
-        android:background="@color/steelblue" />
+        <TextView
+            android:id="@+id/txtRawan"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Rawan Bencana"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvInduk"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvLahanKering"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:layout_toEndOf="@+id/imgInduk"
-        android:text="Sempadan Sungai Induk"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="97dp">
 
-    <ImageView
-        android:id="@+id/imgKecil"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgRawan"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="-67dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginRight="68dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvRawan"
-        android:background="@color/peru" />
+        <ImageView
+            android:id="@+id/imgPantai"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/blanchedalmond" />
 
-    <TextView
-        android:id="@+id/tvKecil"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgPantai"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="8dp"
-        android:layout_toEndOf="@+id/imgKecil"
-        android:text="Sempadan Sungai Kecil"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtPantai"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Sempadan Pantai"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
 
-    <ImageView
-        android:id="@+id/imgSelok"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/tvPantai"
-        android:layout_alignParentLeft="false"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="-63dp"
-        android:layout_toLeftOf="@+id/tvResAir"
-        android:layout_toEndOf="@+id/tvKecil"
-        android:background="@color/fuchsia" />
+        <ImageView
+            android:id="@+id/imgInduk"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="1dp"
+            android:background="@color/steelblue" />
 
-    <TextView
-        android:id="@+id/tvSelok"
-        android:layout_width="@dimen/_60sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_below="@+id/imgInduk"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="9dp"
-        android:layout_toEndOf="@+id/imgSelok"
-        android:text="Wisata Gn. Selok"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_7sdp"
-        tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/txtInduk"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Sempadan Sungai Induk"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
 
-    <Button
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_below="@+id/imgSelok"
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="@dimen/_89sdp"
-        android:background="@drawable/ic_twotone_keyboard_backspace_24"/>
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imgKecil"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/peru" />
+
+        <TextView
+            android:id="@+id/txtKecil"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Kaw. Sempadan Sungai Kecil"
+            android:textColor="@color/black"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:id="@+id/imgSelok"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/fuchsia" />
+
+        <TextView
+            android:id="@+id/txtSelok"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/arial"
+            android:text="Wisata Gn Selok"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
