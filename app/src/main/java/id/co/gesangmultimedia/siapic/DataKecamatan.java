@@ -4,10 +4,12 @@ import android.animation.AnimatorInflater;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.navigation.FloatingWindow;
 
@@ -3594,6 +3597,20 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(cilacap));
         //mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 1000, null);
         showCilacap(null);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION
+                        , android.Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            } else {
+                mMap.setMyLocationEnabled(true);
+            }
+        } else {
+            mMap.setMyLocationEnabled(true);
+        }
+        //mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setAllGesturesEnabled(true);
 
     }
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {

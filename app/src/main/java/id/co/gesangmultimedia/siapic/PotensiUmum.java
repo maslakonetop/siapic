@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -23,7 +24,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
 import com.google.maps.android.data.geojson.GeoJsonPolygonStyle;
@@ -192,35 +192,20 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         sapiDayeuhluhur();
         palaDayeuhluhur();
         airpanascipari();
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        MarkerInfoWindowAdapter markerInfoWindowAdapter = new MarkerInfoWindowAdapter(getApplicationContext());
-        mMap.setInfoWindowAdapter(markerInfoWindowAdapter);
-        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-            @Override
-            public void onMapClick(LatLng arg0) {
-                mMap.clear();
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(arg0);
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(arg0));
-                Marker marker = mMap.addMarker(markerOptions);
-                marker.showInfoWindow();
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION
+                        , android.Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            } else {
+                mMap.setMyLocationEnabled(true);
             }
-        });
-        mMap.setMyLocationEnabled(true);
+        } else {
+            mMap.setMyLocationEnabled(true);
+        }
+        //mMap.getUiSettings().setMyLocationButtonEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(true);
-        mMap.getUiSettings().setCompassEnabled(true);
-        mMap.setOnMyLocationButtonClickListener(this);
-        mMap.setOnMyLocationClickListener(this);
+        mMap.getUiSettings().setAllGesturesEnabled(true);
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
@@ -247,9 +232,10 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         Toast.makeText(this, "Lokasi saya di klik", Toast.LENGTH_SHORT).show();
     }
 
-
     public void rumah(View view) {
         Intent balik = new Intent(PotensiUmum.this, MainActivity.class);
         startActivity(balik);
     }
+
+
 }

@@ -81,27 +81,31 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="590dp"
+        android:layout_width="595dp"
         android:layout_height="575dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:context=".MapDataKecamatan" >
+        app:layout_constraintVertical_bias="0.995"
+        tools:context=".MapDataKecamatan"></androidx.fragment.app.FragmentContainerView>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="514dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="utama"
-            app:backgroundTint="@color/aqua"
-            app:srcCompat="@drawable/back" />
-    </androidx.fragment.app.FragmentContainerView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="utama"
+        app:backgroundTint="@color/aqua"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.995"
+        app:srcCompat="@drawable/back" />
 
     <Button
         android:id="@+id/btnPeta"
