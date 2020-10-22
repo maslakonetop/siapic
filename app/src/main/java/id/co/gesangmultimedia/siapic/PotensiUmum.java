@@ -48,7 +48,6 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         assert mapFragment != null;
         mapFragment.getMapAsync(this);
-        //mMap = mapFragment.getMap();
 
     }
 
@@ -248,7 +247,8 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         Toast.makeText(this, "Lokasi saya di klik", Toast.LENGTH_SHORT).show();
     }
 
-    public void balik(View view) {
+
+    public void rumah(View view) {
         Intent balik = new Intent(PotensiUmum.this, MainActivity.class);
         startActivity(balik);
     }

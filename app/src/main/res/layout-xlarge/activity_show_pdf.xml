@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/imgApic"
+        android:layout_width="@dimen/_176sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        app:srcCompat="@drawable/apik"
+        tool:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtPdf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/imgApic"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:clickable="false"
+        android:enabled="false"
+        android:fontFamily="@font/arial"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        tool:text="FilePdf" />
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="776dp"
+        android:layout_height="782dp"
+        android:layout_below="@+id/txtPdf"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:layout_width="165dp"
+        android:layout_height="111dp"
+        android:layout_below="@+id/pdfView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="635dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/back"
+        android:onClick="kembali" />
+
+</RelativeLayout>

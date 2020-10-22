@@ -66,7 +66,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         boolean focusable = true; // lets taps outside the popup also dismiss it
         final PopupWindow popupWindow = new PopupWindow(popupmenu, width, height, focusable);
 
-        popupWindow.showAtLocation(popupmenu, Gravity.BOTTOM, 0, 0);
+        popupWindow.showAtLocation(popupmenu, Gravity.CENTER_VERTICAL, 0, 500);
 
         popupmenu.setOnTouchListener(new View.OnTouchListener() {
             @Override

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:id="@+id/menu_profile"
+        android:title="Tentang Aplikasi"/>
+    <item android:id="@+id/menu_pengaturan"
+        android:title="Pengaturan"/>
+    <item android:id="@+id/menu_bug"
+        android:title="LaporanBug"/>
+    <item android:id="@+id/menu_keluar"
+        android:title="Keluar"/>
+</menu>

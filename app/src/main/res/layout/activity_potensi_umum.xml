@@ -47,23 +47,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.993"
         tools:context=".MapPotensiUmum"
-        tools:layout="@layout/activity_potensi_umum" >
+        tools:layout="@layout/activity_potensi_umum"/>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            app:srcCompat="@drawable/back"
-            android:onClick="balik"
-            android:focusable="true" />
-    </androidx.fragment.app.FragmentContainerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabmenu"
+        android:layout_width="93dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="44dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="rumah"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline29"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline31"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/back" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="182dp"
         android:layout_height="88dp"
-        app:srcCompat="@drawable/apik"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toStartOf="@+id/guideline19"
+        app:layout_constraintStart_toStartOf="@+id/guideline18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/apik" />
 </androidx.constraintlayout.widget.ConstraintLayout>

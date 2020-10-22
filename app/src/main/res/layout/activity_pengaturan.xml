@@ -135,52 +135,6 @@
         app:layout_constraintTop_toTopOf="@+id/btKembali"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chipGroup"
-        android:layout_width="176dp"
-        android:layout_height="179dp"
-        android:tooltipText="Modus Aplikasi"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toStartOf="@+id/guideline63"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline62"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chBackground"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Prioritas Untuk Background Service"
-            android:textColor="@color/black"
-            tools:ignore="HardcodedText" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chMemory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hemat Memory"
-            android:textColor="@color/black"
-            tools:ignore="HardcodedText" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chBatere"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Modus Hemat Batere"
-            android:textColor="@color/black"
-            tools:ignore="HardcodedText" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chTampilan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Modus Tampilan (Batere akan boros)"
-            android:textColor="@color/black"
-            tools:ignore="HardcodedText" />
-
-    </com.google.android.material.chip.ChipGroup>
-
     <Switch
         android:id="@+id/swGelap"
         android:layout_width="wrap_content"

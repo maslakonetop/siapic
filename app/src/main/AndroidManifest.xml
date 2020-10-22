@@ -17,11 +17,11 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/siapik"
+        android:icon="@drawable/ic_siapik"
         android:installLocation="auto"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/siapik"
+        android:roundIcon="@drawable/ic_siapik"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name="id.co.gesangmultimedia.siapic.BerandaSop" />

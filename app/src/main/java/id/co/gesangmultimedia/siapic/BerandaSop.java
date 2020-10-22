@@ -1,12 +1,12 @@
 package id.co.gesangmultimedia.siapic;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -30,6 +30,7 @@ public class BerandaSop extends AppCompatActivity {
         pdfOss.setMinZoom(60);
         pdfOss.setMidZoom(80);
         pdfOss.setMaxZoom(100);
+        pdfOss.setLayerType(View.LAYER_TYPE_HARDWARE,null);
     }
 
     public void clear(View view) {
@@ -43,6 +44,7 @@ public class BerandaSop extends AppCompatActivity {
         pdfJempol.setMinZoom(60);
         pdfJempol.setMidZoom(80);
         pdfJempol.setMaxZoom(100);
+        pdfJempol.setLayerType(View.LAYER_TYPE_HARDWARE,null);
     }
 
     public void gooss(View view) {
