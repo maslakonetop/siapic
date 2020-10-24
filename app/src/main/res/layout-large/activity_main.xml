@@ -20,125 +20,71 @@
 
     <Button
         android:id="@+id/btnUmum"
-        android:layout_width="194dp"
-        android:layout_height="161dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
         android:background="@drawable/menu"
         android:onClick="potensi"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="5dp"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.321"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.038"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="194dp"
-        android:layout_height="161dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/menumenu"
         android:onClick="kecamatan"
         app:layout_constraintBottom_toBottomOf="@+id/btnUmum"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintHorizontal_bias="0.548"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        android:layout_marginStart="15dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnUmum"
         app:layout_constraintTop_toTopOf="@+id/btnUmum"
-        android:layout_marginTop="15dp"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="194dp"
-        android:layout_height="161dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
         android:background="@drawable/menumenumenu"
         android:onClick="kawasan"
-        app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        android:layout_marginBottom="15dp"
         app:layout_constraintEnd_toEndOf="@+id/btnUmum"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnUmum"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        android:layout_marginTop="15dp"
-        app:layout_constraintVertical_bias="0.548" />
+        tools:layout_editor_absoluteY="523dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="267dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_width="365dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.955"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/apik"
         tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="76dp"
-        android:layout_height="69dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        android:layout_width="66dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.16"
         app:srcCompat="@drawable/pemkab"
         tools:ignore="ContentDescription" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="411dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_end="1049dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="242dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.19"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.48" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="675dp" />
-
     <Button
         android:id="@+id/button5"
-        android:layout_width="167dp"
-        android:layout_height="156dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
         android:background="@drawable/menutata"
         android:onClick="rtrw"
         app:layout_constraintBottom_toBottomOf="@+id/button4"
@@ -154,26 +100,22 @@
         android:layout_height="@dimen/_37sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        android:layout_marginTop="25dp"
-        app:layout_constraintVertical_bias="0.929"
         app:srcCompat="@drawable/dpmptsp"
         tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/btnSop"
-        android:layout_width="420dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/_242sdp"
+        android:layout_height="@dimen/_47sdp"
         android:background="@drawable/sopfront"
         android:onClick="pdfgo"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/guideline5"
-        android:layout_marginTop="15dp"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.929" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

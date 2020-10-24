@@ -21,14 +21,21 @@
         android:layout_marginBottom="410dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="620dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -40,17 +47,17 @@
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline62"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:layout_constraintVertical_bias="0.82"
+        app:layout_constraintVertical_bias="0.266"
         app:srcCompat="@drawable/apik"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/Pengaturan"
-        android:layout_width="619dp"
-        android:layout_height="59dp"
+        android:layout_width="219dp"
+        android:layout_height="51dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="75dp"
@@ -70,11 +77,12 @@
 
     <TextView
         android:id="@+id/txtKontrol"
-        android:layout_width="420dp"
-        android:layout_height="50dp"
+        android:layout_width="181dp"
+        android:layout_height="23dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="75dp"
+        android:layout_marginBottom="185dp"
         android:fontFamily="@font/arial"
         android:text="Kontrol Aplikasi"
         android:textAlignment="center"
@@ -82,21 +90,29 @@
 
         android:textSize="@dimen/_15sdp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintVertical_bias="0.047"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btKembali"
         android:layout_width="89dp"
         android:layout_height="83dp"
-        android:layout_marginStart="752dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/back"
         android:onClick="balik"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline63"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline50"
+        app:layout_constraintVertical_bias="0.366" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline63"
@@ -113,9 +129,11 @@
         android:onClick="simpan"
         android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/btKembali"
+        app:layout_constraintEnd_toStartOf="@+id/guideline63"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/btKembali"
         app:layout_constraintTop_toTopOf="@+id/btKembali"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="857dp" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Switch
         android:id="@+id/swGelap"
@@ -162,10 +180,12 @@
         android:layout_height="44dp"
         android:text="Mode Tanpa Gambar"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chModeAdmin"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
 
     <CheckBox
@@ -174,9 +194,11 @@
         android:layout_height="44dp"
         android:text="Aktifkan Mode Lite"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/guideline50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chGambarKecil"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

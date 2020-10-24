@@ -13,37 +13,76 @@
         tools:ignore="ScopedStorage" />
 
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <compatible-screens>
+        <!-- all small size screens -->
+        <screen android:screenSize="small" android:screenDensity="ldpi" />
+        <screen android:screenSize="small" android:screenDensity="mdpi" />
+        <screen android:screenSize="small" android:screenDensity="hdpi" />
+        <screen android:screenSize="small" android:screenDensity="xhdpi" />
+        <screen android:screenSize="small" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="small" android:screenDensity="xxxhdpi" />
+
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="ldpi" />
+        <screen android:screenSize="normal" android:screenDensity="mdpi" />
+        <screen android:screenSize="normal" android:screenDensity="hdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxhdpi" />
+        <!-- all large size screens -->
+        <screen android:screenDensity="ldpi" android:screenSize="large"/>
+        <screen android:screenDensity="mdpi" android:screenSize="large"/>
+        <screen android:screenDensity="hdpi" android:screenSize="large"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="large"/>
+        <screen android:screenDensity="xxxhdpi" android:screenSize="large"/>
+        <screen android:screenDensity="xxhdpi" android:screenSize="large"/>
+    </compatible-screens>
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/siapik"
         android:installLocation="auto"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/ic_launcher_foreground"
+        android:roundIcon="@drawable/siapik"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name="id.co.gesangmultimedia.siapic.BerandaSop" />
-        <activity android:name="id.co.gesangmultimedia.siapic.ShowPdf" />
-        <activity android:name="id.co.gesangmultimedia.siapic.TampilkanVideo" />
-        <activity android:name="id.co.gesangmultimedia.siapic.LaporanBug" />
-        <activity android:name="id.co.gesangmultimedia.siapic.Pengaturan" />
-        <activity android:name="id.co.gesangmultimedia.siapic.About" />
-        <activity android:name="id.co.gesangmultimedia.siapic.VideoPotensi" />
-        <activity android:name="id.co.gesangmultimedia.siapic.CumstomInfoContent" />
-        <activity android:name="id.co.gesangmultimedia.siapic.RtrwCilacap" />
-        <activity android:name="id.co.gesangmultimedia.siapic.KawasanIndustri" />
-        <activity android:name="id.co.gesangmultimedia.siapic.PotensiUmum" />
-        <activity android:name="id.co.gesangmultimedia.siapic.SplashScreen">
+        <activity android:name="id.co.gesangmultimedia.siapic.BerandaSop"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.ShowPdf"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.TampilkanVideo"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.LaporanBug"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.Pengaturan"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.About"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.VideoPotensi"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.CumstomInfoContent"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.RtrwCilacap"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.KawasanIndustri"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.PotensiUmum"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.SplashScreen"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="id.co.gesangmultimedia.siapic.DataKecamatan" />
-        <activity android:name="id.co.gesangmultimedia.siapic.MainActivity" />
+        <activity android:name="id.co.gesangmultimedia.siapic.DataKecamatan"
+            android:configChanges="orientation|screenSize"/>
+        <activity android:name="id.co.gesangmultimedia.siapic.MainActivity"
+            android:configChanges="orientation|screenSize"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -54,9 +93,5 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
-
-
-
 </manifest>

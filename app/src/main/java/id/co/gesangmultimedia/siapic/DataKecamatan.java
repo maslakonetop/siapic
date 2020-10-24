@@ -612,6 +612,16 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     }
                     showTernakCimanggu();
                 }
+                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Industri"))){
+                    try {
+                        showCipari(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showIndustriCipari();
+                }
                 if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Pariwisata"))){
                     try {
                         showCipari(null);
@@ -981,6 +991,72 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                         e.printStackTrace();
                     }
                     showTernakKrPucung();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Industri"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showIndustriKawunganten();
+                    animator.start();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Pariwisata"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showWisataKawunganten();
+                    animator.start();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Perikanan"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showIkanKawunganten();
+                    animator.start();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Pertanian"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showTaniKawunganten();
+                    animator.start();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Perkebunan"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showKebunKawunganten();
+                    animator.start();
+                }
+                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Peternakan"))){
+                    try {
+                        showKesugihan(null);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    showTernakKawunganten();
+                    animator.start();
                 }
                 if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Industri"))){
                     try {
@@ -1576,6 +1652,31 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             }
         });
 
+    }
+
+    private void showWisataKawunganten() {
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
+    }
+    private void showIkanKawunganten (){
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
+    }
+    private void showTaniKawunganten(){
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
+    }
+    private void showKebunKawunganten(){
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
+    }
+    private void showTernakKawunganten(){
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
+    }
+    private void showIndustriKawunganten() {
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
     }
 
     private void showIkanWanareja() {

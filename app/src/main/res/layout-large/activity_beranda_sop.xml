@@ -40,14 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="584dp" />
+        app:layout_constraintGuide_begin="395dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="873dp" />
+        app:layout_constraintGuide_end="711dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline59"
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.97" />
+        app:layout_constraintGuide_percent="0.86" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline61"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="585dp" />
+        app:layout_constraintGuide_end="391dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline49"
@@ -114,16 +114,15 @@
         android:id="@+id/btnLinkBkpm"
         android:layout_width="89dp"
         android:layout_height="82dp"
-        android:layout_marginTop="15dp"
         android:background="@drawable/bkpm"
         android:contentDescription="Klik disini untuk ke website OSS"
         android:onClick="gooss"
-        app:layout_constraintBottom_toTopOf="@+id/guideline60"
+        app:layout_constraintBottom_toTopOf="@+id/guideline61"
         app:layout_constraintEnd_toStartOf="@+id/guideline49"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline48"
-        app:layout_constraintTop_toBottomOf="@+id/pdfViewSop"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintTop_toTopOf="@+id/guideline60"
+        app:layout_constraintVertical_bias="0.368" />
 
     <Button
         android:id="@+id/btnWebSijempol"
@@ -133,21 +132,21 @@
         android:onClick="gojempol"
         app:layout_constraintBottom_toBottomOf="@+id/btnLinkBkpm"
         app:layout_constraintEnd_toStartOf="@+id/guideline51"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toEndOf="@+id/btnLinkBkpm"
         app:layout_constraintTop_toTopOf="@+id/btnLinkBkpm"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfViewSop"
-        android:layout_width="565dp"
-        android:layout_height="557dp"
+        android:layout_width="392dp"
+        android:layout_height="459dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline59"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.88" >
 
     </com.github.barteksc.pdfviewer.PDFView>
 
@@ -159,9 +158,7 @@
         android:onClick="gasik"
         app:layout_constraintBottom_toBottomOf="@+id/btnWebSijempol"
         app:layout_constraintEnd_toStartOf="@+id/guideline51"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnWebSijempol"
-        app:layout_constraintTop_toTopOf="@+id/btnWebSijempol"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/btnWebSijempol" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

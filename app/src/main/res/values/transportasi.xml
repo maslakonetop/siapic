@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ModaTransport">
+        <item>Transportasi Darat</item>
+        <item>Transportasi Laut</item>
+        <item>Transportasi Udara</item>
+    </array>
+    <array name="Darat">
+        <item>Terminal Cilacap</item>
+        <item>Terminal Sidareja</item>
+        <item>Terminal Karangpucung</item>
+        <item>Terminal Majenang</item>
+    </array>
+    <array name="Laut">
+        <item>Pelabuhan Tanjung Intan</item>
+        <item>Pelabuhan Penyeberangan Sleko</item>
+        <item>Pelabuhan Penyeberangan Sodong</item>
+    </array>
+    <array name="Udara">
+        <item>Bandara Tunggul Wulung</item>
+    </array>
+</resources>

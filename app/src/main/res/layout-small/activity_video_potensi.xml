@@ -14,9 +14,10 @@
         android:layout_height="53dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline35"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/apik"
         tools:ignore="ContentDescription" />
 
@@ -32,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="@+id/guideline32"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.255"
+        app:layout_constraintVertical_bias="0.244"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -43,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="404dp" />
+        app:layout_constraintGuide_end="411dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -71,7 +72,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="154dp" />
+        app:layout_constraintGuide_begin="194dp" />
 
     <include
         layout="@layout/menu_atas"
@@ -85,8 +86,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="686dp"
+        android:layout_width="412dp"
+        android:layout_height="571dp"
         android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,9 +121,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="booklet"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -134,9 +135,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="inggris"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -148,9 +149,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="sidat"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -162,9 +163,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="pameran"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -176,9 +177,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="gula"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -190,9 +191,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="tas"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -204,9 +205,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="asin"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -218,9 +219,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="stik"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -232,9 +233,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="nata"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -246,9 +247,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="batik"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -260,9 +261,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="sale"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -274,9 +275,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="kerang"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -288,9 +289,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="tengiri"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -302,9 +303,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="rawa"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -316,9 +317,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="wedus"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
 
@@ -331,9 +332,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="semut"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -345,9 +346,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="sapi"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -359,9 +360,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="payau"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -373,9 +374,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="gurame"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -387,9 +388,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="sebutret"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -401,9 +402,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="hotspring"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -416,9 +417,9 @@
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="3dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="bahari"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -430,9 +431,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="pantai"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <Button
@@ -444,9 +445,9 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
                 android:background="@color/goldenrot"
-                android:textColor="@color/black"
                 android:onClick="oss"
                 android:text="Lihat Video"
+                android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
             <EditText

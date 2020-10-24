@@ -14,10 +14,10 @@
         android:layout_height="53dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline35"
-        app:layout_constraintVertical_bias="0.24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113"
         app:srcCompat="@drawable/apik"
         tools:ignore="ContentDescription" />
 
@@ -33,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.688"
         app:layout_constraintStart_toStartOf="@+id/guideline32"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.255"
+        app:layout_constraintVertical_bias="0.244"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="404dp" />
+        app:layout_constraintGuide_end="411dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -65,14 +65,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="873dp" />
+        app:layout_constraintGuide_end="814dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="154dp" />
+        app:layout_constraintGuide_begin="194dp" />
 
     <include
         layout="@layout/menu_atas"
@@ -86,8 +86,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="598dp"
-        android:layout_height="697dp"
+        android:layout_width="412dp"
+        android:layout_height="571dp"
         android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

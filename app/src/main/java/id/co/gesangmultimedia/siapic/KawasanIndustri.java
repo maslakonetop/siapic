@@ -170,7 +170,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         layerKPI = new GeoJsonLayer(mMap, R.raw.cilacapkpi, getApplicationContext());
         GeoJsonPolygonStyle geoJsonPolygonStyle = layerKPI.getDefaultPolygonStyle();
         geoJsonPolygonStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        geoJsonPolygonStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        geoJsonPolygonStyle.setFillColor(ContextCompat.getColor(this, R.color.steelblue));
         geoJsonPolygonStyle.setStrokeWidth(5f);
         layerKPI.addLayerToMap();
     }
@@ -186,7 +186,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         GeoJsonPolygonStyle stylewarung = layerWarung.getDefaultPolygonStyle();
         stylewarung.setStrokeWidth(3f);
         stylewarung.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        stylewarung.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        stylewarung.setFillColor(ContextCompat.getColor(this, R.color.yellow));
         layerWarung.addLayerToMap();
 
         mMap.addMarker(new MarkerOptions()
@@ -207,7 +207,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerCiptim.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.red));
         styleciptim.setStrokeWidth(3f);
         layerCiptim.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -227,7 +227,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.rossybrown));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -248,7 +248,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         assert layerdonan != null;
         GeoJsonPolygonStyle styleciptim = layerdonan.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.lightseagreen));
         styleciptim.setStrokeWidth(3f);
         layerdonan.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -277,7 +277,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.palegreen));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -297,7 +297,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.navajowhite));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -317,7 +317,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.mediumviolet));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -337,7 +337,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.silver));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -357,7 +357,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         }
         GeoJsonPolygonStyle styleciptim = layerkpi.getDefaultPolygonStyle();
         styleciptim.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleciptim.setFillColor(ContextCompat.getColor(this, R.color.ghostwhite));
         styleciptim.setStrokeWidth(3f);
         layerkpi.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
@@ -412,13 +412,6 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         mMap = googleMap;
         googleMap.getUiSettings().setZoomControlsEnabled(true);
         showCilacap(null);
-        try {
-            showKPI(null);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -433,6 +426,14 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         //mMap.getUiSettings().setMyLocationButtonEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setAllGesturesEnabled(true);
+        markerBengawanDonan();
+        markerBunton();
+        markerCilacapTimur();
+        markerKarangkandri();
+        markerKpiProvinsi();
+        markerLainny();
+        markerTinggarjaya();
+        markerWarungBatok();
 
     }
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {

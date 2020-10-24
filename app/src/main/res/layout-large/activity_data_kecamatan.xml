@@ -11,20 +11,26 @@
         layout="@layout/menu_atas"
         android:layout_width="111dp"
         android:layout_height="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="275dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="160dp"
+        android:layout_width="258dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="100dp"
         app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/apik"
         tools:ignore="ContentDescription" />
 
@@ -34,6 +40,8 @@
         android:layout_height="@dimen/_27sdp"
         android:layout_marginStart="36dp"
         app:layout_constraintBottom_toBottomOf="@+id/txtPilihKecamatan"
+        app:layout_constraintEnd_toStartOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toEndOf="@+id/txtPilihKecamatan"
         app:layout_constraintTop_toTopOf="@+id/txtPilihKecamatan"
         app:layout_constraintVertical_bias="0.0" />
@@ -51,61 +59,85 @@
 
     <TextView
         android:id="@+id/txtPilihKecamatan"
-        android:layout_width="207dp"
-        android:layout_height="31dp"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
         android:fontFamily="@font/arial"
         android:text="Pilih Kecamatan"
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="0.639"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="198dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="159dp"
+        android:layout_height="22dp"
         android:fontFamily="@font/arial"
         android:text="Pilih Potensi"
         android:textAlignment="textStart"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline16"
         app:layout_constraintEnd_toEndOf="@+id/txtPilihKecamatan"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txtPilihKecamatan"
         app:layout_constraintTop_toBottomOf="@+id/txtPilihKecamatan"
+        app:layout_constraintVertical_bias="0.202"
         tools:ignore="HardcodedText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="405dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="407dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="764dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="595dp"
-        android:layout_height="575dp"
+        android:layout_width="400dp"
+        android:layout_height="574dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.995"
-        tools:context=".MapDataKecamatan"></androidx.fragment.app.FragmentContainerView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="utama"
-        app:backgroundTint="@color/aqua"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/map"
-        app:layout_constraintVertical_bias="0.995"
-        app:srcCompat="@drawable/back" />
+        app:layout_constraintTop_toTopOf="@+id/guideline16"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".MapDataKecamatan" />
 
     <Button
         android:id="@+id/btnPeta"
@@ -131,8 +163,26 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/btnPeta"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="@+id/btnPeta"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="HardcodedText" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="514dp"
+        android:clickable="true"
+        android:onClick="utama"
+        app:backgroundTint="@color/aqua"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintVertical_bias="0.384"
+        app:srcCompat="@drawable/back"
+        android:focusable="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,9 +36,25 @@ import java.io.IOException;
 public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener,
         GoogleMap.OnMyLocationClickListener {
     private GoogleMap mMap;
-    private GeoJsonLayer geoJsonLayer;
-    private static final LatLng CILACAP = new LatLng(-7.481717, 108.838529);
+    private Spinner spModa;
+    private Spinner spTranport;
+    private String strModa = "";
+    private String strTransport = "";
 
+    private static final LatLng CILACAP = new LatLng(-7.481717, 108.838529);
+    private static final LatLng BANDARA = new LatLng(-7.642588, 109.034757);
+    private static final LatLng PELABUHANTJINTAN = new LatLng(-7.731252, 108.993437);
+    private static final LatLng PELABUHANSLEKO = new LatLng(-7.727498, 108.996773);
+    private static final LatLng PELABUHANSODONG = new LatLng(-7.681547, 108.979904);
+    private static final LatLng TERMINALCILACAP = new LatLng(-7.702289, 109.025086);
+    private static final LatLng TERMINALKRPUCUNG = new LatLng(-7.410340, 108.900194);
+    private static final LatLng TERMINALSDREJA = new LatLng( -7.485017, 108.791376);
+    private static final LatLng STASIUNCILACAP = new LatLng(-7.736042, 109.007054);
+    private static final LatLng STASIUNMAOS = new LatLng(-7.619082, 109.139459);
+    private static final LatLng STASIUNSDREJA = new LatLng(-7.486329, 108.807540);
+    private static final LatLng STASIUNKROYA = new LatLng(-7.630117, 109.253514);
+    private static final LatLng STASIUNGDMANGU = new LatLng(-7.528495, 108.859040);
+    private static final LatLng TERMINALMAJENANG = new LatLng(-7.303478, 108.771364);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +65,6 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         assert mapFragment != null;
         mapFragment.getMapAsync(this);
-
     }
 
     private void showCilacap(View v) throws IOException, JSONException {
@@ -64,7 +80,52 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
 
         cilacap.addLayerToMap();
     }
-
+    private void mabur(){
+        mMap.addMarker(new MarkerOptions()
+                .position(BANDARA)
+                .title("Bandara Tunggul Wulung Cilacap")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconairport))
+        );
+    }
+    private void renang(){
+        mMap.addMarker(new MarkerOptions()
+                .position(PELABUHANTJINTAN)
+                .title("Pelabuhan Utama Tanjung Intan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(PELABUHANSLEKO)
+                .title("Pelabuhan Penyeberangan Sleko")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(PELABUHANSODONG)
+                .title("Pelabuhan Penyeberangan Dermaga Sodong")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+        );
+    }
+    private void ngebis(){
+        mMap.addMarker(new MarkerOptions()
+                .position(TERMINALCILACAP)
+                .title("Terminal Bis Cilacap")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(TERMINALKRPUCUNG)
+                .title("Terminal Bis Karangpucung")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(TERMINALMAJENANG)
+                .title("Terminal Bus Majenang ")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(TERMINALSDREJA)
+                .title("Terminal Bus Sidareja")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
+        );
+    }
     private void airpanascipari() {
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.430953, 108.7662454))
@@ -192,6 +253,9 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         sapiDayeuhluhur();
         palaDayeuhluhur();
         airpanascipari();
+        mabur();
+        ngebis();
+        renang();
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -236,6 +300,4 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         Intent balik = new Intent(PotensiUmum.this, MainActivity.class);
         startActivity(balik);
     }
-
-
 }

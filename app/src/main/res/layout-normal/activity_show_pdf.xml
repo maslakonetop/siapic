@@ -13,8 +13,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="307dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginStart="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:layout_marginEnd="@dimen/_26sdp"
         app:srcCompat="@drawable/apik"
         tool:ignore="ContentDescription" />
@@ -35,8 +35,8 @@
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdfView"
-        android:layout_width="957dp"
-        android:layout_height="259dp"
+        android:layout_width="399dp"
+        android:layout_height="540dp"
         android:layout_below="@+id/txtPdf"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="4dp"
@@ -44,15 +44,15 @@
         android:layout_marginBottom="5dp" />
 
     <Button
-        android:layout_width="131dp"
-        android:layout_height="74dp"
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_64sdp"
         android:layout_below="@+id/pdfView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="831dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginStart="@dimen/_250sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:background="@drawable/back"
         android:onClick="kembali" />
 
