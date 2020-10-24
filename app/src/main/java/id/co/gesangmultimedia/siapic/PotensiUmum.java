@@ -56,6 +56,15 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
     private static final LatLng STASIUNGDMANGU = new LatLng(-7.528495, 108.859040);
     private static final LatLng TERMINALMAJENANG = new LatLng(-7.303478, 108.771364);
 
+    private static final LatLng SIDATPATIMUAN = new LatLng(-7.596817, 108.799754);
+    private static final LatLng UDANGCILSEL = new LatLng(-7.717121, 109.029973);
+    private static final LatLng UDANGMERTASINGA = new LatLng(-7.689760, 109.067748);
+    private static final LatLng WISATASEGARAANAKAN = new LatLng(-7.676732, 108.831381);
+    private static final LatLng WISATAUJUNGALANG = new LatLng(-7.681276, 108.813512);
+    private static final LatLng UDANGBINANGUN = new LatLng(-7.692737, 109.293375);
+    private static final LatLng WEDUSGNTELU = new LatLng(-7.417377, 108.869263);
+    private static final LatLng KELAPATINGGARJAYA = new LatLng(-7.482692,108.774660);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,17 +100,17 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANTJINTAN)
                 .title("Pelabuhan Utama Tanjung Intan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSLEKO)
                 .title("Pelabuhan Penyeberangan Sleko")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSODONG)
                 .title("Pelabuhan Penyeberangan Dermaga Sodong")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
     }
     private void ngebis(){
@@ -226,6 +235,68 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata)));
     }
 
+    private void kerismap(){
+        mMap.addMarker(new MarkerOptions()
+                .position(SIDATPATIMUAN)
+                .title("Keris Jateng: Sidat Bulupayung")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(UDANGCILSEL)
+                .title("Keris Jateng: Udang Tegal Kamulyan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(UDANGMERTASINGA)
+                .title("Keris Jateng: Udang Vaname Mertasinga")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.505771, 108.774712))
+                .title("Keris Jateng: Peternakan Sapi Gandrungmangu")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.430953, 108.7662454))
+                .title("Pemandian Air Panas Cipari")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(WISATASEGARAANAKAN)
+                .title("Keris Jateng: Wisata Bahari Segara ANakan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.5537295, 108.8129129))
+                .title("Peternakan Terpadu Kambing Karangpucung")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(WISATAUJUNGALANG)
+                .title("Keris Jateng: Wisata Bahari Ujung Alang")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(UDANGBINANGUN)
+                .title("Keris Jateng: Tambak Udang Binangun")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(WEDUSGNTELU)
+                .title("Keris Jateng: Peternakan Kambing Gunung Telu")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(KELAPATINGGARJAYA)
+                .title("Keris Jateng: Industri Kelapa Tinggarjaya")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.712007, 109.387234))
+                .title("Pengembangan Wisata Pulau Momongan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+        );
+    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -256,6 +327,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         mabur();
         ngebis();
         renang();
+        kerismap();
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                     && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
