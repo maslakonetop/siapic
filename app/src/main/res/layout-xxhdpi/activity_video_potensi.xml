@@ -462,7 +462,7 @@
                 android:gravity="start|top"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:text="Visualisasi Profil Kabpupaten Cilacap"
+                android:text="Visualisasi Profil Kabupaten Cilacap"
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 

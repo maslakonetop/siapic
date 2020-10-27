@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="711dp" />
+        app:layout_constraintGuide_end="784dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline56"

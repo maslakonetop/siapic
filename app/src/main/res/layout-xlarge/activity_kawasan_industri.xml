@@ -10,14 +10,14 @@
 
     <ImageView
         android:id="@+id/imageView28"
-        android:layout_width="145dp"
-        android:layout_height="51dp"
+        android:layout_width="319dp"
+        android:layout_height="66dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="120dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -25,31 +25,31 @@
 
     <TextView
         android:id="@+id/PilihKPI"
-        android:layout_width="95dp"
-        android:layout_height="22dp"
+        android:layout_width="157dp"
+        android:layout_height="34dp"
         android:fontFamily="@font/arialb"
         android:text="Pilih Lokasi KPI"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline26"
         app:layout_constraintEnd_toStartOf="@+id/guideline24"
-        app:layout_constraintHorizontal_bias="0.148"
-        app:layout_constraintStart_toStartOf="@+id/guideline23"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="726dp" />
+        app:layout_constraintGuide_end="1191dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="130dp" />
+        app:layout_constraintGuide_begin="190dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline23"
@@ -68,8 +68,8 @@
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="378dp"
-        android:layout_height="605dp"
+        android:layout_width="780dp"
+        android:layout_height="1005dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -80,8 +80,8 @@
 
     <Spinner
         android:id="@+id/spPilihKpi"
-        android:layout_width="150dp"
-        android:layout_height="22dp"
+        android:layout_width="223dp"
+        android:layout_height="31dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@id/PilihKPI"
         app:layout_constraintEnd_toStartOf="@+id/guideline24"

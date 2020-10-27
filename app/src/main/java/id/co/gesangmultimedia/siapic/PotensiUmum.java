@@ -10,7 +10,9 @@ import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
 import com.google.maps.android.data.geojson.GeoJsonPolygonStyle;
@@ -41,7 +44,11 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
     private String strModa = "";
     private String strTransport = "";
 
+    private int markerclicked;
+    private Marker mabur;
+
     private static final LatLng CILACAP = new LatLng(-7.481717, 108.838529);
+
     private static final LatLng BANDARA = new LatLng(-7.642588, 109.034757);
     private static final LatLng PELABUHANTJINTAN = new LatLng(-7.731252, 108.993437);
     private static final LatLng PELABUHANSLEKO = new LatLng(-7.727498, 108.996773);
@@ -64,7 +71,22 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
     private static final LatLng UDANGBINANGUN = new LatLng(-7.692737, 109.293375);
     private static final LatLng WEDUSGNTELU = new LatLng(-7.417377, 108.869263);
     private static final LatLng KELAPATINGGARJAYA = new LatLng(-7.482692,108.774660);
+    private static final LatLng SAPIGDMANGU = new LatLng(-7.505771, 108.774712);
 
+    private static final LatLng AIRPANASCIPARI = new LatLng(-7.430953, 108.7662454);
+    private static final LatLng KELAPAWANAREJA = new LatLng(-7.4056531, 108.8025372);
+    private static final LatLng SAPIDAYEUHLUHUR = new LatLng(-7.261911, 108.601007);
+    private static final LatLng PALADAYEUHLUHUR = new LatLng(-7.259467, 108.607142);
+    private static final LatLng SAPIMAJENANG = new LatLng(-7.258226, 108.683353);
+    private static final LatLng SAPIWANAREJA = new LatLng(-7.312470, 108.673625);
+    private static final LatLng KELAPAKDREJA = new LatLng(-7.5015207, 108.7848592);
+    private static final LatLng WEDUSKRPUCUNG = new LatLng(-7.5537295, 108.8129129);
+    private static final LatLng GULASEMUTJRLEGI = new LatLng(-7.654652, 109.041271);
+    private static final LatLng HUTANPAYAU = new LatLng(-7.668021, 109.0270623);
+    private static final LatLng SIDAT = new LatLng(-7.666796, 109.003658);
+    private static final LatLng SLEKO = new LatLng(-7.727495, 108.996744);
+    private static final LatLng UDANGVANAME = new LatLng(-7.662435, 109.260374);
+    private static final LatLng MOMONGAN = new LatLng(-7.712007, 109.387234);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,146 +115,973 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions()
                 .position(BANDARA)
                 .title("Bandara Tunggul Wulung Cilacap")
+                .snippet("Jl. Tritih - Wangon, Tritih Lor. Jeruklegi Cilacap")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconairport))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker arg0) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vmabur = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                //ivGambar.setImageResource(R.drawable.tunggulwulung);
+
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tunggulwulung);
+                }
+                return vmabur;
+            }
+        });
     }
+
+    private boolean onMarkerClick(final Marker marker) {
+        if (marker.equals(BANDARA))
+        {
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANTJINTAN)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANSLEKO)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANSODONG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNCILACAP)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNGDMANGU)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNKROYA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNMAOS)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNSDREJA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALCILACAP)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALKRPUCUNG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALMAJENANG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALSDREJA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(AIRPANASCIPARI)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPAKDREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPATINGGARJAYA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPAWANAREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(PALADAYEUHLUHUR)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIDAYEUHLUHUR)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIMAJENANG)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIWANAREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(WEDUSKRPUCUNG)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(HUTANPAYAU)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(GULASEMUTJRLEGI)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SIDAT)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SLEKO)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(UDANGVANAME)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(MOMONGAN)) {
+            markerclicked = 1;
+            return true;
+        }
+        return false;
+    }
+
     private void renang(){
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANTJINTAN)
                 .title("Pelabuhan Utama Tanjung Intan")
+                .snippet("Klega, Tambakreja, Kec. Cilacap Selatan\n"+
+                        "Kabupaten Cilacap, Jawa Tengah 53213")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSLEKO)
                 .title("Pelabuhan Penyeberangan Sleko")
+                .snippet(" JL. Seleko , Tambakreja , Cilacap Selatan \n" +
+                        "Cilacap , Jawa Tengah 53213")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSODONG)
                 .title("Pelabuhan Penyeberangan Dermaga Sodong")
+                .snippet("Tambakreja, Kec. Cilacap Selatan\n" +
+                        "Kabupaten Cilacap, Jawa Tengah 53263")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
     private void ngebis(){
         mMap.addMarker(new MarkerOptions()
                 .position(TERMINALCILACAP)
                 .title("Terminal Bis Cilacap")
+                .snippet("Jl. Gatot Subroto No.268, Karang Lor \n" +
+                        "Gunungsimping, Kec. Cilacap Tengah \n" +
+                        "Kabupaten Cilacap, Jawa Tengah 53211")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
         mMap.addMarker(new MarkerOptions()
                 .position(TERMINALKRPUCUNG)
                 .title("Terminal Bis Karangpucung")
+                .snippet("Kecamatan Karangpucung, Kabupaten Cilacap, Jawa Tengah")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
         mMap.addMarker(new MarkerOptions()
                 .position(TERMINALMAJENANG)
                 .title("Terminal Bus Majenang ")
+                .snippet("Kecamatan Majenang, Kabupaten Cilacap, Jawa Tengah")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
         mMap.addMarker(new MarkerOptions()
                 .position(TERMINALSDREJA)
                 .title("Terminal Bus Sidareja")
+                .snippet("Kecamatan Sidareja, Kabupaten Cilacap, Jawa Tengah")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconbus))
         );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
+    }
+    private void nyepur(){
+        mMap.addMarker(new MarkerOptions()
+                .position(STASIUNCILACAP)
+                .title("Stasiun Besar Cilacap")
+                .snippet("Gg. Surya V, Tambakreja, Kec. Cilacap Sel., Kabupaten Cilacap, Jawa Tengah 53211")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.train))
+        );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
+        mMap.addMarker(new MarkerOptions()
+                .position(STASIUNKROYA)
+                .title("Stasiun Besar Kroya")
+                .snippet("Semingkir, Pucung Kidul, Kec. Kroya, Kabupaten Cilacap, Jawa Tengah 53282")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.train))
+        );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
+        mMap.addMarker(new MarkerOptions()
+                .position(STASIUNMAOS)
+                .title("Stasiun Maos")
+                .snippet("JL. Raya Kesugihan, Klapagada, 53272 Cilacap, Jawa Tengah 53271")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.train))
+        );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
+        mMap.addMarker(new MarkerOptions()
+                .position(STASIUNSDREJA)
+                .title("Stasiun Sidareja")
+                .snippet("Jenggalan, Sidamulya, Kec. Sidareja, Kabupaten Cilacap, Jawa Tengah 53261")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.train))
+        );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
+        mMap.addMarker(new MarkerOptions()
+                .position(STASIUNGDMANGU)
+                .title("Stasiun Gandrungmangu")
+                .snippet("Kecamatan Gandrungmangu, Kab. Cilacap, Jawa Tengah")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.train))
+        );
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
     private void airpanascipari() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.430953, 108.7662454))
+                .position(AIRPANASCIPARI)
                 .anchor(0.5f, 0.5f)
                 .title("Pemandian Air Panas Cipari")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata)));
+                .snippet("Nilai Investasi Rp. 2.000.000.000,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void kelapaWanareja() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.4056531, 108.8025372))
+                .position(KELAPAWANAREJA)
                 .anchor(0.5f, 0.5f)
                 .title("Serat Sabut Kelapa Wanareja")
+                .snippet("Nilai Investasi Rp. 1.000.000.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void sapiDayeuhluhur() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.261911, 108.601007))
+                .position(SAPIDAYEUHLUHUR)
                 .title("Peternakan Sapi Potong Dayeuhluhur")
+                .snippet("Nilai Investasi Rp. 623.396.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void palaDayeuhluhur() {
         mMap.addMarker(new MarkerOptions()
                 .title("Industri Terpadu Pengolahan Buah Pala")
-                .position(new LatLng(-7.259467, 108.607142))
+                .snippet("Nilai Investasi Rp. 6.605.555.985.000,00")
+                .position(PALADAYEUHLUHUR)
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void sapiMajenang() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.258226, 108.683353))
+                .position(SAPIMAJENANG)
                 .title("Peternakan Sapi Potong Majenang")
+                .snippet("Nilai Investasi Rp. 623.396.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void sapiWanareja() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.312470, 108.673625))
+                .position(SAPIWANAREJA)
                 .title("Peternakan Sapi Potong Wanareja")
+                .snippet("Nilai Investasi Rp. 623.396.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void kelapaKedungreja() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.5015207, 108.7848592))
+                .position(KELAPAKDREJA)
                 .title("Industri Pengolahan Kelapa Terpadu Kedungreja")
+                .snippet("Nilai Investasi Rp. 2.399.000.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void kambingKrpucung() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.5537295, 108.8129129))
+                .position(WEDUSKRPUCUNG)
                 .title("Peternakan Terpadu Kambing Karangpucung")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan)));
+                .snippet("Nilai Investasi Rp. 97.213.602.800,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void gulaJeruklegi() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.654652, 109.041271))
+                .position(GULASEMUTJRLEGI)
                 .title("Pabrik Gula Semut Super Jeruklegi")
+                .snippet("Nilai Investasi Rp. 5.787.746.429,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void hutanpayau() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.668021, 109.0270623))
+                .position(HUTANPAYAU)
                 .title("Pengembangan Hutan Payau")
+                .snippet("Nilai Investasi Rp. 11.600.000.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void sidat() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.666796, 109.003658))
+                .position(SIDAT)
                 .title("Budidaya Ikan Sidat")
+                .snippet("Nilai Investasi Rp. 2.045.635.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void sleko() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.727495, 108.996744))
+                .position(SLEKO)
                 .title("Pengembangan Wisata Bahari")
+                .snippet("Nilai Investasi Rp. 1.754.274.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void udang() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.662435, 109.260374))
+                .position(UDANGVANAME)
                 .title("Industri Terpadu Udang Vaname")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan)));
+                .snippet("Nilai Investasi Rp. 16.010.900.000,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void momongan() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.712007, 109.387234))
+                .position(MOMONGAN)
                 .title("Pengembangan Wisata Pulau Momongan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata)));
+                .snippet("Nilai Investasi 10.658.908.000,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker arg0) {
+                View vIntan = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = arg0.getPosition();
+                ImageView ivGambar = findViewById(R.id.ivGambarMap);
+                TextView tvTitle = findViewById(R.id.tvTitleMap);
+                TextView tvSnipet = findViewById(R.id.tvSnipetMap);
+                String strTitle = arg0.getTitle();
+                String strSnippet = arg0.getSnippet();
+
+                tvTitle.setText(strTitle);
+                tvSnipet.setText(strSnippet);
+                if(onMarkerClick(arg0) && markerclicked==1){
+                    ivGambar.setImageResource(R.drawable.tanjungintan);
+                }
+                return vIntan;
+            }
+        });
     }
 
     private void kerismap(){
@@ -252,48 +1101,39 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.505771, 108.774712))
+                .position(SAPIGDMANGU)
                 .title("Keris Jateng: Peternakan Sapi Gandrungmangu")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.430953, 108.7662454))
-                .title("Pemandian Air Panas Cipari")
+                .snippet("Nilai Investasi Rp. 4,541,500,000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATASEGARAANAKAN)
                 .title("Keris Jateng: Wisata Bahari Segara ANakan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.5537295, 108.8129129))
-                .title("Peternakan Terpadu Kambing Karangpucung")
+                .snippet("Nilai Investasi Rp. 114.550.825.868,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATAUJUNGALANG)
                 .title("Keris Jateng: Wisata Bahari Ujung Alang")
+                .snippet("Nilai Investasi Rp.  116,437,089,393,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGBINANGUN)
                 .title("Keris Jateng: Tambak Udang Binangun")
+                .snippet("Nilai Investasi Rp.  Rp255,387,100,000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WEDUSGNTELU)
                 .title("Keris Jateng: Peternakan Kambing Gunung Telu")
+                .snippet("Nilai Investasi Rp. 95.144.085.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(KELAPATINGGARJAYA)
                 .title("Keris Jateng: Industri Kelapa Tinggarjaya")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.712007, 109.387234))
-                .title("Pengembangan Wisata Pulau Momongan")
+                .snippet("Nilai Investasi Rp. 58,602,850,000")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
     }
@@ -309,8 +1149,6 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        momongan();
         udang();
         sleko();
         sidat();

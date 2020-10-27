@@ -2171,7 +2171,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(BANTARSARI)
                 .title("Kecamatan Bantarsari")
-                .snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Luas wilayah :95,54 km2\n" +
+                        "Jumlah angkatan kerja : 44.173 orang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }

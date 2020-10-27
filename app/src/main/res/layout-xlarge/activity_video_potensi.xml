@@ -14,7 +14,7 @@
         android:layout_height="53dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.113"
@@ -33,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="@+id/guideline32"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.244"
+        app:layout_constraintVertical_bias="0.212"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -44,14 +44,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="411dp" />
+        app:layout_constraintGuide_end="796dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="411dp" />
+        app:layout_constraintGuide_begin="783dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="814dp" />
+        app:layout_constraintGuide_end="1207dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline47"
@@ -86,8 +86,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="571dp"
+        android:layout_width="793dp"
+        android:layout_height="1013dp"
         android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,8 +97,8 @@
         app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
-            android:layout_width="392dp"
-            android:layout_height="623dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/btnNonton"
@@ -107,7 +107,7 @@
                 android:layout_below="@id/editTextTextMultiLine"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="profil"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -120,7 +120,7 @@
                 android:layout_below="@id/editTextTextMultiLine2"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="booklet"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -134,7 +134,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="inggris"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -148,7 +148,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="sidat"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -162,7 +162,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="pameran"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -176,7 +176,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="gula"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -190,7 +190,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="tas"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -204,7 +204,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="asin"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -218,7 +218,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="stik"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -232,7 +232,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="nata"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -246,7 +246,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="batik"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -260,7 +260,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="sale"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -274,7 +274,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="kerang"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -288,7 +288,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="tengiri"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -302,7 +302,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="rawa"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -316,7 +316,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="wedus"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -331,7 +331,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="semut"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -345,7 +345,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="sapi"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -359,7 +359,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="payau"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -373,7 +373,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="gurame"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -387,7 +387,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="sebutret"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -401,7 +401,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="hotspring"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -416,7 +416,7 @@
                 android:layout_alignParentBottom="false"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="3dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="bahari"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -430,7 +430,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="pantai"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -444,7 +444,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
+                android:background="@color/darkturquoise"
                 android:onClick="oss"
                 android:text="Lihat Video"
                 android:textColor="@color/black"
@@ -452,7 +452,7 @@
 
             <EditText
                 android:id="@+id/editTextTextMultiLine"
-                android:layout_width="168dp"
+                android:layout_width="565dp"
                 android:layout_height="69dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
@@ -462,8 +462,10 @@
                 android:gravity="start|top"
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine"
-                android:text="Visualisasi Profil Kabpupaten Cilacap"
+                android:text="Visualisasi Profil Kabupaten Cilacap"
+                android:textAlignment="center"
                 android:textColor="@color/black"
+                android:textSize="24sp"
                 tools:ignore="HardcodedText" />
 
             <EditText
