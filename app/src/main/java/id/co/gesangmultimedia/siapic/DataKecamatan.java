@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.data.geojson.GeoJsonLayer;
 import com.google.maps.android.data.geojson.GeoJsonPolygonStyle;
@@ -50,6 +52,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     private String strKecamatan = "";
     private String strPotensi = "";
     private FloatingWindow fabBack;
+    private int markerclicked;
 
     private static final LatLng CILACAP = new LatLng(-7.727989, 109.005913);
 
@@ -161,6 +164,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     private static final LatLng UDANGBINANGUN = new LatLng(-7.692737, 109.293375);
     private static final LatLng WEDUSGNTELU = new LatLng(-7.417377, 108.869263);
     private static final LatLng KELAPATINGGARJAYA = new LatLng(-7.482692,108.774660);
+
+
 
 
     @Override
@@ -1786,6 +1791,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(SIDATPATIMUAN)
                 .title("Keris Jateng: Sidat Patimuan")
+                .snippet("Nilai Investasi Rp. 3.555.952.133,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
         );
     }
@@ -1952,7 +1958,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 12f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PATIMUAN, 12f));
         GeoJsonLayer layerPatimuan;
         layerPatimuan = new GeoJsonLayer(mMap, R.raw.patimuan, getApplicationContext());
         GeoJsonPolygonStyle layerPatimuanStyle = layerPatimuan.getDefaultPolygonStyle();
@@ -2171,8 +2177,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(BANTARSARI)
                 .title("Kecamatan Bantarsari")
-                .snippet("Luas wilayah :95,54 km2\n" +
-                        "Jumlah angkatan kerja : 44.173 orang")
+                .snippet("Luas wilayah :95,54 km2, Jumlah angkatan kerja : 44.173 orang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
@@ -2510,13 +2515,13 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(GITARADIPALA)
                 .title("Produsen Gitar Suwanto")
-                //.snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Kemungkinan Pengembangan Investasi")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(GULAKELAPAADIPALA)
                 .title("Gula Kelapa Adipala")
-                //.snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Pengembangan Industri dengan memperluas pasar")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
         mMap.addMarker(new MarkerOptions()
@@ -2528,7 +2533,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(JIPANGADIPALA)
                 .title("Sentra Produksi Jipang Adipala")
-                //.snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Perluasan Industri dengan Teknologi Tepat Guna")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
         mMap.addMarker(new MarkerOptions()
@@ -2540,7 +2545,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(SALEPISANGADIPALA)
                 .title("Pusat Sale Pisang")
-                //.snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Kemungkinan Pengembangan dengan menambah pasar")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
         mMap.addMarker(new MarkerOptions()
@@ -2713,7 +2718,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     private void showIkanBinangun(){
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGVANAME)
-                .title("Kesed Binangun")
+                .title("Udang Vaname Binangun")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
         mMap.addMarker(new MarkerOptions()
@@ -3779,6 +3784,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.285676, 108.680878))
                 .title("Hutan Penghasil Kayu Malabar")
+                .snippet("Ini adalah test buat Snipetpet")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
         mMap.addMarker(new MarkerOptions()
@@ -3823,6 +3829,37 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         googleMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
+            @Override
+            public View getInfoWindow(Marker marker) {
+                return null;
+            }
+
+            @Override
+            public View getInfoContents(Marker marker) {
+                View v = getLayoutInflater().inflate(R.layout.info_content, null);
+                LatLng latLng = marker.getPosition();
+                TextView tvLat = (TextView) v.findViewById(R.id.tvLat);
+                TextView tvLng = (TextView) v.findViewById(R.id.tvLng);
+                TextView tv1 = findViewById(R.id.tvTitleMap);
+                TextView tv2 = findViewById(R.id.tvSnipetMap);
+                ImageView iv = findViewById(R.id.ivGambarMap);
+
+                String strTitle = marker.getTitle();
+                String strSniper = marker.getSnippet();
+
+                tv1.setText(strTitle);
+                tv2.setText(strSniper);
+                tvLat.setText("Latitude:" + latLng.latitude);
+                tvLng.setText("Longitude:"+ latLng.longitude);
+
+                if(onMarkerClick(marker)==true && markerclicked==1){
+                    iv.setImageResource(R.drawable.tanjungintan);
+                }
+
+                return v;
+            }
+        });
         //LatLng cilacap = new LatLng(-7.481717, 108.838529);
         //mMap.addMarker(new MarkerOptions().position(cilacap).title("Cilacap").snippet("Cilacap Bercahaya"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(cilacap));
@@ -3844,6 +3881,125 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.getUiSettings().setAllGesturesEnabled(true);
 
     }
+
+    private boolean onMarkerClick(final Marker marker) {
+        if (marker.equals(BANDARA))
+        {
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANTJINTAN)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANSLEKO)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(PELABUHANSODONG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNCILACAP)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNGDMANGU)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNKROYA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNMAOS)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(STASIUNSDREJA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALCILACAP)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALKRPUCUNG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALMAJENANG)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(TERMINALSDREJA)){
+            markerclicked=1;
+            return true;
+        }
+        else if (marker.equals(AIRPANASCIPARI)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPAKEDUNGREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPATINGGARJAYA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KELAPAWANAREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(PALADAYEUHLUHUR)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIDAYEUHLUHUR)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIMAJENANG)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SAPIWANAREJA)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(KAMBINGKRPUCUNG)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(HUTANPAYAU)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(GULAJERUKLEGI)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(SIDATPATIMUAN)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(WISATASLEKO)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(UDANGVANAME)) {
+            markerclicked = 1;
+            return true;
+        }
+        else if (marker.equals(WISATAMOMONGAN)) {
+            markerclicked = 1;
+            return true;
+        }
+        return false;
+
+    }
+
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
         Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
         vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
