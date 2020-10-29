@@ -244,19 +244,19 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .position(PELABUHANTJINTAN)
                 .title("Pelabuhan Utama Tanjung Intan")
                 .snippet("Klega, Tambakreja, Kec. Cilacap Selatan Kabupaten Cilacap, Jawa Tengah 53213")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSLEKO)
                 .title("Pelabuhan Penyeberangan Sleko")
                 .snippet(" JL. Seleko , Tambakreja , Cilacap Selatan Cilacap , Jawa Tengah 53213")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(PELABUHANSODONG)
                 .title("Pelabuhan Penyeberangan Dermaga Sodong")
                 .snippet("Tambakreja, Kec. Cilacap Selatan Kabupaten Cilacap, Jawa Tengah 53263")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconkapal))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.ship))
         );
     }
     private void ngebis(){
@@ -323,7 +323,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .anchor(0.5f, 0.5f)
                 .title("Pemandian Air Panas Cipari")
                 .snippet("Nilai Investasi Rp. 2.000.000.000,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris)));
     }
 
     private void kelapaWanareja() {
@@ -380,7 +380,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .position(WEDUSKRPUCUNG)
                 .title("Peternakan Terpadu Kambing Karangpucung")
                 .snippet("Nilai Investasi Rp. 97.213.602.800,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris)));
     }
 
     private void gulaJeruklegi() {
@@ -428,63 +428,63 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
                 .position(MOMONGAN)
                 .title("Pengembangan Wisata Pulau Momongan")
                 .snippet("Nilai Investasi Rp. 10.658.908.000,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap)));
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris)));
     }
 
-    private void kerismap(){
+    private void mapkeris(){
         mMap.addMarker(new MarkerOptions()
                 .position(SIDATPATIMUAN)
                 .title("Keris Jateng: Sidat Bulupayung")
                 .snippet("Nilai Investasi Rp. 3.555.952.133,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGCILSEL)
                 .title("Keris Jateng: Udang Tegal Kamulyan")
                 .snippet("Nilai Investasi Rp. 20.736.165.550,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGMERTASINGA)
-                .title("Keris Jateng: Udang Vaname Mertasinga")
-                .snippet("Nilai Investasi Rp. 20.736.165.550,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .title("Udang Vaname Mertasinga")
+                .snippet("Industri Udang Mertasinga")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(SAPIGDMANGU)
                 .title("Keris Jateng: Peternakan Sapi Gandrungmangu")
                 .snippet("Nilai Investasi Rp. 4,541,500,000,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATASEGARAANAKAN)
                 .title("Keris Jateng: Wisata Bahari Segara ANakan")
                 .snippet("Nilai Investasi Rp. 114.550.825.868,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATAUJUNGALANG)
                 .title("Keris Jateng: Wisata Bahari Ujung Alang")
                 .snippet("Nilai Investasi Rp.  116,437,089,393,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGBINANGUN)
                 .title("Keris Jateng: Tambak Udang Binangun")
                 .snippet("Nilai Investasi Rp.  Rp255,387,100,000,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WEDUSGNTELU)
                 .title("Keris Jateng: Peternakan Kambing Gunung Telu")
                 .snippet("Nilai Investasi Rp. 95.144.085.000,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(KELAPATINGGARJAYA)
                 .title("Keris Jateng: Industri Kelapa Tinggarjaya")
                 .snippet("Nilai Investasi Rp. 58,602,850,000")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     @Override
@@ -546,7 +546,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         mabur();
         ngebis();
         renang();
-        kerismap();
+        mapkeris();
         nyepur();
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED

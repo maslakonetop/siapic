@@ -510,8 +510,9 @@
                 android:layout_below="@+id/btnNonton3"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="10dp"
                 android:layout_toRightOf="@id/imageView20"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -582,9 +583,9 @@
                 android:layout_below="@+id/btnNonton7"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="47dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="12dp"
                 android:layout_toRightOf="@id/imageView24"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -602,7 +603,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="2dp"
-                android:layout_marginTop="47dp"
+                android:layout_marginTop="42dp"
                 android:layout_marginRight="5dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
@@ -621,7 +622,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imageView26"
                 android:ems="10"
@@ -886,9 +887,9 @@
                 android:layout_below="@+id/btnWisataBahari"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="11dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="12dp"
                 android:layout_toRightOf="@id/imgPantaiWidarapayung"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -1022,8 +1023,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imageView24"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="39dp"
                 app:srcCompat="@drawable/stiksukun" />
 
             <ImageView
@@ -1042,8 +1043,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imageView26"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="47dp"
                 app:srcCompat="@drawable/batik" />
 
             <ImageView
@@ -1052,8 +1053,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgBatik"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="47dp"
                 app:srcCompat="@drawable/salepisang" />
 
             <ImageView
@@ -1063,7 +1064,7 @@
                 android:layout_below="@id/imgSalePisang"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="46dp"
                 app:srcCompat="@drawable/keranglaut" />
 
             <ImageView
@@ -1072,8 +1073,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgKerang"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="48dp"
                 app:srcCompat="@drawable/kerupuktengiri" />
 
             <ImageView
@@ -1082,8 +1083,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgTengiri"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="47dp"
                 app:srcCompat="@drawable/rawabandungan" />
 
             <ImageView
@@ -1102,8 +1103,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgKambingKrPucung"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="46dp"
                 app:srcCompat="@drawable/indgulasemut" />
 
             <ImageView
@@ -1112,8 +1113,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgIndustriGulaSemut"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="48dp"
                 app:srcCompat="@drawable/sapipotong" />
 
             <ImageView
@@ -1122,8 +1123,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgSapi"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="53dp"
                 app:srcCompat="@drawable/hutanpayau" />
 
             <ImageView
@@ -1133,7 +1134,7 @@
                 android:layout_below="@id/imgHutanPayau"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="50dp"
                 app:srcCompat="@drawable/ikangurami" />
 
             <ImageView
@@ -1143,7 +1144,7 @@
                 android:layout_below="@id/imgGurame"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="52dp"
                 app:srcCompat="@drawable/sebutret" />
 
             <ImageView
@@ -1152,8 +1153,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgSebutret"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="70dp"
                 app:srcCompat="@drawable/airpanscipari" />
 
             <ImageView
@@ -1163,7 +1164,7 @@
                 android:layout_below="@id/imgHotSpring"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="51dp"
                 app:srcCompat="@drawable/wisatabahari" />
 
             <ImageView

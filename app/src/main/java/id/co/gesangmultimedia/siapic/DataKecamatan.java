@@ -128,7 +128,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
 
     private static final LatLng UDANGVANAME = new LatLng(-7.662435, 109.260374);
 
-    private static final LatLng WISATAMOMONGAN = new LatLng(-7.430953, 108.7662454);
+    private static final LatLng MOMONGAN = new LatLng(-7.712007, 109.387234);
 
     private static final LatLng KELAPAKEDUNGREJA = new LatLng(-7.5015207, 108.7848592);
 
@@ -958,7 +958,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 }
                 if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Industri"))){
                     try {
-                        showKplaut(null);
+                        showKrpucung(null);
                     } catch (IOException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
@@ -1697,6 +1697,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                         e.printStackTrace();
                     }
                     showIkanWanareja();
+                    animator.start();
                 }
                 if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Pertanian"))){
                     try {
@@ -1775,11 +1776,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     }
 
     private void showIkanWanareja() {
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.293876, 108.716865))
-                .title("Budi Daya Benih Leler")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
-        );
+        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
+                Toast.LENGTH_SHORT).show();
     }
 
     private void showKebunSidareja() {
@@ -1792,7 +1790,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .position(SIDATPATIMUAN)
                 .title("Keris Jateng: Sidat Patimuan")
                 .snippet("Nilai Investasi Rp. 3.555.952.133,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
 
@@ -1972,9 +1970,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAOS, 12f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CIPARI, 12f));
         GeoJsonLayer layerMaos;
-        layerMaos = new GeoJsonLayer(mMap, R.raw.maos, getApplicationContext());
+        layerMaos = new GeoJsonLayer(mMap, R.raw.cipari, getApplicationContext());
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
         layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerMaosStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
@@ -2042,7 +2040,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KAMPUNGLAUT, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KAMPUNGLAUT, 11f));
         GeoJsonLayer layerKpLaut;
         layerKpLaut = new GeoJsonLayer(mMap, R.raw.kampunglaut, getApplicationContext());
         GeoJsonPolygonStyle layerKpLautStyle = layerKpLaut.getDefaultPolygonStyle();
@@ -2072,7 +2070,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KAWUNGANTEN, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KAWUNGANTEN, 11f));
         GeoJsonLayer layerKawunganten;
         layerKawunganten = new GeoJsonLayer(mMap, R.raw.kawunganten, getApplicationContext());
         GeoJsonPolygonStyle layerKawungantenStyle = layerKawunganten.getDefaultPolygonStyle();
@@ -2087,7 +2085,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KEDUNGREJA, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KEDUNGREJA, 11f));
         GeoJsonLayer layerKdreja;
         layerKdreja = new GeoJsonLayer(mMap, R.raw.kedungreja, getApplicationContext());
         GeoJsonPolygonStyle layerKdrejaStyle = layerKdreja.getDefaultPolygonStyle();
@@ -2102,7 +2100,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KESUGIHAN, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KESUGIHAN, 11f));
         GeoJsonLayer layerKesugihan;
         layerKesugihan = new GeoJsonLayer(mMap, R.raw.kesugihan, getApplicationContext());
         GeoJsonPolygonStyle layerKesugihanStyle = layerKesugihan.getDefaultPolygonStyle();
@@ -2118,7 +2116,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KROYA, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(KROYA, 11f));
         GeoJsonLayer layerKroya;
         layerKroya = new GeoJsonLayer(mMap, R.raw.kroya, getApplicationContext());
         GeoJsonPolygonStyle layerKroyaStyle = layerKroya.getDefaultPolygonStyle();
@@ -2133,7 +2131,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAJENANG, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MAJENANG, 11f));
         GeoJsonLayer layerMajenang;
         layerMajenang = new GeoJsonLayer(mMap, R.raw.majenang, getApplicationContext());
         GeoJsonPolygonStyle layerMajenangluhurStyle = layerMajenang.getDefaultPolygonStyle();
@@ -2148,7 +2146,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SIDAREJA, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SIDAREJA, 11f));
         GeoJsonLayer layerSidareja;
         layerSidareja = new GeoJsonLayer(mMap, R.raw.sidareja, getApplicationContext());
         GeoJsonPolygonStyle layerSidarejaStyle = layerSidareja.getDefaultPolygonStyle();
@@ -2163,7 +2161,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             return;
         }
         mMap.clear();
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WANAREJA, 13f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(WANAREJA, 11f));
         GeoJsonLayer layerWanareja;
         layerWanareja = new GeoJsonLayer(mMap, R.raw.wanareja, getApplicationContext());
         GeoJsonPolygonStyle layerWanarejaStyle = layerWanareja.getDefaultPolygonStyle();
@@ -2724,7 +2722,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGBINANGUN)
                 .title("Keris Jateng: Tambak Udang Binangun")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showTaniBinangun(){
@@ -2773,8 +2771,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             );
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGCILSEL)
-                .title("Keris Jateng: Industri Udang Tegal Kamulyan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .title("Industri Udang Tegal Kamulyan")
+                .snippet("Industri Udang Tegal Kamulyan Cilacap Selatan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
     }
     private void showWisataCilsel(){
@@ -2814,7 +2813,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGMERTASINGA)
                 .title("Keris Jateng: Industri Udang Vaname Mertasinga")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showIndustriCilteng(){
@@ -2993,7 +2992,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(AIRPANASCIPARI)
                 .title("Keris Jateng : Wisata Air Panas Cipari")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showIkanCipari(){
@@ -3144,7 +3143,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.505771, 108.774712))
                 .title("Keris Jateng: Peternakan Sapi Gandrungmangu")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
                 );
     }
     private void showIndustriJeruklegi(){
@@ -3269,12 +3268,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(WISATASEGARAANAKAN)
                 .title("Keris Jateng: Wisata Bahari Segara ANakan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATAUJUNGALANG)
                 .title("Keris Jateng: Wisata Bahari Ujung Alang")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showIkanKpLaut(){
@@ -3298,11 +3297,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     }
     private void showIndustriKdReja() {
         mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.507471, 108.813471))
-                .title("Industri Batu Bata Cisumur")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
-        );
-        mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.494068, 108.768923))
                 .title("Industri Batu Bata Bangunreja")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
@@ -3325,11 +3319,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.495867, 108.803682))
                 .title("Sentra Industri Lanting")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.516593, 108.856628))
-                .title("Industri Sale Pisang Buluiwangi")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
         mMap.addMarker(new MarkerOptions()
@@ -3420,7 +3409,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(WEDUSGNTELU)
                 .title("Keris Jateng: Peternakan Kambing Gunung Telu")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showIndustriKesugiihan(){
@@ -3617,9 +3606,10 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     }
     private void showWisataNusawungu(){
         mMap.addMarker(new MarkerOptions()
-                .position(WISATAMOMONGAN)
+                .position(MOMONGAN)
                 .title("Pengembangan Wisata Pulau Momongan")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .snippet("Nilai Investasi Rp. 115.734.150.000,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showIkanNusawungu(){
@@ -3728,18 +3718,13 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(KELAPATINGGARJAYA)
                 .title("Keris Jateng: Industri Kelapa Tinggarjaya")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.kerismap))
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
     private void showWisataSidareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.440434, 108.825462))
                 .title("Panembahan Cisagu")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.449903, 108.828369))
-                .title("Curug Luhur Penyarang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
         mMap.addMarker(new MarkerOptions()
@@ -3764,11 +3749,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.300501, 108.645039))
                 .title("Industri Penggergajian Kayu")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
-        );
-        mMap.addMarker(new MarkerOptions()
-                .position(KELAPAWANAREJA)
-                .title("Industri Kelapa Wanareja")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
     }
@@ -3992,7 +3972,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             markerclicked = 1;
             return true;
         }
-        else if (marker.equals(WISATAMOMONGAN)) {
+        else if (marker.equals(MOMONGAN)) {
             markerclicked = 1;
             return true;
         }

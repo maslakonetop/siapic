@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="411dp" />
+        app:layout_constraintGuide_end="464dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="935dp" />
+        app:layout_constraintGuide_end="818dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline47"
@@ -86,8 +86,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="594dp"
-        android:layout_height="800dp"
+        android:layout_width="482dp"
+        android:layout_height="693dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -451,8 +451,8 @@
 
             <EditText
                 android:id="@+id/editTextTextMultiLine"
-                android:layout_width="364dp"
-                android:layout_height="59dp"
+                android:layout_width="254dp"
+                android:layout_height="55dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
                 android:ems="10"
@@ -472,8 +472,9 @@
                 android:layout_below="@+id/btnNonton"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="-2dp"
+                android:layout_marginTop="39dp"
+                android:layout_marginRight="9dp"
                 android:layout_toRightOf="@+id/imageView18"
                 android:ems="10"
                 android:enabled="false"
@@ -492,8 +493,9 @@
                 android:layout_below="@+id/btnNonton2"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
+                android:layout_marginLeft="0dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="-9dp"
+                android:layout_marginRight="-7dp"
                 android:layout_toRightOf="@id/imageView19"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -509,7 +511,8 @@
                 android:layout_below="@+id/btnNonton3"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="7dp"
                 android:layout_toRightOf="@id/imageView20"
                 android:ems="10"
@@ -565,9 +568,9 @@
                 android:layout_below="@+id/btnNonton6"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="41dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="-3dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="11dp"
                 android:layout_toRightOf="@id/imageView23"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -642,7 +645,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="39dp"
+                android:layout_marginTop="19dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
@@ -661,7 +664,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="6dp"
-                android:layout_marginTop="33dp"
+                android:layout_marginTop="38dp"
                 android:layout_marginRight="9dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
@@ -679,9 +682,9 @@
                 android:layout_below="@+id/btnSale"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="11dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginRight="9dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -699,7 +702,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="46dp"
+                android:layout_marginTop="17dp"
                 android:layout_marginRight="11dp"
                 android:layout_toRightOf="@id/imgTengiri"
                 android:ems="10"
@@ -736,9 +739,9 @@
                 android:layout_below="@+id/btnRawaBendungan"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="39dp"
-                android:layout_marginRight="13dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="12dp"
                 android:layout_toRightOf="@id/imgKambingKrPucung"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -919,32 +922,13 @@
                 android:textColor="@color/black"
                 tools:ignore="HardcodedText" />
 
-            <EditText
-                android:id="@+id/edtTxtHotSpring3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSebutret"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgSebutret"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="WISATA AIR PANAS CIPARI)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
             <ImageView
                 android:id="@+id/imageView17"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
+                android:layout_width="194dp"
+                android:layout_height="114dp"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="16dp"
-                android:layout_marginRight="9dp"
+                android:layout_marginRight="-99dp"
                 android:layout_toLeftOf="@+id/editTextTextMultiLine"
                 app:srcCompat="@drawable/visualisasiprofil" />
 
@@ -1154,8 +1138,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgSebutret"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="58dp"
                 app:srcCompat="@drawable/airpanscipari" />
 
             <ImageView

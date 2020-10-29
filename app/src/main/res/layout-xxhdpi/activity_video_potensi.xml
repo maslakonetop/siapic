@@ -25,6 +25,9 @@
         android:id="@+id/textView3"
         android:layout_width="257dp"
         android:layout_height="31dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="49dp"
         android:fontFamily="@font/arialni"
         android:text="Video Potensi Investasi Cilacap"
         android:textAlignment="gravity"
@@ -32,11 +35,12 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline47"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toStartOf="@+id/guideline32"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.244"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166"
         tools:ignore="HardcodedText" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -72,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="194dp" />
+        app:layout_constraintGuide_begin="162dp" />
 
     <include
         layout="@layout/menu_atas"
@@ -972,8 +976,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imageView19"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="33dp"
                 app:srcCompat="@drawable/budidayasidat" />
 
             <ImageView

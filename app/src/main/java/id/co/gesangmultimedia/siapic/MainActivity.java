@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
@@ -57,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
                         , android.Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
             } else {
 
-                Toast.makeText(MainActivity.this, "Aplikasi GPS dinon-aktifkan", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "Alokasi GPS sudah diaktifkan", Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(MainActivity.this, "Alokasi GPS sudah diaktifkan", Toast.LENGTH_LONG).show();
+            //Toast.makeText(MainActivity.this, "Aplikasi GPS dinon-aktifkan", Toast.LENGTH_LONG).show();
         }
     }
     private void showBeranda(View v) {

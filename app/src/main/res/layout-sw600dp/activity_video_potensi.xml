@@ -44,14 +44,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="411dp" />
+        app:layout_constraintGuide_end="585dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="411dp" />
+        app:layout_constraintGuide_begin="584dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline34"
@@ -65,14 +65,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="814dp" />
+        app:layout_constraintGuide_end="874dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="194dp" />
+        app:layout_constraintGuide_begin="141dp" />
 
     <include
         layout="@layout/menu_atas"
@@ -86,8 +86,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="571dp"
+        android:layout_width="593dp"
+        android:layout_height="732dp"
         android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,8 +97,8 @@
         app:layout_constraintVertical_bias="1.0">
 
         <RelativeLayout
-            android:layout_width="392dp"
-            android:layout_height="623dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnNonton"
@@ -452,8 +452,8 @@
 
             <EditText
                 android:id="@+id/editTextTextMultiLine"
-                android:layout_width="168dp"
-                android:layout_height="69dp"
+                android:layout_width="366dp"
+                android:layout_height="47dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="7dp"
                 android:ems="10"
@@ -473,8 +473,9 @@
                 android:layout_below="@+id/btnNonton"
                 android:layout_alignParentTop="false"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginRight="12dp"
                 android:layout_toRightOf="@+id/imageView18"
                 android:ems="10"
                 android:enabled="false"
@@ -546,8 +547,9 @@
                 android:layout_below="@+id/btnNonton5"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginRight="2dp"
                 android:layout_toRightOf="@id/imageView23"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -564,8 +566,9 @@
                 android:layout_below="@+id/btnNonton6"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginRight="6dp"
                 android:layout_toRightOf="@id/imageView23"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -582,9 +585,9 @@
                 android:layout_below="@+id/btnNonton7"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="47dp"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="7dp"
                 android:layout_toRightOf="@id/imageView24"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -640,7 +643,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="45dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
@@ -678,7 +681,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="44dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imageView25"
                 android:ems="10"
@@ -697,7 +700,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="41dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imgTengiri"
                 android:ems="10"
@@ -715,9 +718,9 @@
                 android:layout_below="@+id/btnTengiri"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="10dp"
                 android:layout_toRightOf="@id/imgRawaBendungan"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -735,7 +738,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="39dp"
                 android:layout_marginRight="8dp"
                 android:layout_toRightOf="@id/imgKambingKrPucung"
                 android:ems="10"
@@ -791,9 +794,9 @@
                 android:layout_below="@+id/btnSapi"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="34dp"
+                android:layout_marginRight="11dp"
                 android:layout_toRightOf="@id/imgHutanPayau"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -905,9 +908,9 @@
                 android:layout_below="@+id/btnPantaiWidarapayung"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginRight="10dp"
                 android:layout_toRightOf="@id/imgOss"
                 android:ems="10"
                 android:fontFamily="@font/arialn"
@@ -1133,7 +1136,7 @@
                 android:layout_below="@id/imgHutanPayau"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 app:srcCompat="@drawable/ikangurami" />
 
             <ImageView
@@ -1152,8 +1155,8 @@
                 android:layout_height="111dp"
                 android:layout_below="@id/imgSebutret"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="37dp"
                 app:srcCompat="@drawable/airpanscipari" />
 
             <ImageView
