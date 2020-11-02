@@ -7,77 +7,74 @@
     android:background="@drawable/background"
     tools:context=".PotensiUmum">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/rltUmum"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_marginBottom="652dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="464dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="463dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="754dp" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="476dp"
-        android:layout_height="714dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:context=".MapPotensiUmum"
-        tools:layout="@layout/activity_potensi_umum"></androidx.fragment.app.FragmentContainerView>
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="122dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/map"
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/apik" />
+
+        <TextView
+            android:id="@+id/txtPotensiUmum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="702dp"
+            android:fontFamily="@font/arialb"
+            android:text="Potensi Umum Investasi Kabupaten Cilacap"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175"
-        app:srcCompat="@drawable/apik" />
+        app:layout_constraintTop_toBottomOf="@+id/rltUmum">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:context=".MapPotensiUmum" />
+
+    </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabmenu"
         android:layout_width="93dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="rumah"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline29"
-        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline31"
+        android:layout_marginStart="5dp"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/back" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

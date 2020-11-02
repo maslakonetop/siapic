@@ -64,7 +64,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
         boolean focusable = true; // lets taps outside the popup also dismiss it
-        final PopupWindow popupWindow = new PopupWindow(popupmenu, width, height, focusable);
+        final PopupWindow popupWindow = new PopupWindow(popupmenu, width, height, true);
 
         popupWindow.showAtLocation(popupmenu, Gravity.CENTER_VERTICAL, 0, 500);
 
@@ -92,6 +92,10 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        GeoJsonPolygonStyle layerstyle = geoJsonLayer.getDefaultPolygonStyle();
+        layerstyle.setStrokeWidth(3f);
+        layerstyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
+        layerstyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
         geoJsonLayer.addLayerToMap();
 
     }
@@ -104,7 +108,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerCagar = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.cagaralam, getApplicationContext());
         GeoJsonPolygonStyle layerCagarStyle = layerCagar.getDefaultPolygonStyle();
         layerCagarStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerCagarStyle.setFillColor(ContextCompat.getColor(this, R.color.burlywood));
+        layerCagarStyle.setFillColor(ContextCompat.getColor(this, R.color.purple));
         layerCagarStyle.setStrokeWidth(1f);
         layerCagar.addLayerToMap();
     }
@@ -117,7 +121,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerHutanProd = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.hutanproduksi, getApplicationContext());
         GeoJsonPolygonStyle layarHutanProdStyle = layerHutanProd.getDefaultPolygonStyle();
         layarHutanProdStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layarHutanProdStyle.setFillColor(ContextCompat.getColor(this, R.color.grey));
+        layarHutanProdStyle.setFillColor(ContextCompat.getColor(this, R.color.lightblue));
         layarHutanProdStyle.setStrokeWidth(1f);
         layerHutanProd.addLayerToMap();
     }
@@ -156,7 +160,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerResapan = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.kawresapanair, getApplicationContext());
         GeoJsonPolygonStyle layerResapanStyle = layerResapan.getDefaultPolygonStyle();
         layerResapanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerResapanStyle.setFillColor(ContextCompat.getColor(this, R.color.deepskyblue));
+        layerResapanStyle.setFillColor(ContextCompat.getColor(this, R.color.cornflowerblue));
         layerResapanStyle.setStrokeWidth(1f);
         layerResapan.addLayerToMap();
     }
@@ -182,7 +186,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerMataAir = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.kawperlindunganmataair, getApplicationContext());
         GeoJsonPolygonStyle layerMataGaya = layerMataAir.getDefaultPolygonStyle();
         layerMataGaya.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerMataGaya.setFillColor(ContextCompat.getColor(this, R.color.mediumorchid));
+        layerMataGaya.setFillColor(ContextCompat.getColor(this, R.color.teal));
         layerMataGaya.setStrokeWidth(1f);
         layerMataAir.addLayerToMap();
     }
@@ -194,7 +198,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         com.google.maps.android.data.geojson.GeoJsonLayer layerNonHutan;
         layerNonHutan = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.kawasannonhutan, getApplicationContext());
         GeoJsonPolygonStyle layerNonGaya = layerNonHutan.getDefaultPolygonStyle();
-        layerNonGaya.setFillColor(ContextCompat.getColor(this, R.color.olive));
+        layerNonGaya.setFillColor(ContextCompat.getColor(this, R.color.lime));
         layerNonGaya.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerNonGaya.setStrokeWidth(1f);
         layerNonHutan.addLayerToMap();
@@ -208,7 +212,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerLongsor = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.longsor, getApplicationContext());
         GeoJsonPolygonStyle layerLongsorStyle = layerLongsor.getDefaultPolygonStyle();
         layerLongsorStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerLongsorStyle.setFillColor(ContextCompat.getColor(this, R.color.lightcoral));
+        layerLongsorStyle.setFillColor(ContextCompat.getColor(this, R.color.olive));
         layerLongsorStyle.setStrokeWidth(1f);
         layerLongsor.addLayerToMap();
     }
@@ -220,7 +224,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         com.google.maps.android.data.geojson.GeoJsonLayer layerNdeso;
         layerNdeso = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.pedesaan, getApplicationContext());
         GeoJsonPolygonStyle layerNdesoNggaya = layerNdeso.getDefaultPolygonStyle();
-        layerNdesoNggaya.setFillColor(ContextCompat.getColor(this, R.color.orange));
+        layerNdesoNggaya.setFillColor(ContextCompat.getColor(this, R.color.burlywood));
         layerNdesoNggaya.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerNdesoNggaya.setStrokeWidth(1f);
         layerNdeso.addLayerToMap();
@@ -247,7 +251,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerKota = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.perkotaan, getApplicationContext());
         GeoJsonPolygonStyle layerKotaStyle = layerKota.getDefaultPolygonStyle();
         layerKotaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerKotaStyle.setFillColor(ContextCompat.getColor(this, R.color.mediumviolet));
+        layerKotaStyle.setFillColor(ContextCompat.getColor(this, R.color.navajowhite));
         layerKotaStyle.setStrokeWidth(1f);
         layerKota.addLayerToMap();
     }
@@ -273,7 +277,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerLahanBasah = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.pertanianlahanbasah, getApplicationContext());
         GeoJsonPolygonStyle layerBasahStyle = layerLahanBasah.getDefaultPolygonStyle();
         layerBasahStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerBasahStyle.setFillColor(ContextCompat.getColor(this, R.color.tan));
+        layerBasahStyle.setFillColor(ContextCompat.getColor(this, R.color.palegreen));
         layerBasahStyle.setStrokeWidth(1f);
         layerLahanBasah.addLayerToMap();
     }
@@ -286,7 +290,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerKering = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.pertanianlahankering, getApplicationContext());
         GeoJsonPolygonStyle layerKeringStyle = layerKering.getDefaultPolygonStyle();
         layerKeringStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerKeringStyle.setFillColor(ContextCompat.getColor(this, R.color.mediumaquamarine));
+        layerKeringStyle.setFillColor(ContextCompat.getColor(this, R.color.ghostwhite));
         layerKeringStyle.setStrokeWidth(1f);
         layerKering.addLayerToMap();
     }
@@ -299,7 +303,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerRawan = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.rawan, getApplicationContext());
         GeoJsonPolygonStyle layerRawanStyle = layerRawan.getDefaultPolygonStyle();
         layerRawanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerRawanStyle.setFillColor(ContextCompat.getColor(this, R.color.crimson));
+        layerRawanStyle.setFillColor(ContextCompat.getColor(this, R.color.darkgray));
         layerRawanStyle.setStrokeWidth(1f);
         layerRawan.addLayerToMap();
     }
@@ -312,7 +316,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerPantai = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.sempadanpantai, getApplicationContext());
         GeoJsonPolygonStyle layerAnakPantai = layerPantai.getDefaultPolygonStyle();
         layerAnakPantai.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerAnakPantai.setFillColor(ContextCompat.getColor(this, R.color.blanchedalmond));
+        layerAnakPantai.setFillColor(ContextCompat.getColor(this, R.color.peru));
         layerAnakPantai.setStrokeWidth(1f);
         layerPantai.addLayerToMap();
     }
@@ -337,7 +341,7 @@ public class RtrwCilacap<GeoJsonLayer, KmlLayer> extends AppCompatActivity imple
         layerAnak = new com.google.maps.android.data.geojson.GeoJsonLayer(mMap, R.raw.sempadansungikecil, getApplicationContext());
         GeoJsonPolygonStyle layerAnakStyle = layerAnak.getDefaultPolygonStyle();
         layerAnakStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
-        layerAnakStyle.setFillColor(ContextCompat.getColor(this, R.color.peru));
+        layerAnakStyle.setFillColor(ContextCompat.getColor(this, R.color.saddlebrown));
         layerAnakStyle.setStrokeWidth(1f);
         layerAnak.addLayerToMap();
     }

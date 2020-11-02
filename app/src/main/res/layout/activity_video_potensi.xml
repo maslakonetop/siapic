@@ -7,1204 +7,1197 @@
     android:background="@drawable/background"
     tools:context=".VideoPotensi">
 
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="247dp"
-        android:layout_height="53dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline47"
-        app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.113"
-        app:srcCompat="@drawable/apik"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="257dp"
-        android:layout_height="31dp"
-        android:fontFamily="@font/arialni"
-        android:text="Video Potensi Investasi Cilacap"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/guideline47"
-        app:layout_constraintEnd_toStartOf="@+id/guideline33"
-        app:layout_constraintHorizontal_bias="0.688"
-        app:layout_constraintStart_toStartOf="@+id/guideline32"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.244"
-        tools:ignore="HardcodedText" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="411dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="411dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50121653" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="814dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="194dp" />
-
     <include
+        android:id="@+id/include"
         layout="@layout/menu_atas"
-        android:layout_width="150dp"
-        android:layout_height="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline47"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline34"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="571dp"
-        android:weightSum="1"
+        android:layout_width="132dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="279dp"
+        android:layout_marginBottom="741dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="1.0">
-
-        <RelativeLayout
-            android:layout_width="392dp"
-            android:layout_height="623dp">
-
-            <Button
-                android:id="@+id/btnNonton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/editTextTextMultiLine"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="profil"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/editTextTextMultiLine2"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="booklet"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine3"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="inggris"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine4"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="sidat"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine6"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="pameran"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine7"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="gula"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine8"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="tas"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine9"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="asin"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine10"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="stik"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnNonton10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine11"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="nata"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnBatik"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtBatik"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="batik"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtSale"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="sale"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnKerang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtKerang"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="kerang"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnTengiri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtTengiri"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="tengiri"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnRawaBendungan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtRawaBendungan"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="rawa"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnWedus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtWedusKrPucung"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="wedus"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-
-            <Button
-                android:id="@+id/btnIndusGulaSemut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtIndusGulaSemut"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="semut"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnSapi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtSapi"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="sapi"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnPayau"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtHutanPayau"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="payau"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnGurame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtGurame"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="gurame"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnSebutret"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtSebutret"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="sebutret"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnHotSpring"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtHotSpring"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="hotspring"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnWisataBahari"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtBahari"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="3dp"
-                android:background="@color/goldenrot"
-                android:onClick="bahari"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnPantaiWidarapayung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtPantaiWidarapayung"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="pantai"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <Button
-                android:id="@+id/btnOss"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/edtTxtOss"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginRight="7dp"
-                android:background="@color/goldenrot"
-                android:onClick="oss"
-                android:text="Lihat Video"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine"
-                android:layout_width="168dp"
-                android:layout_height="69dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="7dp"
-                android:ems="10"
-                android:enabled="false"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:importantForAutofill="no"
-                android:inputType="textMultiLine"
-                android:text="Visualisasi Profil Kabupaten Cilacap"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine2"
-                android:layout_width="168dp"
-                android:layout_height="69dp"
-                android:layout_below="@+id/btnNonton"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
-                android:layout_toRightOf="@+id/imageView18"
-                android:ems="10"
-                android:enabled="false"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:importantForAutofill="no"
-                android:inputType="textMultiLine"
-                android:text="VIDEO (BOOKLET) PROFIL KABUPATEN CILACAP"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine3"
-                android:layout_width="168dp"
-                android:layout_height="69dp"
-                android:layout_below="@+id/btnNonton2"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="-9dp"
-                android:layout_toRightOf="@id/imageView19"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:inputType="textMultiLine"
-                android:text="VIDEO PROFIL KAB. CILACAP 2018 (English Version)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton3"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="-3dp"
-                android:layout_marginTop="11dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imageView20"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="BUDI DAYA IKAN SIDAT"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton4"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
-                android:layout_toRightOf="@id/imageView21"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PAMERAN INVESDA JEC 2017T"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton5"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
-                android:layout_toRightOf="@id/imageView23"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN GULA SEMUT"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton6"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="7dp"
-                android:layout_toRightOf="@id/imageView23"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN TAS"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton7"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="-5dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginRight="12dp"
-                android:layout_toRightOf="@id/imageView24"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="IKAN ASIN TELUK PENYU"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton8"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="42dp"
-                android:layout_marginRight="5dp"
-                android:layout_toRightOf="@id/imageView25"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN STIK SUKUN"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/editTextTextMultiLine11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton9"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imageView26"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN NATA DE COCO"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtBatik"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnNonton10"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imageView25"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN BATIK"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtSale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnBatik"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="33dp"
-                android:layout_marginRight="9dp"
-                android:layout_toRightOf="@id/imageView25"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN SALE PISANG"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtKerang"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSale"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imageView25"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN KERANG LAUT"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtTengiri"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnKerang"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imgTengiri"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PRODUK UNGGULAN KRUPUK TENGGIRI"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtRawaBendungan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnTengiri"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imgRawaBendungan"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="OPTIMALISASI RAWA BENDUNGAN"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtWedusKrPucung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnRawaBendungan"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imgKambingKrPucung"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PETERNAKAN TERPADU KAMBING KARANG PUCUNG"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtIndusGulaSemut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnWedus"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imgIndustriGulaSemut"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="INDUSTRI GULA SEMUT"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtSapi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnIndusGulaSemut"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgSapi"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PETERNAKAN SAPI POTONG"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtHutanPayau"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSapi"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgHutanPayau"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="WISATA HUTAN PAYAU"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtGurame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnPayau"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgGurame"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="BUDI DAYA IKAN GURAMi"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtSebutret"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnGurame"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgSebutret"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="SEBUTRET (SERAT SABUT KELAPA KARET)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtHotSpring"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSebutret"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgSebutret"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="WISATA AIR PANAS CIPARI)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtBahari"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnHotSpring"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgWisataBahari"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="WISATA BAHARI"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtPantaiWidarapayung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnWisataBahari"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="3dp"
-                android:layout_marginTop="33dp"
-                android:layout_marginRight="12dp"
-                android:layout_toRightOf="@id/imgPantaiWidarapayung"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="PANTAI INDAH WIDARA PAYUNG"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtOss"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnPantaiWidarapayung"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="8dp"
-                android:layout_toRightOf="@id/imgOss"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="Tutorial Pengajuan Izin melalui OSS (Online Single Submission)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <EditText
-                android:id="@+id/edtTxtHotSpring3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnSebutret"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="43dp"
-                android:layout_marginRight="10dp"
-                android:layout_toRightOf="@id/imgSebutret"
-                android:ems="10"
-                android:fontFamily="@font/arialn"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="WISATA AIR PANAS CIPARI)"
-                android:textColor="@color/black"
-                tools:ignore="HardcodedText" />
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginRight="9dp"
-                android:layout_toLeftOf="@+id/editTextTextMultiLine"
-                app:srcCompat="@drawable/visualisasiprofil" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView17"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/videobookletprofil" />
-
-            <ImageView
-                android:id="@+id/imageView19"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView18"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/videoprofilinggris" />
-
-            <ImageView
-                android:id="@+id/imageView20"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView19"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/budidayasidat" />
-
-            <ImageView
-                android:id="@+id/imageView21"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView20"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/pameraninvesda" />
-
-            <ImageView
-                android:id="@+id/imageView22"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView21"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/gulasemut" />
-
-            <ImageView
-                android:id="@+id/imageView23"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView22"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/tas" />
-
-            <ImageView
-                android:id="@+id/imageView24"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView23"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/ikanasintelukpenyu" />
-
-            <ImageView
-                android:id="@+id/imageView25"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView24"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="39dp"
-                app:srcCompat="@drawable/stiksukun" />
-
-            <ImageView
-                android:id="@+id/imageView26"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView25"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/natadecoco" />
-
-            <ImageView
-                android:id="@+id/imgBatik"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imageView26"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="47dp"
-                app:srcCompat="@drawable/batik" />
-
-            <ImageView
-                android:id="@+id/imgSalePisang"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgBatik"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="47dp"
-                app:srcCompat="@drawable/salepisang" />
-
-            <ImageView
-                android:id="@+id/imgKerang"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgSalePisang"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="46dp"
-                app:srcCompat="@drawable/keranglaut" />
-
-            <ImageView
-                android:id="@+id/imgTengiri"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgKerang"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="48dp"
-                app:srcCompat="@drawable/kerupuktengiri" />
-
-            <ImageView
-                android:id="@+id/imgRawaBendungan"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgTengiri"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="47dp"
-                app:srcCompat="@drawable/rawabandungan" />
-
-            <ImageView
-                android:id="@+id/imgKambingKrPucung"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgRawaBendungan"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/weduskrpucung" />
-
-            <ImageView
-                android:id="@+id/imgIndustriGulaSemut"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgKambingKrPucung"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="46dp"
-                app:srcCompat="@drawable/indgulasemut" />
-
-            <ImageView
-                android:id="@+id/imgSapi"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgIndustriGulaSemut"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="48dp"
-                app:srcCompat="@drawable/sapipotong" />
-
-            <ImageView
-                android:id="@+id/imgHutanPayau"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgSapi"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="53dp"
-                app:srcCompat="@drawable/hutanpayau" />
-
-            <ImageView
-                android:id="@+id/imgGurame"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgHutanPayau"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="50dp"
-                app:srcCompat="@drawable/ikangurami" />
-
-            <ImageView
-                android:id="@+id/imgSebutret"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgGurame"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="52dp"
-                app:srcCompat="@drawable/sebutret" />
-
-            <ImageView
-                android:id="@+id/imgHotSpring"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgSebutret"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="70dp"
-                app:srcCompat="@drawable/airpanscipari" />
-
-            <ImageView
-                android:id="@+id/imgWisataBahari"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgHotSpring"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="51dp"
-                app:srcCompat="@drawable/wisatabahari" />
-
-            <ImageView
-                android:id="@+id/imgPantaiWidarapayung"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgWisataBahari"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/widarapayung" />
-
-            <ImageView
-                android:id="@+id/imgOss"
-                android:layout_width="204dp"
-                android:layout_height="111dp"
-                android:layout_below="@id/imgPantaiWidarapayung"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/oss" />
-
-            <TextView
-                android:id="@+id/txtVideoProfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/editTextTextMultiLine"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="72dp"
-                android:layout_marginEnd="16dp"
-                android:layout_toStartOf="@+id/btnNonton"
-                android:layout_toEndOf="@+id/imageView17"
-                android:layout_toRightOf="@+id/imageView17"
-                android:text="Text"
-                android:visibility="invisible"
-                tools:ignore="HardcodedText" />
-
-
-        </RelativeLayout>
-    </ScrollView>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rtlPotensi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivJudulPotensi"
+            android:layout_width="247dp"
+            android:layout_height="53dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            app:srcCompat="@drawable/apik"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivJudulPotensi"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/arialni"
+            android:text="Video Potensi Investasi Cilacap"
+            android:textAlignment="gravity"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="648dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rtlPotensi">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNonton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextTextMultiLine"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="profil"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editTextTextMultiLine2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="booklet"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="inggris"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="sidat"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="pameran"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine7"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="gula"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine8"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="tas"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine9"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="asin"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine10"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="stik"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnNonton10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine11"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="nata"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnBatik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtBatik"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="batik"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtSale"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="sale"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnKerang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtKerang"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="kerang"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnTengiri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtTengiri"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="tengiri"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnRawaBendungan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtRawaBendungan"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="rawa"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnWedus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtWedusKrPucung"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="wedus"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+
+                <Button
+                    android:id="@+id/btnIndusGulaSemut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtIndusGulaSemut"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="semut"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnSapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtSapi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="sapi"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnPayau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtHutanPayau"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="payau"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnGurame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtGurame"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="gurame"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnSebutret"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtSebutret"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="sebutret"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnHotSpring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtHotSpring"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="hotspring"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnWisataBahari"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtBahari"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="bahari"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnPantaiWidarapayung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtPantaiWidarapayung"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="pantai"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnOss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtTxtOss"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="oss"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btnMomongan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtMomongan"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/goldenrot"
+                    android:onClick="momongan"
+                    android:text="Lihat Video"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine"
+                    android:layout_width="189dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="7dp"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:text="Visualisasi Profil Kabupaten Cilacap"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine2"
+                    android:layout_width="168dp"
+                    android:layout_height="69dp"
+                    android:layout_below="@+id/btnNonton"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@+id/imageView18"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:text="VIDEO (BOOKLET) PROFIL KABUPATEN CILACAP"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine3"
+                    android:layout_width="168dp"
+                    android:layout_height="69dp"
+                    android:layout_alignTop="@+id/imageView19"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/imageView19"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:inputType="textMultiLine"
+                    android:text="VIDEO PROFIL KAB. CILACAP 2018 (English Version)"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="-3dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/imageView20"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="BUDI DAYA IKAN SIDAT"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView21"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_toEndOf="@id/imageView21"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PAMERAN INVESDA JEC 2017T"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView22"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@+id/imageView22"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN GULA SEMUT"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView23"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imageView23"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN TAS"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toEndOf="@id/imageView24"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="IKAN ASIN TELUK PENYU"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@id/imageView25"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN STIK SUKUN"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView26"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imageView26"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN NATA DE COCO"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtBatik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgBatik"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imageView25"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN BATIK"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtSale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgSalePisang"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_toEndOf="@+id/imgSalePisang"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN SALE PISANG"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtKerang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgKerang"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@+id/imgKerang"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN KERANG LAUT"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtTengiri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgTengiri"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgTengiri"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PRODUK UNGGULAN KRUPUK TENGGIRI"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtRawaBendungan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgRawaBendungan"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgRawaBendungan"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="OPTIMALISASI RAWA BENDUNGAN"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtWedusKrPucung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgKambingKrPucung"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgKambingKrPucung"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PETERNAKAN TERPADU KAMBING KARANG PUCUNG"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtIndusGulaSemut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnWedus"
+                    android:layout_alignTop="@+id/imgIndustriGulaSemut"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgIndustriGulaSemut"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="INDUSTRI GULA SEMUT"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtSapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnIndusGulaSemut"
+                    android:layout_alignTop="@+id/imgSapi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgSapi"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PETERNAKAN SAPI POTONG"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtHutanPayau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnSapi"
+                    android:layout_alignTop="@+id/imgHutanPayau"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgHutanPayau"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="WISATA HUTAN PAYAU"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtGurame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imgGurame"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgGurame"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="BUDI DAYA IKAN GURAMi"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtSebutret"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnGurame"
+                    android:layout_alignTop="@+id/imgSebutret"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgSebutret"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="SEBUTRET (SERAT SABUT KELAPA KARET)"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtHotSpring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnSebutret"
+                    android:layout_alignTop="@id/imgHotSpring"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgSebutret"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="WISATA AIR PANAS CIPARI)"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtBahari"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnHotSpring"
+                    android:layout_alignTop="@+id/imgWisataBahari"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgWisataBahari"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="WISATA BAHARI"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtPantaiWidarapayung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnWisataBahari"
+                    android:layout_alignTop="@id/imgPantaiWidarapayung"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgPantaiWidarapayung"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PANTAI INDAH WIDARA PAYUNG"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtTxtOss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnMomongan"
+                    android:layout_alignTop="@+id/imgOss"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgOss"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="Tutorial Pengajuan Izin melalui OSS (Online Single Submission)"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtMomongan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnPantaiWidarapayung"
+                    android:layout_alignTop="@+id/imgMomongan"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_toEndOf="@id/imgMomongan"
+                    android:ems="10"
+                    android:fontFamily="@font/arialn"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:text="PULAU MOMONGAN"
+                    android:textColor="@color/black"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_toStartOf="@+id/editTextTextMultiLine"
+                    app:srcCompat="@drawable/visualisasi" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView17"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/videobookletprofil" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView18"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/videoprofilinggris" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView19"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/budidayasidat" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView20"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/pameraninvesda" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView21"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/gulasemut" />
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView22"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/tas" />
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView23"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/ikanasintelukpenyu" />
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView24"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/stiksukun" />
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView25"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/natadecoco" />
+
+                <ImageView
+                    android:id="@+id/imgBatik"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imageView26"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/batik" />
+
+                <ImageView
+                    android:id="@+id/imgSalePisang"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgBatik"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/salepisang" />
+
+                <ImageView
+                    android:id="@+id/imgKerang"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgSalePisang"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/keranglaut" />
+
+                <ImageView
+                    android:id="@+id/imgTengiri"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgKerang"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/kerupuktengiri" />
+
+                <ImageView
+                    android:id="@+id/imgRawaBendungan"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgTengiri"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/rawabandungan" />
+
+                <ImageView
+                    android:id="@+id/imgKambingKrPucung"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgRawaBendungan"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/weduskrpucung" />
+
+                <ImageView
+                    android:id="@+id/imgIndustriGulaSemut"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgKambingKrPucung"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/indgulasemut" />
+
+                <ImageView
+                    android:id="@+id/imgSapi"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgIndustriGulaSemut"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/sapipotong" />
+
+                <ImageView
+                    android:id="@+id/imgHutanPayau"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgSapi"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/hutanpayau" />
+
+                <ImageView
+                    android:id="@+id/imgGurame"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgHutanPayau"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/ikangurami" />
+
+                <ImageView
+                    android:id="@+id/imgSebutret"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgGurame"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/sebutret" />
+
+                <ImageView
+                    android:id="@+id/imgHotSpring"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgSebutret"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/airpanscipari" />
+
+                <ImageView
+                    android:id="@+id/imgWisataBahari"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgHotSpring"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/wisatabahari" />
+
+                <ImageView
+                    android:id="@+id/imgPantaiWidarapayung"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgWisataBahari"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/widarapayung" />
+
+                <ImageView
+                    android:id="@+id/imgOss"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgMomongan"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/oss" />
+
+                <ImageView
+                    android:id="@+id/imgMomongan"
+                    android:layout_width="204dp"
+                    android:layout_height="111dp"
+                    android:layout_below="@id/imgPantaiWidarapayung"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    app:srcCompat="@drawable/momongan" />
+
+                <TextView
+                    android:id="@+id/txtVideoProfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextTextMultiLine"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="72dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toStartOf="@+id/btnNonton"
+                    android:layout_toEndOf="@+id/imageView17"
+                    android:text="Text"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

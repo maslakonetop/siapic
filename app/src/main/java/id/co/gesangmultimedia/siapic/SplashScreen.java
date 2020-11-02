@@ -1,24 +1,25 @@
 package id.co.gesangmultimedia.siapic;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class SplashScreen extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SplashScreen extends AppCompatActivity  {
     private int waktu_loading=5000;
     private ProgressBar progressBar;
     private TextView persentase;
     private int Value = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
         progressBar = findViewById(R.id.progressBar);
         persentase = findViewById(R.id.persentasi);
         progressBar.setProgress(0);
@@ -30,7 +31,7 @@ public class SplashScreen extends AppCompatActivity {
                 // Menampung semua data yang ingin diproses oleh thread
                 persentase.setText(String.valueOf(Value)+"%");
                 if(Value == progressBar.getMax()){
-                    Toast.makeText(getApplicationContext(), "GIS Termuat 10 detik!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Aplikasi GIS Berhasil Di Instal!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(SplashScreen.this, MainActivity.class));
                     finish();
                 }
@@ -54,5 +55,4 @@ public class SplashScreen extends AppCompatActivity {
         });
         thread.start();
     }
-
 }

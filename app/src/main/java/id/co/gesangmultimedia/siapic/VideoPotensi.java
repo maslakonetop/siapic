@@ -1,8 +1,5 @@
 package id.co.gesangmultimedia.siapic;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.PopupMenu;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +9,9 @@ import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 
 public class VideoPotensi extends AppCompatActivity {
 
@@ -322,7 +322,7 @@ public class VideoPotensi extends AppCompatActivity {
 
     public void hotspring(View view) {
         Intent panas = new Intent(VideoPotensi.this, TampilkanVideo.class);
-        EditText editText = findViewById(R.id.edtTxtHotSpring3);
+        EditText editText = findViewById(R.id.edtTxtHotSpring);
         TextView textView = findViewById(R.id.txtVideoProfil);
         textView.setText("sGq971RteWE");
         panas.putExtra("judul", editText.getText().toString());
@@ -358,5 +358,15 @@ public class VideoPotensi extends AppCompatActivity {
         ijin.putExtra("judul", editText.getText().toString());
         ijin.putExtra("videoid", textView.getText().toString());
         startActivity(ijin);
+    }
+
+    public void momongan(View view) {
+        Intent momongan = new Intent(VideoPotensi.this, TampilkanVideo.class);
+        EditText editText = findViewById(R.id.edtMomongan);
+        TextView textView = findViewById(R.id.txtVideoProfil);
+        textView.setText("BjKKivhoagI");
+        momongan.putExtra("judul", editText.getText().toString());
+        momongan.putExtra("videoid", textView.getText().toString());
+        startActivity(momongan);
     }
 }

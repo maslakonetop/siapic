@@ -7,80 +7,84 @@
     android:background="@drawable/background"
     tools:context=".RtrwCilacap">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="429dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="427dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50121653" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="848dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
-
-    <fragment
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="410dp"
-        android:layout_height="662dp"
-        android:layout_marginBottom="4dp"
+    <include
+        layout="@layout/menu_atas"
+        android:layout_width="124dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="731dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline28"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="@+id/guideline27"
-        app:layout_constraintTop_toTopOf="@+id/guideline26"
-        app:layout_constraintVertical_bias="0.631"
-        tools:context=",MapKawasanIndustri" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="222dp"
-        android:layout_height="46dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline31"
-        app:layout_constraintEnd_toStartOf="@+id/guideline28"
-        app:layout_constraintStart_toStartOf="@+id/guideline27"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93"
-        app:srcCompat="@drawable/apik"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintVertical_bias="0.021" />
+
+    <RelativeLayout
+        android:id="@+id/rltRtrw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="773dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/ivJudulRTRW"
+            android:layout_width="222dp"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/apik"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtRtrw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivJudulRTRW"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/arialb"
+            android:text="Rencana Tata Ruang Wilayah Kabupaten Cilacap"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rltRtrw2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rltRtrw">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:context=".RtrwCilacap" />
+
+    </RelativeLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabmenu"
         android:layout_width="93dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline29"
-        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline31"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/menuapp"
-        android:focusable="true" />
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/menuapp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

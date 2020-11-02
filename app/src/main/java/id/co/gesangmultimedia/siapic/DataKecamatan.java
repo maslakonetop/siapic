@@ -47,10 +47,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     private GoogleMap mMap;
     private GeoJsonLayer geoJsonLayer;
     private Spinner spKecamatan;
-    private Spinner spPotensi;
     private KmlLayer kmlLayer;
     private String strKecamatan = "";
-    private String strPotensi = "";
     private FloatingWindow fabBack;
     private int markerclicked;
 
@@ -179,25 +177,17 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         final ObjectAnimator animator = (ObjectAnimator) AnimatorInflater.loadAnimator(this, R.animator.blinking_anim);
 
 
-        Spinner spinkecamatan = findViewById(R.id.spKecamatan);
+        final Spinner spinkecamatan = findViewById(R.id.spKecamatan);
         final ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.namakecamatan, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinkecamatan.setAdapter(adapter);
         spinkecamatan.setOnItemSelectedListener(this);
-
-        Spinner spinpotensi = findViewById(R.id.spPotensi);
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.potensi, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinpotensi.setAdapter(adapter1);
-        spinpotensi.setOnItemSelectedListener(this);
-        Button btnPdf = findViewById(R.id.btnPdf);
-        animator.setTarget(btnPdf);
-
-        Button btnMap = findViewById(R.id.btnPeta);
-        btnMap.setOnClickListener(new View.OnClickListener() {
+        spinkecamatan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                if (strKecamatan.equals("Kecamatan Adipala") && strPotensi.equals("Industri")){
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+                final String strKecamatan = spinkecamatan.getSelectedItem().toString();
+                if (strKecamatan.equals("Adipala")){
                     try {
                         showAdipala(null);
                     } catch (IOException e) {
@@ -205,61 +195,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    markerAdipala();
-                    showIndustriAdipala();
+                    showPotensiiAdipala();
                 }
-                if(strKecamatan.equals("Kecamatan Adipala") && strPotensi.equals("Pariwisata")){
-                    try {
-                        showAdipala(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showPariwisataAdipala();
-                }
-                if(strKecamatan.equals("Kecamatan Adipala") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showAdipala(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIwakAdipala();
-                }
-                if(strKecamatan.equals("Kecamatan Adipala") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showAdipala(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showPertanianAdipala();
-                }
-                if(strKecamatan.equals("Kecamatan Adipala") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showAdipala(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunAdipala();
-                    animator.start();
-                }
-                if (strKecamatan.equals("Kecamatan Adipala") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showAdipala(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakAdipala();
-                }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Industri"))){
+                else if (strKecamatan.equals("Bantarsari")){
                     try {
                         showBantarsari(null);
                     } catch (IOException e) {
@@ -267,65 +205,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriBantarsari();
-                    animator.start();
+                    showPotensiBantarsari();
                 }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Perikaanan"))){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanBantarsari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataBantarsari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniBantarsari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunAdipala();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Bantarsari") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showBantarsari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIndustriBantarsari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Binangun")){
                     try {
                         showBinangun(null);
                     } catch (IOException e) {
@@ -333,125 +215,19 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriBinangun();
+                    showPotensiBinangun();
                 }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Pariwisata"))){
+                else if(strKecamatan.equals("Cilacap Utara")){
                     try {
-                        showBinangun(null);
+                        showClputara(null);
                     } catch (IOException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showWisataBinangun();
-                    animator.start();
+                    showPotensiCilut();
                 }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showBinangun(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanBinangun();
-                }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showBinangun(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniBinangun();
-                }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showBinangun(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunBinangun();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Binangun") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showBinangun(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakBinangun();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Industri"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIndustriCilsel();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataCilsel();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanCilsel();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniCilsel();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCilsel();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Selatan") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showClpselatan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakCilsel();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Cilacap Tengah")){
                     try {
                         showClptengah(null);
                     } catch (IOException e) {
@@ -460,125 +236,18 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                         e.printStackTrace();
                     }
                     showIndustriCilteng();
-                    animator.start();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Pariwisata"))){
+                else if(strKecamatan.equals("Cilacap Selatan")){
                     try {
-                        showClptengah(null);
+                        showClpselatan(null);
                     } catch (IOException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showWisataCilteng();
-                    animator.start();
+                    showPotensiCilsel();
                 }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showClptengah(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanCilteng();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showClptengah(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniCilteng();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showClptengah(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCilteng();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Tengah") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showClptengah(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakCilteng();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Industri"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIndustriCilut();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataCilut();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanCilut();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniCilut();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCilut();
-                }
-                if(strKecamatan.equals("Kecamatan Cilacap Utara") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showClputara(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakCilut();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Industri"))){
+                else if (strKecamatan.equals("Cimanggu")){
                     try {
                         showCimanggu(null);
                     } catch (IOException e) {
@@ -586,62 +255,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriCimanggu();
+                    showPotensiCimanggu();
                 }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Industri"))){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataCimanggu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCimanggu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showPertanianCimanggu();
-                }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCimanggu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cimanggu") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showCimanggu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakCimanggu();
-                }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Industri"))){
+                else if (strKecamatan.equals("Cipari")){
                     try {
                         showCipari(null);
                     } catch (IOException e) {
@@ -649,63 +265,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriCipari();
+                    showPotensiCipari();
                 }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showPariwisataCipari();
-                }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanCipari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniCipari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunCipari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Cipari") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showCipari(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakCipari();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Industri"))){
+                else if (strKecamatan.equals("Dayeuhluhur")){
                     try {
                         showDayeuhluhur(null);
                     } catch (IOException e) {
@@ -713,60 +275,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriDayeuhluhur();
+                    showPotensiDayeuhluhur();
                 }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataDayeuhluhur();
-                }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanDayeuhluhur();
-                }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniDayeuhluhur();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunDayeuhluhur();
-                }
-                if(strKecamatan.equals("Kecamatan Dayeuhluhur") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showDayeuhluhur(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakDayeuhluhur();
-                }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Gandrungmangu")){
                     try {
                         showGandrungmangu(null);
                     } catch (IOException e) {
@@ -774,63 +285,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriGandrungmangu();
+                    showPotensiGandrungmangu();
                 }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataGandrungmangu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanGandrungmangu();
-                }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunGandrungmangu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniGandrungmangu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Gandrungmangu") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showGandrungmangu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakGandrungmangu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Jeruklegi")){
                     try {
                         showJeruklegi(null);
                     } catch (IOException e) {
@@ -838,61 +295,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriJeruklegi();
+                    showPotensiJeruklegi();
                 }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataJeruklegi();
-                }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanJerukLego();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniJeruklegi();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showPerkebunanJeruklegi();
-                }
-                if(strKecamatan.equals("Kecamatan Jeruklegi") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showJeruklegi(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakJeruklegi();
-                }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Kampung Laut")){
                     try {
                         showKplaut(null);
                     } catch (IOException e) {
@@ -900,63 +305,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKpLaut();
-                    animator.start();
+                    showPotensiKpLaut();
                 }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKpLaut();
-                }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKpLaut();
-                }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKpLaut();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKpLaut();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kampung Laut") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showKplaut(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKpLaut();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Karangpucung")){
                     try {
                         showKrpucung(null);
                     } catch (IOException e) {
@@ -964,64 +315,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKrPucung();
-                    animator.start();
+                    showPotensiKrPucung();
                 }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKrpucung();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKrPucung();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKrPucung();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKrPucung();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Karangpucung") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showKrpucung(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKrPucung();
-                }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Kawunganten")){
                     try {
                         showKawunganten(null);
                     } catch (IOException e) {
@@ -1029,65 +325,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKawunganten();
-                    animator.start();
+                    showPotensiKawunganten();
                 }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKawunganten();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKawunganten();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKawunganten();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKawunganten();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kawunganten") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showKawunganten(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKawunganten();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Kedungreja")){
                     try {
                         showKdreja(null);
                     } catch (IOException e) {
@@ -1095,60 +335,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKdReja();
+                    showPotensiKdReja();
                 }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKdReja();
-                }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKdReja();
-                }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKdReja();
-                }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKdreja();
-                }
-                if(strKecamatan.equals("Kecamatan Kedungreja") && (strPotensi.equals("Ternak"))){
-                    try {
-                        showKdreja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKdReja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Kesugihan")){
                     try {
                         showKesugihan(null);
                     } catch (IOException e) {
@@ -1156,64 +345,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKesugiihan();
-                    animator.start();
+                    showPotensiKesugihan();
                 }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKesugihan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKesugihan();
-                }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKesugihan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKEsugihan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kesugihan") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showKesugihan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKesugihan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Kroya")){
                     try {
                         showKroya(null);
                     } catch (IOException e) {
@@ -1221,62 +355,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriKroya();
+                    showPotensiKroya();
                 }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataKroya();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanKroya();
-                }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniKroya();
-                }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunKroya();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Kroya") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showKroya(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakKroya();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Majenang")){
                     try {
                         showMajenang(null);
                     } catch (IOException e) {
@@ -1284,62 +365,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriMajenang();
+                    showPotensiMajenang();
                 }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataMajenang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanMajenang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniMajenang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunMajenang();
-                }
-                if(strKecamatan.equals("Kecamatan Majenang") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showMajenang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakMajenang();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Peternakan"))){
+                else if(strKecamatan.equals("Maos")){
                     try {
                         showMaos(null);
                     } catch (IOException e) {
@@ -1347,71 +375,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriMaos();
+                    showPotensiMaos();
                 }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Industri"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIndustriMaos();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataMaos();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanMaos();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniMaos();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunMaos();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Maos") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showMaos(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakMaos();
-                }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Nusawungu")){
                     try {
                         showNusawungu(null);
                     } catch (IOException e) {
@@ -1419,62 +385,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriNusawungu();
+                    showPotensiNusawungu();
                 }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataNusawungu();
-                }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanNusawungu();
-                }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniNusawungu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunNusawungu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Nusawungu") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showNusawungu(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakNusawungu();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Patimuan")){
                     try {
                         showPatimuan(null);
                     } catch (IOException e) {
@@ -1482,64 +395,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriPatimuan();
+                    showPotensiPatimuan();
                 }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataPatimuan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanPatimuan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniPatimuan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunPatimuan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Patimuan") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showPatimuan(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakPatimuan();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Sampang")){
                     try {
                         showSampang(null);
                     } catch (IOException e) {
@@ -1547,62 +405,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriSampang();
+                    showPotensiSampang();
                 }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataSampang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanSampang();
-                }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniSampang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunSampang();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sampang") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showSampang(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakSampang();
-                }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Sidareja")){
                     try {
                         showSidareja(null);
                     } catch (IOException e) {
@@ -1610,64 +415,9 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriSidareja();
-                    animator.start();
+                    showPotensiSidareja();
                 }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Wisata"))){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataSidareja();
-                }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniSidareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunSidareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanSidareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Sidareja") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showSidareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakSidareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Industri"))){
+                else if(strKecamatan.equals("Wanareja")){
                     try {
                         showWanareja(null);
                     } catch (IOException e) {
@@ -1675,133 +425,27 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    showIndustriWanareja();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Pariwisata"))){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showWisataWanareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Perikanan"))){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showIkanWanareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Pertanian"))){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTaniWanareja();
-                    animator.start();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Perkebunan"))){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showKebunWanareja();
-                }
-                if(strKecamatan.equals("Kecamatan Wanareja") && (strPotensi.equals("Peternakan"))){
-                    try {
-                        showWanareja(null);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showTernakWanareja();
+                    showPotensiWanareja();
                 }
             }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
+
+        Button btnPdf = findViewById(R.id.btnPdf);
         btnPdf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                animator.end();
-                animator.cancel();
+                final String strKecamatan = spinkecamatan.getSelectedItem().toString();
                 Intent pdf = new Intent(DataKecamatan.this, ShowPdf.class);
                 pdf.putExtra("judul", strKecamatan);
                 startActivity(pdf);
             }
         });
 
-    }
-
-    private void showTernakKdReja() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void showWisataKawunganten() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanKawunganten (){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniKawunganten(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunKawunganten(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakKawunganten(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriKawunganten() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void showIkanWanareja() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void showKebunSidareja() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void showIkanPatimuan() {
-        mMap.addMarker(new MarkerOptions()
-                .position(SIDATPATIMUAN)
-                .title("Keris Jateng: Sidat Patimuan")
-                .snippet("Nilai Investasi Rp. 3.555.952.133,00")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
-        );
-    }
-
-    private void showIkanMajenang() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-
-    private void showIkanJerukLego() {
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
     }
 
     public void showCilacap(View v){
@@ -1819,6 +463,10 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        GeoJsonPolygonStyle styleCilacap = geoJsonLayer.getDefaultPolygonStyle();
+        styleCilacap.setStrokeWidth(3f);
+        styleCilacap.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        styleCilacap.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         geoJsonLayer.addLayerToMap();
         showallmarker();
     }
@@ -1834,6 +482,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerAdipalaStyle = layerAdipala.getDefaultPolygonStyle();
         layerAdipalaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerAdipalaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerAdipalaStyle.setStrokeWidth(3f);
         layerAdipala.addLayerToMap();
         markerAdipala();
     }
@@ -1849,6 +498,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerBantarsariStyle = layerBantarsari.getDefaultPolygonStyle();
         layerBantarsariStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerBantarsariStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerBantarsariStyle.setStrokeWidth(3f);
         layerBantarsari.addLayerToMap();
         markerBantarsari();
     }
@@ -1864,6 +514,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
         layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerMaosStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerMaosStyle.setStrokeWidth(3f);
         layerMaos.addLayerToMap();
         markerMaos();
     }
@@ -1878,6 +529,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerBinangunStyle = layerBinangun.getDefaultPolygonStyle();
         layerBinangunStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerBinangunStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerBinangunStyle.setStrokeWidth(3f);
         layerBinangun.addLayerToMap();
         markerBinangun();
     }
@@ -1892,6 +544,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerSelatanStyle = layerSelatan.getDefaultPolygonStyle();
         layerSelatanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerSelatanStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerSelatanStyle.setStrokeWidth(3f);
         layerSelatan.addLayerToMap();
         markerClpSelatan();
     }
@@ -1906,6 +559,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerTengahStyle = layerTengah.getDefaultPolygonStyle();
         layerTengahStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerTengahStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerTengahStyle.setStrokeWidth(3f);
         layerTengah.addLayerToMap();
         markerClpTengah();
     }
@@ -1920,6 +574,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerUtaraStyle = layerUtara.getDefaultPolygonStyle();
         layerUtaraStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerUtaraStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerUtaraStyle.setStrokeWidth(3f);
         layerUtara.addLayerToMap();
         markerClpUtara();
     }
@@ -1934,6 +589,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerNusawunguStyle = layerNusawungu.getDefaultPolygonStyle();
         layerNusawunguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerNusawunguStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerNusawunguStyle.setStrokeWidth(3f);
         layerNusawungu.addLayerToMap();
         markerNusawungu();
     }
@@ -1948,6 +604,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerCimangguStyle = layerCimanggu.getDefaultPolygonStyle();
         layerCimangguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerCimangguStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerCimangguStyle.setStrokeWidth(3f);
         layerCimanggu.addLayerToMap();
         markerCimanggu();
     }
@@ -1962,6 +619,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerPatimuanStyle = layerPatimuan.getDefaultPolygonStyle();
         layerPatimuanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerPatimuanStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerPatimuanStyle.setStrokeWidth(3f);
         layerPatimuan.addLayerToMap();
         markerPatimuan();
     }
@@ -1976,6 +634,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerMaosStyle = layerMaos.getDefaultPolygonStyle();
         layerMaosStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerMaosStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerMaosStyle.setStrokeWidth(3f);
         layerMaos.addLayerToMap();
         markerCipari();
     }
@@ -1990,6 +649,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerSampangStyle = layerSampang.getDefaultPolygonStyle();
         layerSampangStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerSampangStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerSampangStyle.setStrokeWidth(3f);
         layerSampang.addLayerToMap();
         markerSampang();
     }
@@ -2004,6 +664,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerDayeuhluhurStyle = layerDayeuhluhur.getDefaultPolygonStyle();
         layerDayeuhluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerDayeuhluhurStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerDayeuhluhurStyle.setStrokeWidth(3f);
         layerDayeuhluhur.addLayerToMap();
         markerDayeuhluhur();
     }
@@ -2018,6 +679,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerGandrungmanguStyle = layerGandrungmangu.getDefaultPolygonStyle();
         layerGandrungmanguStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerGandrungmanguStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerGandrungmanguStyle.setStrokeWidth(3f);
         layerGandrungmangu.addLayerToMap();
         markerGandrungmangu();
     }
@@ -2032,6 +694,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerJeruklegiStyle = layerJeruklegi.getDefaultPolygonStyle();
         layerJeruklegiStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerJeruklegiStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerJeruklegiStyle.setStrokeWidth(3f);
         layerJeruklegi.addLayerToMap();
         markerJeruklegi();
     }
@@ -2046,6 +709,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKpLautStyle = layerKpLaut.getDefaultPolygonStyle();
         layerKpLautStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKpLautStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKpLautStyle.setStrokeWidth(3f);
         layerKpLaut.addLayerToMap();
         //markerDayeuhluhur();
         markerKpLaut();
@@ -2061,6 +725,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKrPucungStyle = layerKrPucung.getDefaultPolygonStyle();
         layerKrPucungStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKrPucungStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKrPucungStyle.setStrokeWidth(3f);
         layerKrPucung.addLayerToMap();
         //markerDayeuhluhur();
         markerKrPucung();
@@ -2076,6 +741,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKawungantenStyle = layerKawunganten.getDefaultPolygonStyle();
         layerKawungantenStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKawungantenStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKawungantenStyle.setStrokeWidth(3f);
         layerKawunganten.addLayerToMap();
         //markerDayeuhluhur();
         markerKawunganteng();
@@ -2091,6 +757,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKdrejaStyle = layerKdreja.getDefaultPolygonStyle();
         layerKdrejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKdrejaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKdrejaStyle.setStrokeWidth(3f);
         layerKdreja.addLayerToMap();
         //markerDayeuhluhur();
         markerKdreja();
@@ -2106,6 +773,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKesugihanStyle = layerKesugihan.getDefaultPolygonStyle();
         layerKesugihanStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKesugihanStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKesugihanStyle.setStrokeWidth(3f);
         layerKesugihan.addLayerToMap();
         //markerDayeuhluhur();
         //layerKesugihan.addLayerToMap();
@@ -2122,6 +790,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerKroyaStyle = layerKroya.getDefaultPolygonStyle();
         layerKroyaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerKroyaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerKroyaStyle.setStrokeWidth(3f);
         layerKroya.addLayerToMap();
         //markerDayeuhluhur();
         markerKroya();
@@ -2137,6 +806,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerMajenangluhurStyle = layerMajenang.getDefaultPolygonStyle();
         layerMajenangluhurStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerMajenangluhurStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerMajenangluhurStyle.setStrokeWidth(3f);
         layerMajenang.addLayerToMap();
         //markerDayeuhluhur();
         markerMajenang();
@@ -2152,6 +822,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerSidarejaStyle = layerSidareja.getDefaultPolygonStyle();
         layerSidarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerSidarejaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerSidarejaStyle.setStrokeWidth(3f);
         layerSidareja.addLayerToMap();
         //markerDayeuhluhur();
         markerSidareja();
@@ -2167,6 +838,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         GeoJsonPolygonStyle layerWanarejaStyle = layerWanareja.getDefaultPolygonStyle();
         layerWanarejaStyle.setStrokeColor(ContextCompat.getColor(this, R.color.black));
         layerWanarejaStyle.setFillColor(ContextCompat.getColor(this, R.color.kolorbapakkau));
+        layerWanarejaStyle.setStrokeWidth(3f);
         layerWanareja.addLayerToMap();
         markerDayeuhluhur();
         markerWanareja();
@@ -2175,7 +847,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(BANTARSARI)
                 .title("Kecamatan Bantarsari")
-                .snippet("Luas wilayah :95,54 km2, Jumlah angkatan kerja : 44.173 orang")
+                .snippet("Jumlah Penduduk 71.383 orang,\n" +
+                        "Angkatan kerja 44.173 orang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
     }
@@ -2367,7 +1040,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         mMap.addMarker(new MarkerOptions()
                 .position(BANTARSARI)
                 .title("Kecamatan Bantarsari")
-                .snippet("Jumlah Penduduk 71.383 orang")
+                .snippet("Jumlah Penduduk 71.383 orang,\n" +
+                        "Angkatan kerja 44.173 orang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.location))
         );
         mMap.addMarker(new MarkerOptions()
@@ -2509,7 +1183,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(),R.drawable.location))
         );
     }
-    private void showIndustriAdipala() {
+    private void showPotensiiAdipala() {
         mMap.addMarker(new MarkerOptions()
                 .position(GITARADIPALA)
                 .title("Produsen Gitar Suwanto")
@@ -2552,8 +1226,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 //.snippet("Jumlah Penduduk 71.383 orang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void  showPertanianAdipala(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.631108, 109.181676))
                 .title("Sawah Doplang")
@@ -2634,8 +1306,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Kebun Pepaya Adipala")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
             );
-    }
-    private void showTernakAdipala(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.654856, 109.149118))
                 .title("Peternakan Ayam Randu Alas")
@@ -2646,58 +1316,25 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Peternakan Ayam Pesapen")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
             );
-    }
-    private void showIwakAdipala(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.630546, 109.158209))
                 .title("Tambak Lele Adipala")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
             );
-    }
-    private void showPariwisataAdipala(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.682109, 109.178511))
                 .title("Wisata Gunung Selok")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
     }
-    private void  showKebunAdipala(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriBantarsari(){
+    private void showPotensiBantarsari(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.597413, 108.871285))
                 .title("Gula Semut Bantarsari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
             );
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(-7.529588, 108.854723))
-                .title("GPenyamakan Kulit Bantarsari")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
-            );
     }
-    private void showWisataBantarsari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanBantarsari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniBantarsari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunBantarsari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakBantarsari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriBinangun(){
+    private void showPotensiBinangun(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.672740, 109.239180))
                 .title("Gula Merah Binangun")
@@ -2708,12 +1345,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Kesed Binangun")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
             );
-    }
-    private void showWisataBinangun(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanBinangun(){
         mMap.addMarker(new MarkerOptions()
                 .position(UDANGVANAME)
                 .title("Udang Vaname Binangun")
@@ -2724,26 +1355,18 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Keris Jateng: Tambak Udang Binangun")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
-    }
-    private void showTaniBinangun(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.684476, 109.255827))
                 .title("Budidaya Cabai Binangun")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
             );
-    }
-    private void showKebunBinangun(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakBinangun(){
          mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.686931, 109.267629))
                 .title("Peternakan Sapi Mazda Widarapayung")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
             );
     }
-    private void showIndustriCilsel(){
+    private void showPotensiCilsel(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.686931, 109.267629))
                 .title("Industri Ikan Asin")
@@ -2775,8 +1398,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .snippet("Industri Udang Tegal Kamulyan Cilacap Selatan")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showWisataCilsel(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.733861, 109.021380))
                 .title("Wisata Pantai Teluk Penyu")
@@ -2788,23 +1409,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
     }
-    private void showIkanCilsel(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniCilsel(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunCilsel(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakCilsel(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriCilut(){
+    private void showPotensiCilut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.683402, 109.050139))
                 .title("Industri Tahu")
@@ -2815,67 +1420,36 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Keris Jateng: Industri Udang Vaname Mertasinga")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
-    }
-    private void showIndustriCilteng(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showWisataCilteng(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniCilteng(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanCilteng(){
-        mMap.addMarker(new MarkerOptions()
-                .position(SIDATCILACAP)
-                .title("Sidat Kutawaru")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
-        );
-    }
-    private void showKebunCilteng(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakCilteng(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private  void showWisataCilut(){
         mMap.addMarker(new MarkerOptions()
                 .position(HUTANPAYAU)
                 .title("Wisata Hutan Payau")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
-    }
-    private void showIkanCilut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.670139, 109.050888))
                 .title("Tambak ikan Rawa Bendungan")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showTaniCilut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.676100, 109.0575529))
                 .title("Tanaman Pangan lestari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showKebunCilut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.668063, 109.029229))
                 .title("Hutan Mangrove")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
     }
-    private void showTernakCilut(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
+    private void showIndustriCilteng() {
+
+        mMap.addMarker(new MarkerOptions()
+                .position(SIDATCILACAP)
+                .title("Sidat Kutawaru")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
+        );
     }
-    private void showIndustriCimanggu(){
+    private void showPotensiCimanggu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.346965, 108.801338))
                 .title("Industri Batu Bata Karangreja")
@@ -2931,19 +1505,11 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Sapu Rejodadi")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataCimanggu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanCimanggu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.342256, 108.838223))
                 .title("Budidaya Ikan Cimanggu")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showPertanianCimanggu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.278261, 108.884804))
                 .title("Perkebuunan Karet Cimanggu")
@@ -2969,49 +1535,25 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Perkebuunan Hutan Cimanggu")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showKebunCimanggu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakCimanggu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.343207, 108.841677))
                 .title("Peternakan Sapi Cimanggu")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
         );
     }
-    private void showIndustriCipari(){
+    private void showPotensiCipari(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.427304, 108.742122))
                 .title("Industri Gula Semut Cipari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showPariwisataCipari(){
         mMap.addMarker(new MarkerOptions()
                 .position(AIRPANASCIPARI)
                 .title("Keris Jateng : Wisata Air Panas Cipari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
-    private void showIkanCipari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniCipari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunCipari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakCipari(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void  showIndustriDayeuhluhur(){
+    private void  showPotensiDayeuhluhur(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.304704, 108.573783))
                 .title("Industri Air Isi Ulang")
@@ -3032,8 +1574,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Sale Pisang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private  void showWisataDayeuhluhur(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.180636, 108.631447))
                 .title("Wisata Curug Kembar")
@@ -3054,16 +1594,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Wisata Air Panas Ki Jantara")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
-    }
-    private void showIkanDayeuhluhur(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniDayeuhluhur(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunDayeuhluhur(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.260279, 108.613382))
                 .title("Sentra Benih Tanaman Sayur")
@@ -3094,8 +1624,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Perkebunan Pala")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showTernakDayeuhluhur(){
         mMap.addMarker(new MarkerOptions()
                 .position(SAPIDAYEUHLUHUR)
                 .title("Peternakan Sapi")
@@ -3112,41 +1640,28 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
         );
     }
-    private void showIndustriGandrungmangu(){
+    private void showPotensiGandrungmangu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.482759, 108.826076))
                 .title("Industri Knalpot Wringinharjo")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataGandrungmangu(){
         Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
                 Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanGandrungmangu(){
+
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(
                         -7.575065, 108.814021))
                 .title("Tambak Sidat Tumpangsari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showTaniGandrungmangu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunGandrungmangu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakGandrungmangu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.505771, 108.774712))
                 .title("Keris Jateng: Peternakan Sapi Gandrungmangu")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
                 );
     }
-    private void showIndustriJeruklegi(){
+    private void showPotensiJeruklegi(){
       mMap.addMarker(new MarkerOptions()
                 .position(GULAJERUKLEGI)
                 .title("Industri Gula Semut Jeruklegi")
@@ -3177,8 +1692,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Kayu Mebel")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataJeruklegi(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.558968, 109.031758))
                 .title("Bumi Perkemahan Jambusari")
@@ -3194,12 +1707,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Wisata Curug Citepus")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
-    }
-    private void showTaniJeruklegi(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showPerkebunanJeruklegi(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.633597, 108.998359))
                 .title("Perkebunan Jeruk")
@@ -3246,15 +1753,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
     }
-    private void showTernakJeruklegi(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriKpLaut(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showWisataKpLaut(){
+    private void showPotensiKpLaut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(7.708564, 108.880613))
                 .title("Wisata Tanjung Mina")
@@ -3275,27 +1774,13 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Keris Jateng: Wisata Bahari Ujung Alang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
-    }
-    private void showIkanKpLaut(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.670176, 108.895601))
                 .title("Tambak Ikan dan Bandeng")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
     }
-    private void showTaniKpLaut(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunKpLaut(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakKpLaut(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriKdReja() {
+    private void showPotensiKdReja() {
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.494068, 108.768923))
                 .title("Industri Batu Bata Bangunreja")
@@ -3326,15 +1811,11 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Sale Pisang Klepusari")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataKdReja(){
         mMap.addMarker(new MarkerOptions()
               .position(new LatLng(-7.466981, 108.719991 ))
               .title("Wisata Kuliner Rowo Bojongrongga")
               .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
-    }
-    private void showIkanKdReja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.522648, 108.776925 ))
                 .title("Budi daya Ikan Gurami")
@@ -3346,8 +1827,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
 
-    }
-    private void showTaniKdReja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.515330, 108.766025 ))
                 .title("Area Persawahan Pengghasil Beras")
@@ -3368,43 +1847,17 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Area Persawahan Tambak Reja")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-
-    private void showKebunKdreja(){
         mMap.addMarker(new MarkerOptions()
                 .position(KELAPAKEDUNGREJA)
                 .title("Industri Kerupuk")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
     }
-    private void showIndustriKrPucung(){
+    private void showPotensiKrPucung(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.385429, 108.906612))
                 .title("Industri Kerupuk")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
-        );
-    }
-    private void showWisataKrpucung(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanKrPucung(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniKrPucung(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunKrPucung(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakKrPucung(){
-        mMap.addMarker(new MarkerOptions()
-                .position(KAMBINGKRPUCUNG)
-                .title("Peternakan Terpadu Kambing")
-                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WEDUSGNTELU)
@@ -3412,34 +1865,76 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
     }
-    private void showIndustriKesugiihan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
+    private void showPotensiKawunganten(){
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.587983, 108.940550))
+                .title("Industri Gula merah")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.593359, 108.943428))
+                .title("Industri Gula Merah Bojong")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.620548, 108.949942))
+                .title("Pabrik Gula Kubangkangkung")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.659880, 108.947222))
+                .title("Area Persawahan Babakan")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.579501, 108.941447))
+                .title("Gudang Jagung Semar Sakti")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.633301, 108.952389))
+                .title("Peternakan Sapi Gintungjajar")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.633349, 108.951195))
+                .title("Peternakan Kambing Gintungjajar")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.550338, 108.907735))
+                .title("Galery Bonsai Karangsari")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.639012, 108.916205))
+                .title("Pengrajin Bonsai Karang Sidaurip")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.584476, 108.902180))
+                .title("Pabrik Kayu Putih Karangbanteng")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.635768, 108.900792))
+                .title("Tambak Ikan Rawareja")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
+        );
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(-7.614746, 108.960180))
+                .title("Wisata Waduk Kubangkangkung")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
+        );
     }
-    private void showWisataKesugihan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanKesugihan(){
+    private void showPotensiKesugihan(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.595133, 109.119762))
                 .title("Sentra Sidat Kesugihan")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
     }
-    private void showTaniKesugihan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunKEsugihan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakKesugihan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriKroya(){
+    private void showPotensiKroya(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.607361, 109.256437))
                 .title("Industri Soun Kroya")
@@ -3460,19 +1955,11 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Home Industri Kesed")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataKroya(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIkanKroya(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.597723, 109.221049))
                 .title("Industri Sidat Kroya")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showTaniKroya(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.644214, 109.285212))
                 .title("Persawahan Mengawati")
@@ -3484,15 +1971,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
     }
-    private void showKebunKroya(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakKroya(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriMajenang(){
+    private void showPotensiMajenang(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.296695, 108.762990))
                 .title("Sale Pisang Majenang")
@@ -3523,16 +2002,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Gula Merah")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataMajenang(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniMajenang(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunMajenang(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.346774, 108.799284))
                 .title("PTPN Kawung Majenang")
@@ -3543,15 +2012,13 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Hutan Boja Majenang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showTernakMajenang(){
         mMap.addMarker(new MarkerOptions()
                 .position(SAPIMAJENANG)
                 .title("Peternakan Sapi Majenang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
     }
-    private void showIndustriMaos(){
+    private void showPotensiMaos(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.598569, 109.150286))
                 .title("Industri Jenang Maos")
@@ -3562,37 +2029,23 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Batik Maos")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataMaos(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.599192, 109.135667))
                 .title("Wisata Panembahan Ragil Kuning")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
-    }
-    private void showIkanMaos(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.593554, 109.146601))
                 .title("Sentra Bibit Sidat Maos")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showTaniMaos(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunMaos(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakMaos(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.607214, 109.179588))
                 .title("Sentra Bibit Sidat Maos")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
         );
     }
-    private void showIndustriNusawungu(){
+    private void showPotensiNusawungu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.662427, 109.359306))
                 .title("Industri Anyaman Bambu")
@@ -3603,16 +2056,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Gula Karangpakis")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataNusawungu(){
         mMap.addMarker(new MarkerOptions()
                 .position(MOMONGAN)
                 .title("Pengembangan Wisata Pulau Momongan")
                 .snippet("Nilai Investasi Rp. 115.734.150.000,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
-    }
-    private void showIkanNusawungu(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.713110, 109.386963))
                 .title("Budidaya Ikan Gurami")
@@ -3624,19 +2073,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
     }
-    private void showTaniNusawungu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunNusawungu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakNusawungu(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriPatimuan(){
+    private void showPotensiPatimuan(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.597056, 108.779647))
                 .title("Industri Gula Merah")
@@ -3647,31 +2084,19 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Marning Jagung")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataPatimuan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void IkanPatimuan(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.667056, 108.791778))
                 .title("Budidaya Sidat Patimuan")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
+        mMap.addMarker(new MarkerOptions()
+                .position(SIDATPATIMUAN)
+                .title("Keris Jateng: Sidat Patimuan")
+                .snippet("Nilai Investasi Rp. 3.555.952.133,00")
+                .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
+        );
     }
-    private void showTaniPatimuan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunPatimuan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakPatimuan(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriSampang(){
+    private void showPotensiSampang(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.565295, 109.190459))
                 .title("Industri Pupuk Sampang")
@@ -3682,10 +2107,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Industri Bata Merah Sampang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataSampang(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
     }
     private void showIkanSampang(){
         mMap.addMarker(new MarkerOptions()
@@ -3698,30 +2119,18 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Budidaya Sidat")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconperikanan))
         );
-    }
-    private void showTaniSampang(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunSampang(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakSampang(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.565051, 109.175867))
                 .title("Peternakan Sapi Sampang")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpeternakan))
         );
     }
-    private void showIndustriSidareja(){
+    private void showPotensiSidareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(KELAPATINGGARJAYA)
                 .title("Keris Jateng: Industri Kelapa Tinggarjaya")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
-    }
-    private void showWisataSidareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.440434, 108.825462))
                 .title("Panembahan Cisagu")
@@ -3733,34 +2142,12 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpariwisata))
         );
     }
-    private void showIkanSidareja(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniSidareja(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTernakSidareja(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showIndustriWanareja(){
+    private void showPotensiWanareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.300501, 108.645039))
                 .title("Industri Penggergajian Kayu")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconindusti))
         );
-    }
-    private void showWisataWanareja(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showTaniWanareja(){
-        Toast.makeText(DataKecamatan.this, "Data Tidak Ditemukan, Silahkan buka Data Detail",
-                Toast.LENGTH_SHORT).show();
-    }
-    private void showKebunWanareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(-7.285676, 108.680878))
                 .title("Hutan Penghasil Kayu Malabar")
@@ -3797,8 +2184,6 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
                 .title("Hutan Penghasil Kayu Adimulya")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.iconpertanian))
         );
-    }
-    private void showTernakWanareja(){
         mMap.addMarker(new MarkerOptions()
                 .position(SAPIWANAREJA)
                 .title("Peternakan Sapi Wanareja")
@@ -3992,15 +2377,246 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
-        Spinner spinner = (Spinner)parent;
-        Spinner spinner1 = (Spinner)parent;
-        if (spinner.getId() == R.id.spKecamatan){
-            strKecamatan = parent.getSelectedItem().toString();
+        if (strKecamatan.equals("Adipala")){
+            try {
+                showAdipala(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiiAdipala();
         }
-        else if (spinner1.getId() == R.id.spPotensi){
-            strPotensi = parent.getSelectedItem().toString();
+        else if (strKecamatan.equals("Bantarsari")){
+            try {
+                showBantarsari(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiBantarsari();
         }
-
+        else if(strKecamatan.equals("Binangun")){
+            try {
+                showBinangun(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiBinangun();
+        }
+        else if(strKecamatan.equals("Cilacap Utara")){
+            try {
+                showClputara(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiCilut();
+        }
+        else if(strKecamatan.equals("Cilacap Tengah")){
+            try {
+                showClptengah(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showIndustriCilteng();
+        }
+        else if(strKecamatan.equals("Cilacap Selatan")){
+            try {
+                showClpselatan(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiCilsel();
+        }
+        else if (strKecamatan.equals("Cimanggu")){
+            try {
+                showCimanggu(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiCimanggu();
+        }
+        else if (strKecamatan.equals("Cipari")){
+            try {
+                showCipari(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiCipari();
+        }
+        else if (strKecamatan.equals("Dayeuhluhur")){
+            try {
+                showDayeuhluhur(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiDayeuhluhur();
+        }
+        else if(strKecamatan.equals("Gandrungmangu")){
+            try {
+                showGandrungmangu(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiGandrungmangu();
+        }
+        else if(strKecamatan.equals("Jeruklegi")){
+            try {
+                showJeruklegi(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiJeruklegi();
+        }
+        else if(strKecamatan.equals("Kampung Laut")){
+            try {
+                showKplaut(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKpLaut();
+        }
+        else if(strKecamatan.equals("Karangpucung")){
+            try {
+                showKrpucung(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKrPucung();
+        }
+        else if(strKecamatan.equals("Kawunganten")){
+            try {
+                showKawunganten(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKawunganten();
+        }
+        else if(strKecamatan.equals("Kedungreja")){
+            try {
+                showKdreja(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKdReja();
+        }
+        else if(strKecamatan.equals("Kesugihan")){
+            try {
+                showKesugihan(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKesugihan();
+        }
+        else if(strKecamatan.equals("Kroya")){
+            try {
+                showKroya(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiKroya();
+        }
+        else if(strKecamatan.equals("Majenang")){
+            try {
+                showMajenang(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiMajenang();
+        }
+        else if(strKecamatan.equals("Maos")){
+            try {
+                showMaos(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiMaos();
+        }
+        else if(strKecamatan.equals("Nusawungu")){
+            try {
+                showNusawungu(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiNusawungu();
+        }
+        else if(strKecamatan.equals("Patimuan")){
+            try {
+                showPatimuan(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiPatimuan();
+        }
+        else if(strKecamatan.equals("Sampang")){
+            try {
+                showSampang(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiSampang();
+        }
+        else if(strKecamatan.equals("Sidareja")){
+            try {
+                showSidareja(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiSidareja();
+        }
+        else if(strKecamatan.equals("Wanareja")){
+            try {
+                showWanareja(null);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            showPotensiWanareja();
+        }
     }
 
     @Override
