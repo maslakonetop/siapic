@@ -1771,7 +1771,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATAUJUNGALANG)
-                .title("Keris Jateng: Wisata Bahari Ujung Alang")
+                .title("Keris Jateng: Wisata Bahari Tirang Resik")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
         mMap.addMarker(new MarkerOptions()
@@ -2194,6 +2194,8 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         googleMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setAllGesturesEnabled(true);
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
             @Override
             public View getInfoWindow(Marker marker) {
@@ -2242,8 +2244,7 @@ public class DataKecamatan extends AppCompatActivity implements OnMapReadyCallba
             mMap.setMyLocationEnabled(true);
         }
         //mMap.getUiSettings().setMyLocationButtonEnabled(true);
-        mMap.getUiSettings().setZoomControlsEnabled(true);
-        mMap.getUiSettings().setAllGesturesEnabled(true);
+
 
     }
 

@@ -464,7 +464,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
         );
         mMap.addMarker(new MarkerOptions()
                 .position(WISATAUJUNGALANG)
-                .title("Keris Jateng: Wisata Bahari Ujung Alang")
+                .title("Keris Jateng: Wisata Bahari Tirang Resik")
                 .snippet("Nilai Investasi Rp.  116,437,089,393,00")
                 .icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.mapkeris))
         );
@@ -491,6 +491,8 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(CILACAP, 10f));
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setAllGesturesEnabled(true);
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
             @Override
             public View getInfoWindow(Marker marker) {
@@ -560,8 +562,7 @@ public class PotensiUmum extends AppCompatActivity implements OnMapReadyCallback
             mMap.setMyLocationEnabled(true);
         }
         //mMap.getUiSettings().setMyLocationButtonEnabled(true);
-        mMap.getUiSettings().setZoomControlsEnabled(true);
-        mMap.getUiSettings().setAllGesturesEnabled(true);
+
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {

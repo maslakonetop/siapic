@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\Project Aplikasi\\siapic\\siapik1.jks')
+            storePassword 'm4sl4k0n3clp'
+            keyAlias 'key1'
+            keyPassword 'm4sl4k0n3clp'
+        }
+    }
     compileSdkVersion 30
 
     defaultConfig {
