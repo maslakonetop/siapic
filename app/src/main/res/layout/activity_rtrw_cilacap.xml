@@ -22,19 +22,15 @@
         android:id="@+id/rltRtrw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="773dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/ivJudulRTRW"
-            android:layout_width="222dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
@@ -67,7 +63,7 @@
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_10sdp"
             android:layout_marginTop="5dp"
             tools:context=".RtrwCilacap" />
 
@@ -78,12 +74,12 @@
         android:id="@+id/fabmenu"
         android:layout_width="93dp"
         android:layout_height="59dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="5dp"
         app:srcCompat="@drawable/menuapp" />
 
 

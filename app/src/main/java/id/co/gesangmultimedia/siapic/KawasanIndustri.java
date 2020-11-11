@@ -192,7 +192,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions()
                 .position(WARUNGBATOK)
                 .title("KPI Warung Bathok")
-                .snippet("Luas: 40,76Ha")
+                .snippet("Luas: 50 Ha")
                 //.icon(bitmapDescriptorFromVector(getApplicationContext(), R.drawable.factory))
         );
     }
@@ -212,8 +212,8 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         layerCiptim.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
                 .position(CILACAPTIMUR)
-                .title("KPI Cilacap Timur")
-                .snippet("Luas 1119,76 Ha")
+                .title("KPI Cilacap Timur (Kec. Adipala, Binangun, Nusawungu")
+                .snippet("Luas 1.119,76 Ha")
         );
     }
     private void markerKpiCilacap(){
@@ -253,17 +253,18 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         layerdonan.addLayerToMap();
         mMap.addMarker(new MarkerOptions()
                 .position(BengawanDonan)
-                .title("KPI Bengawan Donan")
-                .snippet("Total Luas 816,49 Ha")
+                .title("KPI Bengawan Donan (Cilacap Utara)")
+                .snippet("Total Luas 816,49  Ha")
         );
         mMap.addMarker(new MarkerOptions()
                 .position(BengawanDonan1)
-                .title("KPI Bengawan Donan")
+                .title("KPI Bengawan Donan (Cilacap Utara")
                 .snippet("Total Luas 816,49 Ha")
         );
         mMap.addMarker(new MarkerOptions()
                 .position(BengawanDonan2)
-                .title("Kpi Bengawan Donan")
+                .title("Kpi Bengawan Donan (Cilacap Tengah")
+                .snippet("Total Luas 816,49 Ha")
         );
     }
     private void markerKpiProvinsi(){
@@ -283,7 +284,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions()
                 .position(Provinsi)
                 .title("KPI Provinsi")
-                .snippet("Total Luas 1618,22 Ha")
+                .snippet("Total Luas 1.618,22 Ha")
         );
     }
     private void markerKarangkandri(){
@@ -323,7 +324,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions()
                 .position(Bunton)
                 .title("KPI Bunton")
-                .snippet("Total Luas 556,39 Ha")
+                .snippet("Total Luas 816,49  Ha")
         );
     }
     private void markerTinggarjaya(){
@@ -343,7 +344,7 @@ public class KawasanIndustri extends AppCompatActivity implements OnMapReadyCall
         mMap.addMarker(new MarkerOptions()
                 .position(TinggarJaya)
                 .title("KPI Tinggar Jaya")
-                .snippet("Total Luas 5,38 Ha")
+                .snippet("Total Luas  5  Ha")
         );
     }
     private void markerLainny(){

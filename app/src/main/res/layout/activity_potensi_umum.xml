@@ -10,22 +10,18 @@
     <RelativeLayout
         android:id="@+id/rltUmum"
         android:layout_width="match_parent"
-        android:layout_height="129dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="652dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="150dp"
-            android:layout_height="32dp"
-            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_15sdp"
             app:srcCompat="@drawable/apik" />
 
         <TextView
@@ -34,15 +30,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView5"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="702dp"
+            android:layout_marginTop="@dimen/_5sdp"
             android:fontFamily="@font/arialb"
             android:text="Potensi Umum Investasi Kabupaten Cilacap"
             android:textColor="@color/black"
             tools:ignore="HardcodedText" />
-
     </RelativeLayout>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -57,10 +50,9 @@
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="634dp"
-            android:layout_marginTop="5dp"
-            tools:context=".MapPotensiUmum"
-            android:layout_marginBottom="5dp"/>
+            android:layout_height="@dimen/_500sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            tools:context=".MapPotensiUmum" />
 
     </RelativeLayout>
 
