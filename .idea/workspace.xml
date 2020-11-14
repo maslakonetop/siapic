@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="4.7in WXGA" />
+        <device id="pixel_3_xl" />
+        <device id="Nexus 7" />
+        <device id="5.4in FWVGA" />
+        <device id="pixel_3" />
+        <device id="Android TV (720p)" />
+        <device id="pixel_4_xl" />
+        <device id="pixel_c" />
+        <device id="Nexus 9" />
+        <device id="8in Foldable" />
+      </config>
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd8ff309-c2b9-43f0-beac-70917f98bd2d" name="Default Changelist" comment="1. Menambahkan detail pada Kawasan Peruntukan Industri&#10;2. Edit tampilan Video Potensi&#10;3. Debugging mode">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-normal/mobilelegend.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xlarge/mobilelegend.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mobilelegend.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-mcc520/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/debug/app-debug.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/debug/app-debug.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-anydpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-anydpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-hdpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-ldpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-mdpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-nodpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-nodpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-small/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-small/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_video_potensi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/activity_video_potensi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-sw600dp/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxhdpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxxhdpi/menu_legend.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_legend.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_legend.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="siapic" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="siapic" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="siapic" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="D:\Project Aplikasi\siapic\siapik.jks" />
+    <option name="KEY_ALIAS" value="key0" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ixyutvXuGLCDZk5OoWO8pFjP7x" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="siapic.app" />
+    <property name="BundleExportedModule" value="siapic.app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_XL_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-11-02T04:39:20.643Z" />
+    <property name="ExportApk.ApkPath" value="D:\Project Aplikasi\siapic\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SelectDeploymentTargetsDialog.selectedDevices" value="127.0.0.1:62001&#10;Pixel_2_XL_API_23" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/siapik.jks" />
+    <property name="project.structure.last.edited" value="Build Variants" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="release" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-2068156347">
+      <recent name="id.co.gesangmultimedia.siapic" />
+    </key>
+    <key name="android.template.-1788788442">
+      <recent name="id.co.gesangmultimedia.petapotensicilacap" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="adb connect localhost:64643" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="siapic.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="siapic [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.siapic [signingReport]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd8ff309-c2b9-43f0-beac-70917f98bd2d" name="Default Changelist" comment="" />
+      <created>1602863763883</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602863763883</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update 19 Oktober 2020">
+      <created>1603077696898</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603077696898</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update 19 Oktober 2020">
+      <created>1603112844845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603112844845</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update 21 Oktober 2020">
+      <created>1603297700876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603297700876</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update 21 Oktober 2020">
+      <created>1603355796767</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603355796767</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Release Candidat">
+      <created>1603356619498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603356619498</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Beta RC">
+      <created>1603375201078</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603375201078</updated>
+    </task>
+    <task id="LOCAL-00007" summary="RC 24 Oktober 2020">
+      <created>1603518424248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603518424249</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Bug fix:&#10;1. Tampilan xhdpi&#10;2. My location icon&#10;3. Re-render geojson&#10;&#10;Tambahan:&#10;1. Lokasi Industri yang masuk di Keris Jateng&#10;2. Lokasi Transportasi udara, darat dan laut&#10;3. Mendeteksi lokasi saya">
+      <created>1603538345189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603538345196</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Bug fix dan tambah Info Content">
+      <created>1603794110161</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603794110161</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Mapping decolorizer&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic">
+      <created>1603866476010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603866476010</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Desain yang numpuk&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic">
+      <created>1603936481975</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1603936481975</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Desain yang numpuk&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic">
+      <created>1604312067563</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604312067563</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Desain yang numpuk&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic">
+      <created>1604581207650</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604581207650</updated>
+    </task>
+    <task id="LOCAL-00014" summary="1. Menambahkan detail pada Kawasan Peruntukan Industri&#10;2. Edit tampilan Video Potensi&#10;3. Debugging mode">
+      <created>1605091728546</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605091728547</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update 19 Oktober 2020" />
+    <MESSAGE value="Update 21 Oktober 2020" />
+    <MESSAGE value="Release Candidat" />
+    <MESSAGE value="Beta RC" />
+    <MESSAGE value="RC 24 Oktober 2020" />
+    <MESSAGE value="Bug fix:&#10;1. Tampilan xhdpi&#10;2. My location icon&#10;3. Re-render geojson&#10;&#10;Tambahan:&#10;1. Lokasi Industri yang masuk di Keris Jateng&#10;2. Lokasi Transportasi udara, darat dan laut&#10;3. Mendeteksi lokasi saya" />
+    <MESSAGE value="Bug fix dan tambah Info Content" />
+    <MESSAGE value="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Mapping decolorizer&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic" />
+    <MESSAGE value="Si Apic v0.1.2 Beta Release&#10;Release Note:&#10;Fix Bug&#10;1. Desain yang numpuk&#10;2. Fix the width and height on Xiaomi with MIUI 11 above, Samsung Device&#10;3. Fix allocation memory for device with below 1024MB RAM&#10;4. Clean after closing application&#10;&#10;Added function:&#10;1. Custom Info Window Adapter, with extended information&#10;2. Full stack mapping for SDK 29 and SDK 30&#10;&#10;https://github.com/maslakonetop/siapic" />
+    <MESSAGE value="1. Menambahkan detail pada Kawasan Peruntukan Industri&#10;2. Edit tampilan Video Potensi&#10;3. Debugging mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Menambahkan detail pada Kawasan Peruntukan Industri&#10;2. Edit tampilan Video Potensi&#10;3. Debugging mode" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="13" key="#Notifications" timestamp="1602999671662">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="275" y="13" key="#Notifications/0.0.1366.710@0.0.1366.710" timestamp="1602999671662" />
+    <state x="200" y="100" key="#PSD" timestamp="1604389293273">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="200" y="100" key="#PSD/0.0.1366.738@0.0.1366.738" timestamp="1604389293273" />
+    <state x="491" y="194" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1603794296698">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="491" y="187" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.710@0.0.1366.710" timestamp="1603773550238" />
+    <state x="491" y="194" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1603794296698" />
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602900147090" />
+    <state x="544" y="150" key="#com.intellij.ide.util.MemberChooser" timestamp="1603795536432">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="544" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1366.710@0.0.1366.710" timestamp="1603773521895" />
+    <state x="544" y="150" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1603795536432" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602890283434" />
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1603263012417">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="363" y="104" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.738@0.0.1366.738" timestamp="1603263012417" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603974352551">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.710@0.0.1366.710" timestamp="1603974352551" />
+    <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1603264301071" />
+    <state x="98" y="95" width="1182" height="533" key="AVDManager" timestamp="1605086808402">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="89" width="1182" height="533" key="AVDManager/0.0.1366.710@0.0.1366.710" timestamp="1603533173469" />
+    <state x="98" y="95" width="1182" height="533" key="AVDManager/0.0.1366.738@0.0.1366.738" timestamp="1605086808402" />
+    <state x="196" y="118" key="AndroidCreateResourceDirectoryDialog" timestamp="1605094102084">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="196" y="114" key="AndroidCreateResourceDirectoryDialog/0.0.1366.710@0.0.1366.710" timestamp="1603529584766" />
+    <state x="196" y="118" key="AndroidCreateResourceDirectoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1605094102084" />
+    <state x="263" y="109" key="AndroidCreateResourceFileDialog" timestamp="1603976434995">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="263" y="109" key="AndroidCreateResourceFileDialog/0.0.1366.710@0.0.1366.710" timestamp="1603976434995" />
+    <state x="263" y="113" key="AndroidCreateResourceFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1603440506608" />
+    <state x="263" y="59" key="AndroidThemeDialog" timestamp="1603972907457">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="263" y="59" key="AndroidThemeDialog/0.0.1366.710@0.0.1366.710" timestamp="1603972907457" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1603538076225">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.710@0.0.1366.710" timestamp="1603518420494" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1603538076225" />
+    <state x="463" y="100" key="FileChooserDialogImpl" timestamp="1604887646120">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="96" key="FileChooserDialogImpl/0.0.1366.710@0.0.1366.710" timestamp="1604120885164" />
+    <state x="463" y="100" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1604887646120" />
+    <state width="1305" height="162" key="GridCell.Tab.0.bottom" timestamp="1605086348954">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="157" key="GridCell.Tab.0.bottom/0.0.1366.710@0.0.1366.710" timestamp="1604114627667" />
+    <state width="1305" height="162" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605086348954" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602908795489" />
+    <state width="1305" height="162" key="GridCell.Tab.0.center" timestamp="1605086348954">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="157" key="GridCell.Tab.0.center/0.0.1366.710@0.0.1366.710" timestamp="1604114627667" />
+    <state width="1305" height="162" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605086348954" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602908795489" />
+    <state width="1305" height="162" key="GridCell.Tab.0.left" timestamp="1605086348954">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="157" key="GridCell.Tab.0.left/0.0.1366.710@0.0.1366.710" timestamp="1604114627667" />
+    <state width="1305" height="162" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605086348954" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602908795489" />
+    <state width="1305" height="162" key="GridCell.Tab.0.right" timestamp="1605086348954">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="157" key="GridCell.Tab.0.right/0.0.1366.710@0.0.1366.710" timestamp="1604114627667" />
+    <state width="1305" height="162" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605086348954" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602908795489" />
+    <state x="384" y="179" key="IDE.errors.dialog" timestamp="1604105617416">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="384" y="179" key="IDE.errors.dialog/0.0.1366.710@0.0.1366.710" timestamp="1604105617416" />
+    <state x="384" y="186" key="IDE.errors.dialog/0.0.1366.738@0.0.1366.738" timestamp="1603850685381" />
+    <state x="540" y="262" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602864354039" />
+    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1604320820562">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1604320820562" />
+    <state x="382" y="123" key="NewModule_or_Project.wizard" timestamp="1603868088208">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="382" y="123" key="NewModule_or_Project.wizard/0.0.1366.738@0.0.1366.738" timestamp="1603868088208" />
+    <state x="463" y="57" key="RollbackChangesDialog" timestamp="1603974491773">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="463" y="57" key="RollbackChangesDialog/0.0.1366.710@0.0.1366.710" timestamp="1603974491773" />
+    <state x="184" y="11" key="SettingsEditor" timestamp="1603865805134">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.710@0.0.1366.710" timestamp="1603370776417" />
+    <state x="184" y="11" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1603865805134" />
+    <state x="92" y="92" width="1182" height="554" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1603255949335">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="89" width="1182" height="533" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.710@0.0.1366.710" timestamp="1603021551201" />
+    <state x="92" y="92" width="1182" height="554" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.738@0.0.1366.738" timestamp="1603255949335" />
+    <state x="379" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1602950370259">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="379" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1602950370259" />
+    <state x="335" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604034486487">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="335" y="24" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.710@0.0.1366.710" timestamp="1604034486487" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604320707818">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1604320707818" />
+    <state x="389" y="102" key="refactoring.ChangeSignatureDialog" timestamp="1603771870443">
+      <screen x="0" y="0" width="1366" height="710" />
+    </state>
+    <state x="389" y="102" key="refactoring.ChangeSignatureDialog/0.0.1366.710@0.0.1366.710" timestamp="1603771870443" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1603850766682">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1603850766682" />
+    <state x="346" y="59" width="672" height="160" key="search.everywhere.popup" timestamp="1605091537553">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="160" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1605091537553" />
+  </component>
+</project>

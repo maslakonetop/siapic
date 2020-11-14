@@ -1,0 +1,4 @@
+#Wed Nov 11 18:43:39 ICT 2020
+base.0=D\:\\Project Aplikasi\\siapic\\app\\build\\intermediates\\dex\\debug\\minifyDebugWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

@@ -444,7 +444,7 @@
 
                 <EditText
                     android:id="@+id/editTextTextMultiLine"
-                    android:layout_width="189dp"
+                    android:layout_width="353dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="7dp"

@@ -1,0 +1,532 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="id.co.gesangmultimedia.siapic"
+4    android:versionCode="2"
+5    android:versionName="1.0 Release Candidate" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml
+10
+11    <permission
+11-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:6:5-8:47
+12        android:name="id.co.gesangmultimedia.siapic.MAPS_RECEIVE"
+12-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:7:9-66
+13        android:protectionLevel="signature" />
+13-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:8:9-44
+14
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:10:5-81
+15-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:11:5-79
+16-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:11:22-76
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:12:5-67
+17-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:12:22-64
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:13:5-79
+18-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:13:22-76
+19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+19-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:14:5-16:40
+19-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:15:9-65
+20    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+20-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:17:5-98
+20-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:17:22-95
+21
+22    <compatible-screens>
+22-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:19:5-79:26
+23
+24        <!-- all small size screens -->
+25        <screen
+25-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:22:9-24:42
+26            android:screenDensity="ldpi"
+26-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:23:13-41
+27            android:screenSize="small" />
+27-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:24:13-39
+28        <screen
+28-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:25:9-27:42
+29            android:screenDensity="mdpi"
+29-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:26:13-41
+30            android:screenSize="small" />
+30-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:27:13-39
+31        <screen
+31-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:28:9-30:42
+32            android:screenDensity="hdpi"
+32-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:29:13-41
+33            android:screenSize="small" />
+33-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:30:13-39
+34        <screen
+34-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:31:9-33:42
+35            android:screenDensity="xhdpi"
+35-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:32:13-42
+36            android:screenSize="small" />
+36-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:33:13-39
+37        <screen
+37-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:34:9-36:42
+38            android:screenDensity="xxhdpi"
+38-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:35:13-43
+39            android:screenSize="small" />
+39-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:36:13-39
+40        <screen
+40-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:37:9-39:42
+41            android:screenDensity="xxxhdpi"
+41-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:38:13-44
+42            android:screenSize="small" />
+42-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:39:13-39
+43
+44        <!-- all normal size screens -->
+45        <screen
+45-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:42:9-44:43
+46            android:screenDensity="ldpi"
+46-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:43:13-41
+47            android:screenSize="normal" />
+47-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:44:13-40
+48        <screen
+48-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:45:9-47:43
+49            android:screenDensity="mdpi"
+49-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:46:13-41
+50            android:screenSize="normal" />
+50-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:47:13-40
+51        <screen
+51-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:48:9-50:43
+52            android:screenDensity="hdpi"
+52-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:49:13-41
+53            android:screenSize="normal" />
+53-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:50:13-40
+54        <screen
+54-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:51:9-53:43
+55            android:screenDensity="xhdpi"
+55-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:52:13-42
+56            android:screenSize="normal" />
+56-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:53:13-40
+57        <screen
+57-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:54:9-56:43
+58            android:screenDensity="xxhdpi"
+58-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:55:13-43
+59            android:screenSize="normal" />
+59-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:56:13-40
+60        <screen
+60-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:54:9-56:43
+61            android:screenDensity="xxhdpi"
+61-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:55:13-43
+62            android:screenSize="normal" />
+62-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:56:13-40
+63        <!-- all large size screens -->
+64        <screen
+64-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:61:9-63:42
+65            android:screenDensity="ldpi"
+65-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:62:13-41
+66            android:screenSize="large" />
+66-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:63:13-39
+67        <screen
+67-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:64:9-66:42
+68            android:screenDensity="mdpi"
+68-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:65:13-41
+69            android:screenSize="large" />
+69-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:66:13-39
+70        <screen
+70-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:67:9-69:42
+71            android:screenDensity="hdpi"
+71-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:68:13-41
+72            android:screenSize="large" />
+72-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:69:13-39
+73        <screen
+73-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:70:9-72:42
+74            android:screenDensity="xhdpi"
+74-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:71:13-42
+75            android:screenSize="large" />
+75-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:72:13-39
+76        <screen
+76-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:73:9-75:42
+77            android:screenDensity="xxxhdpi"
+77-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:74:13-44
+78            android:screenSize="large" />
+78-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:75:13-39
+79        <screen
+79-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:76:9-78:42
+80            android:screenDensity="xxhdpi"
+80-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:77:13-43
+81            android:screenSize="large" />
+81-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:78:13-39
+82    </compatible-screens>
+83
+84    <uses-feature
+84-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+85        android:glEsVersion="0x00020000"
+85-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+86        android:required="true" />
+86-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+87
+88    <uses-permission android:name="android.permission.WAKE_LOCK" />
+88-->[com.google.android.gms:play-services-measurement-sdk-api:17.2.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\a7b7997bd7457eecc3f0afbf7b1cf54f\jetified-play-services-measurement-sdk-api-17.2.0\AndroidManifest.xml:25:5-68
+88-->[com.google.android.gms:play-services-measurement-sdk-api:17.2.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\a7b7997bd7457eecc3f0afbf7b1cf54f\jetified-play-services-measurement-sdk-api-17.2.0\AndroidManifest.xml:25:22-65
+89    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+89-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:27:5-81
+89-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:27:22-78
+90
+91    <application
+91-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:81:5-150:19
+92        android:allowBackup="true"
+92-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:82:9-35
+93        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+93-->[androidx.core:core:1.3.1] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\ff37b710ecf84191a2687617c776753e\core-1.3.1\AndroidManifest.xml:24:18-86
+94        android:hardwareAccelerated="true"
+94-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:83:9-43
+95        android:icon="@drawable/siapik"
+95-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:84:9-40
+96        android:installLocation="auto"
+96-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:85:9-39
+97        android:label="@string/app_name"
+97-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:86:9-41
+98        android:largeHeap="true"
+98-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:87:9-33
+99        android:roundIcon="@drawable/siapik"
+99-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:88:9-45
+100        android:supportsRtl="true"
+100-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:89:9-35
+101        android:theme="@style/Theme.AppCompat.NoActionBar" >
+101-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:90:9-59
+102        <activity
+102-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:91:9-93:62
+103            android:name="id.co.gesangmultimedia.siapic.BerandaSop"
+103-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:92:13-39
+104            android:configChanges="orientation|screenSize" />
+104-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:93:13-59
+105        <activity
+105-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:94:9-96:62
+106            android:name="id.co.gesangmultimedia.siapic.ShowPdf"
+106-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:95:13-36
+107            android:configChanges="orientation|screenSize" />
+107-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:96:13-59
+108        <activity
+108-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:97:9-99:62
+109            android:name="id.co.gesangmultimedia.siapic.TampilkanVideo"
+109-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:98:13-43
+110            android:configChanges="orientation|screenSize" />
+110-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:99:13-59
+111        <activity
+111-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:100:9-102:62
+112            android:name="id.co.gesangmultimedia.siapic.LaporanBug"
+112-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:101:13-39
+113            android:configChanges="orientation|screenSize" />
+113-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:102:13-59
+114        <activity
+114-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:103:9-105:62
+115            android:name="id.co.gesangmultimedia.siapic.Pengaturan"
+115-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:104:13-39
+116            android:configChanges="orientation|screenSize" />
+116-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:105:13-59
+117        <activity
+117-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:106:9-108:62
+118            android:name="id.co.gesangmultimedia.siapic.About"
+118-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:107:13-34
+119            android:configChanges="orientation|screenSize" />
+119-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:108:13-59
+120        <activity
+120-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:109:9-111:62
+121            android:name="id.co.gesangmultimedia.siapic.VideoPotensi"
+121-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:110:13-41
+122            android:configChanges="orientation|screenSize" />
+122-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:111:13-59
+123        <activity
+123-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:112:9-115:52
+124            android:name="id.co.gesangmultimedia.siapic.CumstomInfoContent"
+124-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:113:13-47
+125            android:configChanges="orientation"
+125-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:114:13-48
+126            android:screenOrientation="portrait" />
+126-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:115:13-49
+127        <activity
+127-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:116:9-118:62
+128            android:name="id.co.gesangmultimedia.siapic.RtrwCilacap"
+128-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:117:13-40
+129            android:configChanges="orientation|screenSize" />
+129-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:118:13-59
+130        <activity
+130-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:119:9-121:62
+131            android:name="id.co.gesangmultimedia.siapic.KawasanIndustri"
+131-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:120:13-44
+132            android:configChanges="orientation|screenSize" />
+132-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:121:13-59
+133        <activity
+133-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:122:9-124:62
+134            android:name="id.co.gesangmultimedia.siapic.PotensiUmum"
+134-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:123:13-40
+135            android:configChanges="orientation|screenSize" />
+135-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:124:13-59
+136        <activity
+136-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:125:9-133:20
+137            android:name="id.co.gesangmultimedia.siapic.SplashScreen"
+137-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:126:13-41
+138            android:configChanges="orientation|screenSize" >
+138-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:127:13-59
+139            <intent-filter>
+139-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:128:13-132:29
+140                <action android:name="android.intent.action.MAIN" />
+140-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:129:17-69
+140-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:129:25-66
+141
+142                <category android:name="android.intent.category.LAUNCHER" />
+142-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:131:17-77
+142-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:131:27-74
+143            </intent-filter>
+144        </activity>
+145        <activity
+145-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:134:9-136:62
+146            android:name="id.co.gesangmultimedia.siapic.DataKecamatan"
+146-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:135:13-42
+147            android:configChanges="orientation|screenSize" />
+147-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:136:13-59
+148        <activity
+148-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:137:9-139:62
+149            android:name="id.co.gesangmultimedia.siapic.MainActivity"
+149-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:138:13-41
+150            android:configChanges="orientation|screenSize" />
+150-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:139:13-59
+151
+152        <meta-data
+152-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:141:9-143:55
+153            android:name="com.google.android.geo.API_KEY"
+153-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:142:13-58
+154            android:value="@string/google_maps_key" />
+154-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:143:13-52
+155        <meta-data
+155-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:144:9-146:70
+156            android:name="com.google.android.gms.ads.APPLICATION_ID"
+156-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:145:13-69
+157            android:value="ca-app-pub-8683063272161709~6118474226" />
+157-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:146:13-67
+158        <meta-data
+158-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:147:9-149:57
+159            android:name="preloaded_fonts"
+159-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:148:13-43
+160            android:resource="@array/preloaded_fonts" />
+160-->D:\Project Aplikasi\siapic\app\src\main\AndroidManifest.xml:149:13-54
+161        <meta-data
+161-->[com.google.maps.android:android-maps-utils:2.0.3] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\49d4acb3ffee8fbb5bd4e0a3d8b12b1f\jetified-android-maps-utils-2.0.3\AndroidManifest.xml:12:9-14:69
+162            android:name="com.google.android.gms.version"
+162-->[com.google.maps.android:android-maps-utils:2.0.3] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\49d4acb3ffee8fbb5bd4e0a3d8b12b1f\jetified-android-maps-utils-2.0.3\AndroidManifest.xml:13:13-58
+163            android:value="@integer/google_play_services_version" /> <!-- Needs to be explicitly declared on P+ -->
+163-->[com.google.maps.android:android-maps-utils:2.0.3] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\49d4acb3ffee8fbb5bd4e0a3d8b12b1f\jetified-android-maps-utils-2.0.3\AndroidManifest.xml:14:13-66
+164        <uses-library
+164-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+165            android:name="org.apache.http.legacy"
+165-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+166            android:required="false" />
+166-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\d027d9448fbcf9654d950b23d8ed0e5d\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+167
+168        <activity
+168-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3f9aba943b40305b342ef7e68662fdd0\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+169            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+169-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3f9aba943b40305b342ef7e68662fdd0\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+170            android:exported="false"
+170-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3f9aba943b40305b342ef7e68662fdd0\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+171            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+171-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3f9aba943b40305b342ef7e68662fdd0\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+172        <activity
+172-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:29:9-33:64
+173            android:name="com.google.android.gms.ads.AdActivity"
+173-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:30:13-65
+174            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+174-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:31:13-122
+175            android:exported="false"
+175-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:32:13-37
+176            android:theme="@android:style/Theme.Translucent" />
+176-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:33:13-61
+177
+178        <provider
+178-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:35:9-39:39
+179            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+179-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:36:13-76
+180            android:authorities="id.co.gesangmultimedia.siapic.mobileadsinitprovider"
+180-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:37:13-73
+181            android:exported="false"
+181-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:38:13-37
+182            android:initOrder="100" />
+182-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:39:13-36
+183
+184        <service
+184-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:41:9-44:40
+185            android:name="com.google.android.gms.ads.AdService"
+185-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:42:13-64
+186            android:enabled="true"
+186-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:43:13-35
+187            android:exported="false" />
+187-->[com.google.android.gms:play-services-ads-lite:19.5.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\3129b9ac30a8e43d396f89e9e58f87b7\jetified-play-services-ads-lite-19.5.0\AndroidManifest.xml:44:13-37
+188
+189        <provider
+189-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:30:9-36:35
+190            android:name="androidx.work.impl.WorkManagerInitializer"
+190-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:31:13-69
+191            android:authorities="id.co.gesangmultimedia.siapic.workmanager-init"
+191-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:32:13-68
+192            android:directBootAware="false"
+192-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:33:13-44
+193            android:exported="false"
+193-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:34:13-37
+194            android:multiprocess="true" />
+194-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:35:13-40
+195
+196        <service
+196-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:38:9-43:35
+197            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+197-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:39:13-88
+198            android:directBootAware="false"
+198-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:40:13-44
+199            android:enabled="@bool/enable_system_alarm_service_default"
+199-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:41:13-72
+200            android:exported="false" />
+200-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:42:13-37
+201        <service
+201-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:44:9-50:35
+202            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+202-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:45:13-84
+203            android:directBootAware="false"
+203-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:46:13-44
+204            android:enabled="@bool/enable_system_job_service_default"
+204-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:47:13-70
+205            android:exported="true"
+205-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:48:13-36
+206            android:permission="android.permission.BIND_JOB_SERVICE" />
+206-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:49:13-69
+207
+208        <receiver
+208-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:52:9-57:35
+209            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+209-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:53:13-88
+210            android:directBootAware="false"
+210-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:54:13-44
+211            android:enabled="true"
+211-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:55:13-35
+212            android:exported="false" />
+212-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:56:13-37
+213        <receiver
+213-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:58:9-68:20
+214            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+214-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:59:13-106
+215            android:directBootAware="false"
+215-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:60:13-44
+216            android:enabled="false"
+216-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:61:13-36
+217            android:exported="false" >
+217-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:62:13-37
+218            <intent-filter>
+218-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:64:13-67:29
+219                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+219-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:65:17-87
+219-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:65:25-84
+220                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+220-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:66:17-90
+220-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:66:25-87
+221            </intent-filter>
+222        </receiver>
+223        <receiver
+223-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:69:9-79:20
+224            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+224-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:70:13-104
+225            android:directBootAware="false"
+225-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:71:13-44
+226            android:enabled="false"
+226-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:72:13-36
+227            android:exported="false" >
+227-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:73:13-37
+228            <intent-filter>
+228-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:75:13-78:29
+229                <action android:name="android.intent.action.BATTERY_OKAY" />
+229-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:76:17-77
+229-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:76:25-74
+230                <action android:name="android.intent.action.BATTERY_LOW" />
+230-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:77:17-76
+230-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:77:25-73
+231            </intent-filter>
+232        </receiver>
+233        <receiver
+233-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:80:9-90:20
+234            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+234-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:81:13-104
+235            android:directBootAware="false"
+235-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:82:13-44
+236            android:enabled="false"
+236-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:83:13-36
+237            android:exported="false" >
+237-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:84:13-37
+238            <intent-filter>
+238-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:86:13-89:29
+239                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+239-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:87:17-83
+239-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:87:25-80
+240                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+240-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:88:17-82
+240-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:88:25-79
+241            </intent-filter>
+242        </receiver>
+243        <receiver
+243-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:91:9-100:20
+244            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+244-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:92:13-103
+245            android:directBootAware="false"
+245-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:93:13-44
+246            android:enabled="false"
+246-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:94:13-36
+247            android:exported="false" >
+247-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:95:13-37
+248            <intent-filter>
+248-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:97:13-99:29
+249                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+249-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:98:17-79
+249-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:98:25-76
+250            </intent-filter>
+251        </receiver>
+252        <receiver
+252-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:101:9-112:20
+253            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+253-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:102:13-88
+254            android:directBootAware="false"
+254-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:103:13-44
+255            android:enabled="false"
+255-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:104:13-36
+256            android:exported="false" >
+256-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:105:13-37
+257            <intent-filter>
+257-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:107:13-111:29
+258                <action android:name="android.intent.action.BOOT_COMPLETED" />
+258-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:108:17-79
+258-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:108:25-76
+259                <action android:name="android.intent.action.TIME_SET" />
+259-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:109:17-73
+259-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:109:25-70
+260                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+260-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:110:17-81
+260-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:110:25-78
+261            </intent-filter>
+262        </receiver>
+263        <receiver
+263-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:113:9-122:20
+264            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+264-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:114:13-99
+265            android:directBootAware="false"
+265-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:115:13-44
+266            android:enabled="@bool/enable_system_alarm_service_default"
+266-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:116:13-72
+267            android:exported="false" >
+267-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:117:13-37
+268            <intent-filter>
+268-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:119:13-121:29
+269                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+269-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:120:17-98
+269-->[androidx.work:work-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\56e6f94a89a806ae6b457c0ef5c93f36\work-runtime-2.1.0\AndroidManifest.xml:120:25-95
+270            </intent-filter>
+271        </receiver>
+272
+273        <service
+273-->[androidx.room:room-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\6d7cd11850027465120e40f53813cdee\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+274            android:name="androidx.room.MultiInstanceInvalidationService"
+274-->[androidx.room:room-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\6d7cd11850027465120e40f53813cdee\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+275            android:exported="false" />
+275-->[androidx.room:room-runtime:2.1.0] C:\Users\djonn\.gradle\caches\transforms-2\files-2.1\6d7cd11850027465120e40f53813cdee\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+276    </application>
+277
+278</manifest>

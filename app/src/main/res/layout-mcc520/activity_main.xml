@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/menu_atas"
+        android:layout_width="157dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="254dp"
+        android:layout_marginBottom="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <RelativeLayout
+        android:id="@+id/rtlHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/apik"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:srcCompat="@drawable/pemkab"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlHome1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rtlHome">
+
+        <Button
+            android:id="@+id/btnUmum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:background="@drawable/menu"
+            android:onClick="potensi"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnKecamatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_toEndOf="@id/btnUmum"
+            android:background="@drawable/menumenu"
+            android:onClick="kecamatan" />
+
+        <Button
+            android:id="@+id/btnKIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnUmum"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:background="@drawable/menumenumenu"
+            android:onClick="kawasan" />
+
+
+        <Button
+            android:id="@+id/btnRtrw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnKecamatan"
+            android:layout_marginStart="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_toEndOf="@id/btnKIP"
+            android:background="@drawable/menutata"
+            android:onClick="rtrw" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rtlHome2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rtlHome1">
+
+        <ImageView
+            android:id="@+id/ivdpmptsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:srcCompat="@drawable/dpmptsp"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/btnSop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/sopfront"
+            android:onClick="pdfgo" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
